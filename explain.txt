@@ -1,0 +1,9 @@
+1. The folder named "water_drill_db" corresponds to a database for a water drill web application, which you should set up in your MySQL.
+
+2. To run this folder, Node.js and npm are required.
+
+3. Execute "npm install" initially, followed by "node node.js" to initiate the web application.
+
+4. If any errors occur, please verify the database link, such as "http://localhost:3000/...", and adjust it according to your system configuration.
+
+5. All web page files are located in the 'public' folder.
