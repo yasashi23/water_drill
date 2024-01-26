@@ -1,0 +1,32 @@
+.search{
+    border-bottom: 1px solid;
+    height: 35px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    input{
+        width: 100%;
+        border: none;
+        &:focus{
+            border: none;
+            outline: none;
+        }
+        font-size: 20px;
+    }
+    button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transform: scale(1.6);
+        color: rgba(0, 0, 0, 0.384);
+
+        &:hover{
+            transform: scale(2.0);
+        }
+        &:focus{
+            transform: scale(2.0);
+            outline: none;
+            color: black;
+        }
+    }
+}

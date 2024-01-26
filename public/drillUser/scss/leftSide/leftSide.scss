@@ -1,0 +1,11 @@
+.left-side{
+    @include side(16px,0px);
+    
+
+    @import 'bits.scss';
+    @import 'casing.scss';
+    @import 'drill-bits.scss';
+    @import 'driller-user.scss';
+    @import 'tricone-bits.scss';
+    @import 'various.scss';
+}

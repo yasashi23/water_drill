@@ -1,0 +1,17 @@
+.bits table tr td:first-child{}
+
+.bits{
+    table {
+        tr{
+            td{
+                &:nth-child(2){
+                    padding: 0px 10px !important;
+                }
+                width: 120px;
+                input{
+                    width: 120px;
+                }
+            }
+        }
+    }
+}
