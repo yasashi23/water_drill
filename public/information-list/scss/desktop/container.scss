@@ -1,0 +1,14 @@
+.container{
+
+    border: 1px solid #000;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @import 'navbar.scss';
+    @import 'section2/container-list.scss';
+    @import 'edit/container-edit.scss';
+}
