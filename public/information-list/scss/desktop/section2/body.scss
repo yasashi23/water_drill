@@ -1,9 +1,8 @@
 .data-list{
 
     table{
-        // border-collapse: collapse;
-        border-spacing: 0px 30px;
-
+        border-spacing: 0px 20px;
+        position: relative;
         tr{
             th,td{
                 text-align: center;
@@ -16,29 +15,14 @@
             td:nth-child(4){
                 width: 80px;
             }
-            &:nth-child(n+3){
-                
-                td{
-                    border-top: 1px solid #000;
+            &:first-child{
+                th{
                     border-bottom: 1px solid #000;
-                    padding: 15px 15px;
-                    box-sizing: border-box;
-                    &:first-child{
-                        border-left: 1px solid #000;
-                    }
-                    &:last-child{
-                        border-right: 1px solid #000;
-                    }
-                }
-                
+                    padding-bottom: 5px;
+                }  
             }
-            // td:nth-child(2){
-            //     padding: 15px 90px 15px 90px;
-            // }
-            // td:nth-child(3){
-            //     padding-right: 90px;
-            // }
-            
+            @import 'perdata.scss';
+
         }
     }
 }

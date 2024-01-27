@@ -6,13 +6,24 @@
 }
 
 .container {
-  border: 1px solid #000;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+.container .edit-process {
+  width: 100%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.315);
+  position: fixed;
+  overflow: hidden;
+}
+.container .edit-process.off {
+  display: none;
 }
 .container .navbar {
   display: flex;
@@ -31,23 +42,23 @@
   box-sizing: border-box;
 }
 .container .navbar .input {
-  background-color: black;
-  color: #fff;
-}
-.container .navbar .information {
   background-color: #fff;
   border: 2px solid #000;
 }
+.container .navbar .information {
+  background-color: black;
+  color: #fff;
+}
 .container .body-data {
-  width: 900px;
-  border: 1px solid #000;
+  width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
 }
 .container .body-data .data-list table {
-  border-spacing: 0px 30px;
+  border-spacing: 0px 20px;
+  position: relative;
 }
 .container .body-data .data-list table tr th, .container .body-data .data-list table tr td {
   text-align: center;
@@ -60,17 +71,123 @@
 .container .body-data .data-list table tr td:nth-child(4) {
   width: 80px;
 }
-.container .body-data .data-list table tr:nth-child(n+3) td {
+.container .body-data .data-list table tr:first-child th {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+.container .body-data .data-list table tr:nth-child(n+2) td {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   padding: 15px 15px;
   box-sizing: border-box;
 }
-.container .body-data .data-list table tr:nth-child(n+3) td:first-child {
+.container .body-data .data-list table tr:nth-child(n+2) td:first-child, .container .body-data .data-list table tr:nth-child(n+2) td:nth-child(2) {
+  font-weight: 500;
+}
+.container .body-data .data-list table tr:nth-child(n+2) td:first-child {
   border-left: 1px solid #000;
 }
-.container .body-data .data-list table tr:nth-child(n+3) td:last-child {
+.container .body-data .data-list table tr:nth-child(n+2) td:nth-child(3) {
+  font-size: 24px;
+  font-weight: 600;
+}
+.container .body-data .data-list table tr:nth-child(n+2) td:last-child {
   border-right: 1px solid #000;
+  font-weight: 500;
+}
+.container .body-data .data-list table tr:nth-child(n+2) td:last-child u {
+  cursor: pointer;
+}
+.container .body-data .data-list table tr:nth-child(n+2) td:last-child u:hover {
+  color: #29957D;
+}
+.container .edit-data-modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+.container .edit-data-modal.off {
+  display: none;
+}
+.container .edit-data-modal .container {
+  background-color: #fff;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 410px;
+  position: relative;
+}
+.container .edit-data-modal .container .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.container .edit-data-modal .container .close:hover {
+  color: red;
+}
+.container .edit-data-modal .container h2 {
+  padding-bottom: 25px;
+}
+.container .edit-data-modal .container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.container .edit-data-modal .container form div select {
+  width: 230px;
+  height: 35px;
+}
+.container .edit-data-modal .container form div label {
+  font-weight: 600;
+}
+.container .edit-data-modal .container form div label.label-earn {
+  width: 80px;
+}
+.container .edit-data-modal .container form div #earn {
+  width: 60px;
+  height: 25px;
+}
+.container .edit-data-modal .container form div:nth-child(3) {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 230px;
+}
+.container .edit-data-modal .container form button {
+  margin-top: 10px;
+  background-color: #29957D;
+  border: none;
+  color: white;
+  padding: 7px 0px 7px 0px;
+  width: 220px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container .body-data {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .container .body-data {
+    width: 90%;
+  }
+  .container .body-data .data-list table tr:nth-child(n+2) td:nth-child(3) {
+    font-size: 18px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
