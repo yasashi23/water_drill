@@ -35,7 +35,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <p>Jonathan Marcus</p>
+                            Jonathan Marcus
                         </td>
                         <td>Silvio Alem</td>
                         <td>$80</td>
@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="close">X</div>
                 <h2><u>Edit Data</u></h2>
-                <form action="">
+                <form action="" id="updateForm">
 
                     <div>
                         <label class="label label-user" for="driller">Driller</label><br>
@@ -75,7 +75,7 @@
                     </div>
                     <div>
                         <label class="label label-user" for="assistants">Assistants</label><br>
-                        <select name="" id="assistants">
+                        <select name="assistants" id="assistants">
                             <option value="Silvio Alem">Silvio Alem</option>
                             <option value="Ruben Rivas">Ruben Rivas</option>
                             <option value="Mariano Cardozo">Mariano Cardozo</option>
@@ -88,12 +88,13 @@
                         <label for="earn" class="label label-earn">Earn</label>
                         <input type="text" id="earn" name="earn">
                     </div>
-                    <button type="button">UPDATE</button>
+                    <button class="btn-update" type="button">UPDATE</button>
                 </form>
             </div>
         </div>
 
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="script/document.js"></script>
     <!-- <script src="script/document.js"></script> -->
 </body>
