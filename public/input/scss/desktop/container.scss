@@ -1,0 +1,10 @@
+$brand:#29957D;
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @import 'input/container.scss';
+    @import 'navbar.scss';
+}
