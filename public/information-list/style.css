@@ -160,6 +160,7 @@
 .container .edit-data-modal .container form div #earn {
   width: 60px;
   height: 25px;
+  padding-left: 6px;
 }
 .container .edit-data-modal .container form div:nth-child(3) {
   display: flex;
