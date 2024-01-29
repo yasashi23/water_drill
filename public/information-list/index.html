@@ -11,15 +11,15 @@
 
 <body>
     <div class="container">
-        <div class="edit-process off"></div>
-        <div class="navbar">
-            <div class="input">INPUT</div>
-            <div class="information">INFORMATION</div>
+        <div class="container__edit-process off"></div>
+        <div class="container__navbar">
+            <div class="container__navbar-input">INPUT</div>
+            <div class="container__navbar-information">INFORMATION</div>
         </div>
 
-        <div class="body-data">
+        <div class="container__data">
             <h1><u>INFORMATION LIST</u></h1>
-            <div class="data-list">
+            <div class="container__data-list">
                 <table>
                     <tr>
                         <th>
@@ -39,33 +39,33 @@
                         </td>
                         <td>Silvio Alem</td>
                         <td>$80</td>
-                        <td><u class="edit-data">edit</u></td>
+                        <td><u class="container__edit-data">edit</u></td>
 
                     </tr>
                     <tr>
                         <td>Eduardo Garrel</td>
                         <td>Ruben Rivas</td>
                         <td>$80</td>
-                        <td><u class="edit-data">edit</u></td>
+                        <td><u class="container__edit-data">edit</u></td>
                     </tr>
                     <tr>
                         <td>Franklin Giménez</td>
                         <td>Mariano Cardozo</td>
                         <td>$80</td>
-                        <td><u class="edit-data">edit</u></td>
+                        <td><u class="container__edit-data">edit</u></td>
                     </tr>
                 </table>
             </div>
         </div>
 
-        <div class="edit-data-modal off">
-            <div class="container">
-                <div class="close">X</div>
+        <div class="container__modal off">
+            <div class="container__modal-edit">
+                <div class="container__modal-close">X</div>
                 <h2><u>Edit Data</u></h2>
                 <form action="" id="updateForm">
 
                     <div>
-                        <label class="label label-user" for="driller">Driller</label><br>
+                        <label class="container__label container__label-user" for="driller">Driller</label><br>
                         <select name="driller" id="driller">
                             <option value="Jonathan Marcos">Jonathan Marcos</option>
                             <option value="Eduardo Garrel">Eduardo Garrel</option>
@@ -74,7 +74,7 @@
                         </select>
                     </div>
                     <div>
-                        <label class="label label-user" for="assistants">Assistants</label><br>
+                        <label class="container__label container__label-user" for="assistants">Assistants</label><br>
                         <select name="assistants" id="assistants">
                             <option value="Silvio Alem">Silvio Alem</option>
                             <option value="Ruben Rivas">Ruben Rivas</option>
@@ -85,10 +85,10 @@
                         </select>
                     </div>
                     <div>
-                        <label for="earn" class="label label-earn">Earn</label>
+                        <label for="earn" class="container__label container__label-earn">Earn</label>
                         <input type="text" id="earn" name="earn">
                     </div>
-                    <button class="btn-update" type="button">UPDATE</button>
+                    <button class="container__btn" type="button">UPDATE</button>
                 </form>
             </div>
         </div>

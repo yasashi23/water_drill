@@ -5,16 +5,16 @@
   font-family: "Inter", sans-serif;
 }
 
-.container {
+.container-input {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.container .input-information {
+.container-input .container-input__user {
   padding-bottom: 100px;
 }
-.container .input-information .input-field {
+.container-input .container-input__user .container-input__user-input {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -22,56 +22,56 @@
   border: 1px solid #000;
   padding: 30px;
 }
-.container .input-information .input-field form {
+.container-input .container-input__user .container-input__user-input form {
   display: flex;
   flex-direction: column;
   gap: 51px;
   width: 400px;
 }
-.container .input-information .input-field form .section-user {
+.container-input .container-input__user .container-input__user-input form .container-input__section-user {
   width: 380px;
 }
-.container .input-information .input-field form .section-user div {
+.container-input .container-input__user .container-input__user-input form .container-input__section-user div {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.container .input-information .input-field form .section-user div label {
+.container-input .container-input__user .container-input__user-input form .container-input__section-user div label {
   width: 120px;
 }
-.container .input-information .input-field form .section-user div select {
+.container-input .container-input__user .container-input__user-input form .container-input__section-user div select {
   cursor: pointer;
   height: 30px;
   width: 240px;
 }
-.container .input-information .input-field form .section-user div:nth-child(3) {
+.container-input .container-input__user .container-input__user-input form .container-input__section-user div:nth-child(3) {
   margin-top: 24px;
   margin-bottom: 23px;
 }
-.container .input-information .input-field form .section-cost {
+.container-input .container-input__user .container-input__user-input form .container-input__section-cost {
   width: 380px;
 }
-.container .input-information .input-field form .section-cost .content-cost {
+.container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.container .input-information .input-field form .section-cost .content-cost:nth-child(4) {
+.container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content:nth-child(4) {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.container .input-information .input-field form .section-cost .content-cost:nth-child(3) {
+.container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content:nth-child(3) {
   margin-top: 24px;
 }
-.container .input-information .input-field form .section-cost .content-cost label {
+.container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content label {
   width: 120px;
 }
-.container .input-information .input-field form .section-cost .content-cost div {
+.container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content div {
   display: flex;
   justify-content: center;
   width: 240px;
 }
-.container .input-information .input-field form .section-cost .content-cost div input {
+.container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content div input {
   border: none;
   border-bottom: 1px solid #000;
   height: 23px;
@@ -79,32 +79,32 @@
   padding-left: 5px;
   font-size: 18px;
 }
-.container .input-information .input-field form .section-cost .content-cost div input:focus {
+.container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content div input:focus {
   border: none;
   outline: transparent;
   background-color: transparent;
   border-bottom: 1px solid #000;
 }
-.container .input-information .input-field form .section-earn {
+.container-input .container-input__user .container-input__user-input form .container-input__section-earn {
   width: 380px;
 }
-.container .input-information .input-field form .section-earn .content-earn {
+.container-input .container-input__user .container-input__user-input form .container-input__section-earn .container-input__content-earn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.container .input-information .input-field form .section-earn .content-earn:nth-child(3) {
+.container-input .container-input__user .container-input__user-input form .container-input__section-earn .container-input__content-earn:nth-child(3) {
   margin-top: 24px;
 }
-.container .input-information .input-field form .section-earn .content-earn label {
+.container-input .container-input__user .container-input__user-input form .container-input__section-earn .container-input__content-earn label {
   width: 120px;
 }
-.container .input-information .input-field form .section-earn .content-earn div {
+.container-input .container-input__user .container-input__user-input form .container-input__section-earn .container-input__content-earn div {
   display: flex;
   justify-content: center;
   width: 240px;
 }
-.container .input-information .input-field form .section-earn .content-earn div input {
+.container-input .container-input__user .container-input__user-input form .container-input__section-earn .container-input__content-earn div input {
   border: none;
   border-bottom: 1px solid #000;
   height: 23px;
@@ -112,13 +112,13 @@
   padding-left: 5px;
   font-size: 18px;
 }
-.container .input-information .input-field form .section-earn .content-earn div input:focus {
+.container-input .container-input__user .container-input__user-input form .container-input__section-earn .container-input__content-earn div input:focus {
   border: none;
   outline: transparent;
   background-color: transparent;
   border-bottom: 1px solid #000;
 }
-.container .input-information .input-field form button {
+.container-input .container-input__user .container-input__user-input form button {
   padding: 11px 110px 11px 110px;
   cursor: pointer;
   background-color: #29957D;
@@ -127,18 +127,18 @@
   font-weight: 600;
   font-size: 18px;
 }
-.container .input-information .input-field form button:hover {
+.container-input .container-input__user .container-input__user-input form button:hover {
   background-color: transparent;
   color: #29957D;
   border: 1px solid #29957D;
 }
-.container .navbar {
+.container-input .container-input__navbar {
   display: flex;
   margin-top: 53px;
   margin-bottom: 60px;
   height: 50px;
 }
-.container .navbar div {
+.container-input .container-input__navbar div {
   cursor: pointer;
   font-weight: 600;
   display: flex;
@@ -148,56 +148,56 @@
   padding-left: 23px;
   box-sizing: border-box;
 }
-.container .navbar .input {
+.container-input .container-input__navbar .container-input__input-navbar {
   background-color: black;
   color: #fff;
 }
-.container .navbar .information {
+.container-input .container-input__navbar .container-input__information-navbar {
   background-color: #fff;
   border: 2px solid #000;
 }
 
 @media only screen and (max-width: 490px) {
-  .container .input-information {
+  .container-input .container-input__user {
     padding-bottom: 50px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .container .input-information .input-field {
+  .container-input .container-input__user .container-input__user-input {
     box-sizing: border-box;
     padding: 15px;
     width: 98%;
   }
-  .container .input-information .input-field form {
+  .container-input .container-input__user .container-input__user-input form {
     width: 100%;
   }
-  .container .input-information .input-field form .section-user {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-user {
     width: 100%;
   }
-  .container .input-information .input-field form .section-user div label {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-user div label {
     width: 40%;
   }
-  .container .input-information .input-field form .section-user div select {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-user div select {
     width: 60%;
   }
-  .container .input-information .input-field form .section-cost {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-cost {
     width: 100%;
   }
-  .container .input-information .input-field form .section-cost .content-cost label {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content label {
     width: 40%;
   }
-  .container .input-information .input-field form .section-cost .content-cost div {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-cost .container-input__content div {
     width: 60%;
   }
-  .container .input-information .input-field form .section-earn {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-earn {
     width: 100%;
   }
-  .container .input-information .input-field form .section-earn .content-earn label {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-earn .container-input__content-earn label {
     width: 40%;
   }
-  .container .input-information .input-field form .section-earn .content-earn div {
+  .container-input .container-input__user .container-input__user-input form .container-input__section-earn .container-input__content-earn div {
     width: 60%;
   }
 }

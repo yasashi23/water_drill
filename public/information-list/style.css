@@ -15,23 +15,23 @@
   justify-content: center;
   position: relative;
 }
-.container .edit-process {
+.container .container__edit-process {
   width: 100%;
   height: 200%;
   background-color: rgba(0, 0, 0, 0.315);
   position: fixed;
   overflow: hidden;
 }
-.container .edit-process.off {
+.container .container__edit-process.off {
   display: none;
 }
-.container .navbar {
+.container .container__navbar {
   display: flex;
   margin-top: 53px;
   margin-bottom: 60px;
   height: 50px;
 }
-.container .navbar div {
+.container .container__navbar div {
   cursor: pointer;
   font-weight: 600;
   display: flex;
@@ -41,67 +41,67 @@
   padding-left: 23px;
   box-sizing: border-box;
 }
-.container .navbar .input {
+.container .container__navbar .container__navbar-input {
   background-color: #fff;
   border: 2px solid #000;
 }
-.container .navbar .information {
+.container .container__navbar .container__navbar-information {
   background-color: black;
   color: #fff;
 }
-.container .body-data {
+.container .container__data {
   width: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 50px;
 }
-.container .body-data .data-list table {
+.container .container__data .container__data-list table {
   border-spacing: 0px 20px;
   position: relative;
 }
-.container .body-data .data-list table tr th, .container .body-data .data-list table tr td {
+.container .container__data .container__data-list table tr th, .container .container__data .container__data-list table tr td {
   text-align: center;
   box-sizing: border-box;
   width: 200px;
 }
-.container .body-data .data-list table tr th:nth-child(3),
-.container .body-data .data-list table tr th:nth-child(4),
-.container .body-data .data-list table tr td:nth-child(3),
-.container .body-data .data-list table tr td:nth-child(4) {
+.container .container__data .container__data-list table tr th:nth-child(3),
+.container .container__data .container__data-list table tr th:nth-child(4),
+.container .container__data .container__data-list table tr td:nth-child(3),
+.container .container__data .container__data-list table tr td:nth-child(4) {
   width: 80px;
 }
-.container .body-data .data-list table tr:first-child th {
+.container .container__data .container__data-list table tr:first-child th {
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
 }
-.container .body-data .data-list table tr:nth-child(n+2) td {
+.container .container__data .container__data-list table tr:nth-child(n+2) td {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   padding: 15px 15px;
   box-sizing: border-box;
 }
-.container .body-data .data-list table tr:nth-child(n+2) td:first-child, .container .body-data .data-list table tr:nth-child(n+2) td:nth-child(2) {
+.container .container__data .container__data-list table tr:nth-child(n+2) td:first-child, .container .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(2) {
   font-weight: 500;
 }
-.container .body-data .data-list table tr:nth-child(n+2) td:first-child {
+.container .container__data .container__data-list table tr:nth-child(n+2) td:first-child {
   border-left: 1px solid #000;
 }
-.container .body-data .data-list table tr:nth-child(n+2) td:nth-child(3) {
+.container .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(3) {
   font-size: 24px;
   font-weight: 600;
 }
-.container .body-data .data-list table tr:nth-child(n+2) td:last-child {
+.container .container__data .container__data-list table tr:nth-child(n+2) td:last-child {
   border-right: 1px solid #000;
   font-weight: 500;
 }
-.container .body-data .data-list table tr:nth-child(n+2) td:last-child u {
+.container .container__data .container__data-list table tr:nth-child(n+2) td:last-child u {
   cursor: pointer;
 }
-.container .body-data .data-list table tr:nth-child(n+2) td:last-child u:hover {
+.container .container__data .container__data-list table tr:nth-child(n+2) td:last-child u:hover {
   color: #29957D;
 }
-.container .edit-data-modal {
+.container .container__modal {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -111,10 +111,10 @@
   box-sizing: border-box;
   padding-top: 80px;
 }
-.container .edit-data-modal.off {
+.container .container__modal.off {
   display: none;
 }
-.container .edit-data-modal .container {
+.container .container__modal .container__modal-edit {
   background-color: #fff;
   border: 1px solid #000;
   display: flex;
@@ -122,9 +122,10 @@
   justify-content: center;
   width: 350px;
   height: 410px;
+  flex-direction: column;
   position: relative;
 }
-.container .edit-data-modal .container .close {
+.container .container__modal .container__modal-edit .container__modal-close {
   position: absolute;
   top: 0;
   right: 0;
@@ -134,41 +135,41 @@
   font-weight: 800;
   cursor: pointer;
 }
-.container .edit-data-modal .container .close:hover {
+.container .container__modal .container__modal-edit .container__modal-close:hover {
   color: red;
 }
-.container .edit-data-modal .container h2 {
+.container .container__modal .container__modal-edit h2 {
   padding-bottom: 25px;
 }
-.container .edit-data-modal .container form {
+.container .container__modal .container__modal-edit form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-.container .edit-data-modal .container form div select {
+.container .container__modal .container__modal-edit form div select {
   width: 230px;
   height: 35px;
 }
-.container .edit-data-modal .container form div label {
+.container .container__modal .container__modal-edit form div label {
   font-weight: 600;
 }
-.container .edit-data-modal .container form div label.label-earn {
+.container .container__modal .container__modal-edit form div label.container__label-earn {
   width: 80px;
 }
-.container .edit-data-modal .container form div #earn {
+.container .container__modal .container__modal-edit form div #earn {
   width: 60px;
   height: 25px;
   padding-left: 6px;
 }
-.container .edit-data-modal .container form div:nth-child(3) {
+.container .container__modal .container__modal-edit form div:nth-child(3) {
   display: flex;
   justify-content: start;
   align-items: center;
   width: 230px;
 }
-.container .edit-data-modal .container form button {
+.container .container__modal .container__modal-edit form .container__btn {
   margin-top: 10px;
   background-color: #29957D;
   border: none;
@@ -178,15 +179,15 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .container .body-data {
+  .container .container__data {
     width: 450px;
   }
 }
 @media only screen and (max-width: 450px) {
-  .container .body-data {
+  .container .container__data {
     width: 90%;
   }
-  .container .body-data .data-list table tr:nth-child(n+2) td:nth-child(3) {
+  .container .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(3) {
     font-size: 18px;
   }
 }

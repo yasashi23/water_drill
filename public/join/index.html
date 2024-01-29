@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container__navbar">
+            <div class="container__input-navbar">INPUT</div>
+            <div class="container__information-navbar">INFORMATION</div>
+        </div>
+
+        <div class="container__body-input">
+            <div class="container__user">
+                <div class="container__user-input">
+                    <h1><u>INPUT</u></h1>
+                    <form action="" method="post">
+                        <div class="container__section-user">
+                            <h2>User</h2>
+                            <hr>
+                            <div>
+                                <label class="container__label container__label-user" for="driller">Driller</label>
+                                <select name="driller" id="driller">
+                                    <option value="Jonathan Marcos">Jonathan Marcos</option>
+                                    <option value="Eduardo Garrel">Eduardo Garrel</option>
+                                    <option value="ranklin Giménez">ranklin Giménez</option>
+                                    <option value="Luis Benitez">Luis Benitez</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="container__label container__label-user"
+                                    for="assistants">Assistants</label>
+                                <select name="" id="assistants">
+                                    <option value="Silvio Alem">Silvio Alem</option>
+                                    <option value="Ruben Rivas">Ruben Rivas</option>
+                                    <option value="Mariano Cardozo">Mariano Cardozo</option>
+                                    <option value="Robert Sosa">Robert Sosa</option>
+                                    <option value="Pablo Pereira">Pablo Pereira</option>
+                                    <option value="Pereira">Pereira</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="container__section-cost">
+                            <h2>Cost</h2>
+                            <hr>
+                            <div class="container__content">
+                                <label for="diesel-liters" class="container__label container__label-cost">Diesel
+                                    Liters</label>
+                                <div>
+                                    <span>$</span>
+                                    <input name="diesel-liters" type="text">
+                                </div>
+                            </div>
+                            <div class="container__content">
+                                <label for="engine-oil" class="container__label container__label-cost">Engine
+                                    Oil</label>
+                                <div>
+                                    <span>$</span>
+                                    <input id="engine-oil" type="text">
+                                </div>
+                            </div>
+                            <div class="container__content">
+                                <label for="grease-kg" class="container__label container__label-cost">Grease Kg</label>
+                                <div>
+                                    <span>$</span>
+                                    <input id="grease-kg" name="grease-kg" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container__section-earn">
+                            <h2>Earn</h2>
+                            <hr>
+                            <div class="container__content-earn">
+                                <label for="earn" class="label label-earn">Earn</label>
+                                <div>
+                                    <span>$</span>
+                                    <input type="text" id="earn" name="earn">
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button">POST</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container__body-information">
+            <div class="container__edit-process off"></div>
+            <div class="container__navbar">
+                <div class="container__navbar-input">INPUT</div>
+                <div class="container__navbar-information">INFORMATION</div>
+            </div>
+        
+            <div class="container__data">
+                <h1><u>INFORMATION LIST</u></h1>
+                <div class="container__data-list">
+                    <table>
+                        <tr>
+                            <th>
+                                <h3>Driller</h3>
+                            </th>
+                            <th>
+                                <h3>Assistans</h3>
+                            </th>
+                            <th>
+                                <h3>Earn</h3>
+                            </th>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                Jonathan Marcus
+                            </td>
+                            <td>Silvio Alem</td>
+                            <td>$80</td>
+                            <td><u class="container__edit-data">edit</u></td>
+        
+                        </tr>
+                        <tr>
+                            <td>Eduardo Garrel</td>
+                            <td>Ruben Rivas</td>
+                            <td>$80</td>
+                            <td><u class="container__edit-data">edit</u></td>
+                        </tr>
+                        <tr>
+                            <td>Franklin Giménez</td>
+                            <td>Mariano Cardozo</td>
+                            <td>$80</td>
+                            <td><u class="container__edit-data">edit</u></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        
+            <div class="container__modal off">
+                <div class="container__modal-edit">
+                    <div class="container__modal-close">X</div>
+                    <h2><u>Edit Data</u></h2>
+                    <form action="" id="updateForm">
+        
+                        <div>
+                            <label class="container__label container__label-user" for="driller">Driller</label><br>
+                            <select name="driller" id="driller">
+                                <option value="Jonathan Marcos">Jonathan Marcos</option>
+                                <option value="Eduardo Garrel">Eduardo Garrel</option>
+                                <option value="ranklin Giménez">ranklin Giménez</option>
+                                <option value="Luis Benitez">Luis Benitez</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="container__label container__label-user" for="assistants">Assistants</label><br>
+                            <select name="assistants" id="assistants">
+                                <option value="Silvio Alem">Silvio Alem</option>
+                                <option value="Ruben Rivas">Ruben Rivas</option>
+                                <option value="Mariano Cardozo">Mariano Cardozo</option>
+                                <option value="Robert Sosa">Robert Sosa</option>
+                                <option value="Pablo Pereira">Pablo Pereira</option>
+                                <option value="Pereira">Pereira</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="earn" class="container__label container__label-earn">Earn</label>
+                            <input type="text" id="earn" name="earn">
+                        </div>
+                        <button class="container__btn" type="button">UPDATE</button>
+                    </form>
+                </div>
+            </div>
+        
+        </div>
+
+
+    </div>
+</body>
+</html>
