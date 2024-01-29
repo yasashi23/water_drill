@@ -1,0 +1,22 @@
+.container__table{
+    border-spacing: 0 10px;
+    tr{
+        th,td{text-align: center;}
+        &:first-child{
+            th{
+                border-bottom: 1px solid #000;
+                width: 90px;
+                opacity: 0.4;
+                padding-bottom: 5px;
+            }
+        }
+        &:nth-child(n+2){
+            td{
+                &:first-child{opacity: 0.6;}
+                &:nth-child(n+2){
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
