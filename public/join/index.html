@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <div class="container__navbar">
             <div class="container__input-navbar">INPUT</div>
-            <div class="container__information-navbar">INFORMATION</div>
+            <div class="container__information-navbar off">INFORMATION</div>
         </div>
 
         <div class="container__body-input">
@@ -33,7 +34,7 @@
                             <div>
                                 <label class="container__label container__label-user"
                                     for="assistants">Assistants</label>
-                                <select name="" id="assistants">
+                                <select name="assistants" id="assistants">
                                     <option value="Silvio Alem">Silvio Alem</option>
                                     <option value="Ruben Rivas">Ruben Rivas</option>
                                     <option value="Mariano Cardozo">Mariano Cardozo</option>
@@ -59,7 +60,7 @@
                                     Oil</label>
                                 <div>
                                     <span>$</span>
-                                    <input id="engine-oil" type="text">
+                                    <input name="engine-oil" id="engine-oil" type="text">
                                 </div>
                             </div>
                             <div class="container__content">
@@ -87,13 +88,8 @@
             </div>
         </div>
 
-        <div class="container__body-information">
-            <div class="container__edit-process off"></div>
-            <div class="container__navbar">
-                <div class="container__navbar-input">INPUT</div>
-                <div class="container__navbar-information">INFORMATION</div>
-            </div>
-        
+        <div class="container__body-information off">
+            <div class="container__edit-process off"></div>        
             <div class="container__data">
                 <h1><u>INFORMATION LIST</u></h1>
                 <div class="container__data-list">
@@ -173,6 +169,10 @@
         </div>
 
 
+
+        <script src="script/frontend/variable.js"></script>
+        <script src="script/frontend/function.js"></script>
+        <script src="script/frontend/listener.js"></script>
     </div>
 </body>
 </html>
