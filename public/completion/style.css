@@ -1,58 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
   display: flex;
-  padding: 40px 0px;
-  align-items: center;
   flex-direction: column;
-  width: 100%;
-  box-sizing: border-box;
-  gap: 40px;
+  align-items: center;
+  gap: 110px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.container h1 {
-  font-size: 32px;
+.container .container__completion .container__title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.container .container__completion .container__table {
+  width: 350px;
+  border-spacing: 0 27px;
+}
+.container .container__completion .container__table .container__user td {
+  border-bottom: 2px solid #000;
+  text-align: center;
+  font-weight: 600;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.container .container__completion .container__table tr:nth-child(n+2) td {
+  padding-left: 20px;
+}
+.container .container__completion .container__table tr:nth-child(n+2) td:first-child {
+  width: 250px;
+  opacity: 0.5;
+}
+.container .container__completion .container__table tr:nth-child(n+2) td:last-child {
+  font-weight: 600;
+}
+.container .container__charged .container__label-charged {
+  font-weight: 600;
+}
+.container .container__charged .container__input-charged {
+  width: 61px;
+  height: 25px;
+  padding-left: 5px;
+}
+.container .container__charged .container__btn-charged {
+  cursor: pointer;
+  border: none;
+  background-color: #29957D;
+  color: white;
+  padding: 6px 20px;
+  font-weight: 500;
+}
+.container .container__charged .container__btn-charged:hover {
+  border: 2px solid #29957D;
+  background-color: transparent;
+  color: #29957D;
+}
+.container .container__cost .container__title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.container .container__cost .container__table {
+  border-spacing: 0 10px;
+}
+.container .container__cost .container__table tr th, .container .container__cost .container__table tr td {
   text-align: center;
 }
-.container table {
-  width: 400px;
-  border-spacing: 0px;
+.container .container__cost .container__table tr:first-child th {
+  border-bottom: 1px solid #000;
+  width: 90px;
+  opacity: 0.4;
+  padding-bottom: 5px;
 }
-.container table .user td {
-  border-bottom: 1px solid;
-  text-align: center;
-}
-.container table .user td span {
-  font-weight: bold;
-  font-size: 24px;
-}
-.container table tr {
-  box-sizing: border-box;
-}
-.container table tr td {
-  box-sizing: border-box;
-}
-.container table tr:nth-child(n+2) td {
-  font-size: 18px;
-  padding: 15px 15px;
-}
-.container table tr:nth-child(n+2) td:first-child {
+.container .container__cost .container__table tr:nth-child(n+2) td:first-child {
   opacity: 0.6;
 }
-.container table tr:nth-child(n+2) td:nth-child(2) {
-  font-weight: bold;
-  text-align: right;
+.container .container__cost .container__table tr:nth-child(n+2) td:nth-child(n+2) {
+  font-weight: 600;
 }
-
-@media only screen and (max-width: 400px) {
-  .container table {
-    width: 300px;
-  }
-  .container table tr td {
-    padding: 15px 6px;
-  }
+.container .container__profit {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+}
+.container .container__profit .container__title {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.container .container__profit .container__table-profit {
+  border-spacing: 15px;
+}
+.container .container__profit .container__table-profit tr td:first-child {
+  width: 150px;
+}
+.container .container__profit .container__table-profit tr:last-child td {
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */

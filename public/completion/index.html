@@ -3,46 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <title>completion</title>
 </head>
 <body>
     <div class="container">
-        <h1 class="container__title"><u>Completion</u></h1>
-        <table class="container__table">
-            <tr class="container__user">
-                <td colspan="2"><span class="container__name">John</span> - <span class="container__number">00001</span></td>
+        <div class="container__completion">
+            <h1 class="container__title"><u>Completion</u></h1>
+            <table class="container__table">
+                <tr class="container__user">
+                    <td colspan="2"><span class="container__name">John</span> - <span class="container__number">00001</span></td>
 
-            </tr>
-            <tr>
-                <td>Total Depth</td>
-                <td class="container__total-depth">1000</td>
-            </tr>
-            <tr>
-                <td>Static Level Meters</td>
-                <td class="container__static-level-meters">0</td>
-            </tr>
-            <tr>
-                <td>Flow Rate Liters/hour</td>
-                <td class="container__flow-rate">0</td>
-            </tr>
-            <tr>
-                <td>Dynamic Meters</td>
-                <td class="container__dynamic-meters">0</td>
-            </tr>
-            <tr>
-                <td>Filters</td>
-                <td class="container__filters">0</td>
-            </tr>
-            <tr>
-                <td>Driller</td>
-                <td class="container__driller">0</td>
-            </tr>
-            <tr>
-                <td>Assistans</td>
-                <td class="container__assistans">0</td>
-            </tr>
-        </table>
+                </tr>
+                <tr>
+                    <td>Total Depth</td>
+                    <td class="container__total-depth">1000</td>
+                </tr>
+                <tr>
+                    <td>Static Level Meters</td>
+                    <td class="container__static-level-meters">0</td>
+                </tr>
+                <tr>
+                    <td>Flow Rate Liters/hour</td>
+                    <td class="container__flow-rate">0</td>
+                </tr>
+                <tr>
+                    <td>Dynamic Meters</td>
+                    <td class="container__dynamic-meters">0</td>
+                </tr>
+                <tr>
+                    <td>Filters</td>
+                    <td class="container__filters">0</td>
+                </tr>
+                <tr>
+                    <td>Driller</td>
+                    <td class="container__driller">0</td>
+                </tr>
+                <tr>
+                    <td>Assistans</td>
+                    <td class="container__assistans">0</td>
+                </tr>
+            </table>
+        </div>
+        <form class="container__charged">
+            <label for="" class="container__label-charged">Charged</label>
+            <input type="text" class="container__input-charged">
+            <button class="container__btn-charged">POST</button>
+        </form>
+        <div class="container__cost">
+            <h1 class="container__title"><u>Cost</u></h1>
+            <table class="container__table">
+                <tr>
+                    <th>Category</th>
+                    <th>Per liter</th>
+                    <th>Total liter</th>
+                    <th>Total Cost</th>
+                </tr>
+                <tr>
+                    <td>Driller</td>
+                    <td class="container__td-perliter"><span>$</span><span>1</span></td>
+                    <td class="container__td-total-liter">5</td>
+                    <td class="container__td-total-cost"><span>$</span><span>5</span></td>
+                </tr>
+                <tr>
+                    <td>Engine Oil</td>
+                    <td class="container__td-perliter"><span>$</span><span>0.5</span></td>
+                    <td class="container__td-total-liter">8</td>
+                    <td class="container__td-total-cost"><span>$</span><span>2</span></td>
+                </tr>
+                <tr>
+                    <td>Grease Kg</td>
+                    <td class="container__td-perliter"><span>$</span><span>75</span></td>
+                    <td class="container__td-total-liter">2</td>
+                    <td class="container__td-total-cost"><span>$</span><span>150</span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="container__profit">
+            <h1 class="container__title"><u>Profit</u></h1>
+            <table class="container__table-profit">
+                <tr>
+                    <td>Earnings</td>
+                    <td class="container__td-earnings"><span>$</span><span>200</span></td>
+                </tr>
+                <tr>
+                    <td>Total Cost</td>
+                    <td class="container__td-total-cost"><span>$</span><span>200</span></td>
+                </tr>
+                <tr>
+                    <td><u>Profit</u></td>
+                    <td class="container__td-profit"><u><span>$</span><span>200</span></u></td>
+                </tr>
+            </table>
+        </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
