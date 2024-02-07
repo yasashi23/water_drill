@@ -5,18 +5,16 @@ function clickToClose(a){
 function clickToEdit(i){
     addOffClass("")
     listData = i.parentNode.parentNode.querySelectorAll("td")
-    console.log(listData)
   }
   
 function clickToUpdate(a){
     addOffClass("off")
     const i = numberOfDataList
     const dataform = serializeFormData(updateForm)
-    listData[0].innerHTML = dataform.driller
-    listData[1].innerHTML = dataform.assistants
-    listData[2].innerHTML = '$'+dataform.earn
-    console.log(driller[i],assistans[i],earn[i])
-    console.log(dataform)
+    listData[0].querySelector("span:first-child").innerHTML = dataform.driller
+    listData[0].querySelector("span:last-child").innerHTML = dataform.assistants
+    listData[1].querySelector("span:first-child").innerHTML = '$'+dataform.earn_driller
+    listData[1].querySelector("span:last-child").innerHTML = '$'+dataform.earn_assistant
   }
   
 // functions
@@ -54,12 +52,18 @@ function addOffClass(a){
   }
   function addNewDataList(){
     const dataFormInput = serializeFormData(input_form)
+    console.log(dataFormInput)
     const element = `            
     <tr>
-    <td>${dataFormInput.driller}</td>
-    <td>${dataFormInput.assistants}</td>
-    <td>$${dataFormInput.earn}</td>
-    <td><u class="container__edit-data" onclick="clickToEdit(this)">edit</u></td>
+      <td>
+        <span>${dataFormInput.driller}</span><br>
+        <span>${dataFormInput.assistants}</span>
+      </td>
+      <td>
+        <span>$${dataFormInput.earn_driller}</span><br>
+        <span>$${dataFormInput.earn_assistan}</span>
+      </td>
+      <td><u class="container__edit-data" onclick="clickToEdit(this)">edit</u></td>
   </tr>`
     data_list.innerHTML += element
   }

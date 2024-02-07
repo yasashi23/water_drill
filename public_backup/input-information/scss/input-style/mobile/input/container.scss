@@ -1,0 +1,19 @@
+.container__user{
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container__user-input{
+        box-sizing: border-box;
+        padding: 15px;
+        width: 98%;
+        form{
+            width: 100%;
+
+            @import 'user.scss';
+            @import 'cost.scss';
+            @import 'earn.scss';
+        }
+    }
+}

@@ -75,10 +75,17 @@
                             <h2>Earn</h2>
                             <hr>
                             <div class="container__content-earn">
-                                <label for="earn" class="label label-earn">Earn</label>
+                                <label for="earn earn-driller" class="label label-earn">Driller</label>
                                 <div>
                                     <span>$</span>
-                                    <input type="text" id="earn" name="earn">
+                                    <input type="text" id="earn earn-driller" name="earn_driller">
+                                </div>
+                            </div>
+                            <div class="container__content-earn">
+                                <label for="earn earn-assistan" class="label label-earn">Assistan</label>
+                                <div>
+                                    <span>$</span>
+                                    <input type="text" id="earn earn-assistan" name="earn_assistan">
                                 </div>
                             </div>
                         </div>
@@ -97,10 +104,7 @@
                         <tbody>
                             <tr>
                                 <th>
-                                    <h3>Driller</h3>
-                                </th>
-                                <th>
-                                    <h3>Assistans</h3>
+                                    <h3>Driller & Assistans</h3>
                                 </th>
                                 <th>
                                     <h3>Earn</h3>
@@ -109,10 +113,13 @@
                             </tr>
                             <tr>
                                 <td>
-                                    Jonathan Marcus
+                                    <span>Jonathan Marcus</span><br>
+                                    <span>Silvio Alem</span>
                                 </td>
-                                <td>Silvio Alem</td>
-                                <td>$80</td>
+                                <td>
+                                    <span>$80</span><br>
+                                    <span>$60</span>
+                                </td>
                                 <td><u class="container__edit-data" onclick="clickToEdit(this)">edit</u></td>
             
                             </tr>
@@ -148,8 +155,12 @@
                             </select>
                         </div>
                         <div>
-                            <label for="earn" class="container__label container__label-earn">Earn</label>
-                            <input type="text" id="earn" name="earn">
+                            <label for="earn" class="container__label container__label-earn">Driller Earn</label>
+                            <input type="text" id="earn" name="earn_driller">
+                        </div>
+                        <div>
+                            <label for="earn" class="container__label container__label-earn">Assistant Earn</label>
+                            <input type="text" id="earn" name="earn_assistant">
                         </div>
                         <button class="container__btn" type="button">UPDATE</button>
                     </form>

@@ -1,0 +1,38 @@
+- On the completion page, what data is needed from the driller page?
+- on the adminstrator page 1, what data is needed from the driller page?
+
+- database for input page is used for which pages?
+
+
+pada halaman di completion page ada 7 variabel yaitu, total depth, static level meters, flow rate liters/hours, dynamic meters, filters, driller dan assistans. yang sudah diketahui yaitu total depth yang angkanya berasal dari meter drilled yg ada di form bagian driller_user dihalaman driller page, bagaimana dengan keenam variable sisanya?,
+
+angka yang telah diinputkan pada bagian charged, maka angka itu akan di tampilkan di bagian mana?
+
+di bagian cost terdapat 3 kategori yaitu diesel liters, engine oil, grease kg, apakah ketiga kategori itu berdasarkan angka yang ada di form daily consumption dan inventory, atau hanya daily consumption saja?
+
+
+hasil perbaikan katanya.....
+
+
+Di halaman completion, terdapat 7 variabel, yaitu: total kedalaman, level statis meter, laju aliran liter/jam, meter dinamis, filter, penggali, dan asisten. Kita sudah mengetahui bahwa total kedalaman berasal dari jumlah meter yang telah digali yang tercatat dalam formulir pengguna penggali di halaman penggali. Bagaimana dengan enam variabel lainnya?
+
+Setelah angka dimasukkan di bagian 'charged', di mana angka tersebut akan ditampilkan?
+
+Apakah ketiga kategori di bagian biaya, yaitu liter diesel, minyak mesin, dan kg gemuk, didasarkan pada angka yang ada dalam formulir konsumsi harian dan inventaris, atau hanya konsumsi harian saja?
+
+nomor pertanyaan-pertanyaan di bawah ini sesuai dengan gambar yang di kirim
+
+the questions below according to the image that has been sent.
+
+1. On the completion page, there are 7 variables: total depth, static level meters, flow rate liters/hour, dynamic meters, filters, driller, and assistant. We already know that the total depth comes from the meter drilled inputted in the driller_user form on the driller page. How about the remaining six variables?
+
+2. Once the number is inputted in the charged section, where will that number be displayed?
+
+3. in the cost section, there are 3 categories: diesel liters, engine oil, grease kg. Are these three categories based on the numbers in the daily consumption form and inventory, or just the daily consumption?
+
+4. Within the profit section, there are earnings and total cost. How much are the earnings in dollars and where do they come from? Also, how is the total cost calculated?
+
+
+
+
+

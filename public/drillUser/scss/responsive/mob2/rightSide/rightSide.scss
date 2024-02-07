@@ -1,4 +1,4 @@
-.right-side{
+.container__right-side{
     @include sideMobile2(8px,8px);
 
     @import 'completion.scss';

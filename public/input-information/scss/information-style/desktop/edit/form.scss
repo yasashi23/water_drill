@@ -10,9 +10,9 @@ form{
             height: 35px;
         }
         label{
-            font-weight: 600;
+            font-weight: 500;
             &.container__label-earn{
-                width: 80px;
+                width: 150px;
             }
         }
         #earn{
@@ -20,7 +20,8 @@ form{
             height: 25px;
             padding-left: 6px;
         }
-        &:nth-child(3){
+        &:nth-child(3),
+        &:nth-child(4){
             display: flex;
             justify-content: start;
             align-items: center;

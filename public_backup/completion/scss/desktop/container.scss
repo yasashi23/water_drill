@@ -1,0 +1,13 @@
+.container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 110px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+    @import 'completion/container.scss';
+    @import 'charged/container.scss';
+    @import 'cost/container.scss';
+    @import 'profit/container.scss';
+}

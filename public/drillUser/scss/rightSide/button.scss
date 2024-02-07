@@ -1,13 +1,13 @@
-.btn-submit{
+.container__btn-submit{
     width: 100%;
     background-color: $btn;
     border: none;
     color: white;
     cursor: pointer;
     padding: 8px;
-}
-.btn-submit:hover{
-    background-color: transparent;
-    color: $btn;
-    border: 1px solid $btn;
+    &:hover{
+        background-color: transparent;
+        color: $btn;
+        border: 1px solid $btn;
+    }
 }

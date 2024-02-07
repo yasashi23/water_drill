@@ -1,0 +1,28 @@
+.container__data-list{
+
+    table{
+        border-spacing: 0px 20px;
+        position: relative;
+        tr{
+            th,td{
+                text-align: center;
+                box-sizing: border-box;
+                width: 200px;
+            }
+            th:nth-child(3),
+            th:nth-child(4),
+            td:nth-child(3),
+            td:nth-child(4){
+                width: 80px;
+            }
+            &:first-child{
+                th{
+                    border-bottom: 1px solid #000;
+                    padding-bottom: 5px;
+                }  
+            }
+            @import 'perdata.scss';
+
+        }
+    }
+}

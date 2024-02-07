@@ -137,6 +137,7 @@
 }
 .container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn:nth-child(3) {
   margin-top: 24px;
+  margin-bottom: 20px;
 }
 .container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn label {
   width: 120px;
@@ -229,15 +230,14 @@
   padding: 15px 15px;
   box-sizing: border-box;
 }
-.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:first-child, .container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(2) {
-  font-weight: 500;
-}
 .container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:first-child {
   border-left: 1px solid #000;
 }
-.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(3) {
-  font-size: 24px;
-  font-weight: 600;
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:first-child span:nth-child(1) {
+  font-weight: 700;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(2) span:nth-child(1) {
+  font-weight: 700;
 }
 .container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:last-child {
   border-right: 1px solid #000;
@@ -301,17 +301,17 @@
   height: 35px;
 }
 .container .container__body-information .container__modal .container__modal-edit form div label {
-  font-weight: 600;
+  font-weight: 500;
 }
 .container .container__body-information .container__modal .container__modal-edit form div label.container__label-earn {
-  width: 80px;
+  width: 150px;
 }
 .container .container__body-information .container__modal .container__modal-edit form div #earn {
   width: 60px;
   height: 25px;
   padding-left: 6px;
 }
-.container .container__body-information .container__modal .container__modal-edit form div:nth-child(3) {
+.container .container__body-information .container__modal .container__modal-edit form div:nth-child(3), .container .container__body-information .container__modal .container__modal-edit form div:nth-child(4) {
   display: flex;
   justify-content: start;
   align-items: center;

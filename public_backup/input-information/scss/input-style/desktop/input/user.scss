@@ -1,0 +1,20 @@
+.container__section-user{
+    width: 380px;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        label{
+            width: 120px;
+        }
+        select{
+            cursor: pointer;
+            height: 30px;
+            width: 240px;
+        }
+        &:nth-child(3){
+            margin-top: 24px;
+            margin-bottom: 23px;
+        }
+    }
+}

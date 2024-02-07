@@ -1,4 +1,4 @@
-$btn:#5CC974;
+$btn:#29957D;
 $fU:18px;
 
 *{
@@ -6,7 +6,7 @@ $fU:18px;
     padding: 0;
 }
 
-.containerAll{
+.container{
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@ $fU:18px;
     gap: 80px;
     padding: 50px 0px 50px 0px;
     box-sizing: border-box;
-    .container-form{
+    .container__form{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -23,7 +23,16 @@ $fU:18px;
     }
     @import 'section1/section1.scss';
     @import 'section2/section2.scss';
-    @import 'section3/section3.scss';
+    // @import 'section3/section3.scss';
+    .container__link-input{
+        a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+                color: $btn;
+            }
+        }
+    }
 }
 
 
@@ -33,7 +42,7 @@ $fU:18px;
 
             @import "responsive/section1/section1.scss";
             @import "responsive/section2/section2.scss";
-            @import "responsive/section3/section3.scss";
+            // @import "responsive/section3/section3.scss";
         }
     }
 

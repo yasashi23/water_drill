@@ -1,4 +1,4 @@
-.right-side{
+.container__right-side{
     @include sideTab1(0px,8px);
     @import 'completion.scss';
     @import 'daily-consumption.scss';

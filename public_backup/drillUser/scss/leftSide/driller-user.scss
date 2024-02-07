@@ -1,0 +1,18 @@
+.driller-user{
+    table{
+
+        tr:nth-child(2){
+            > td{
+                padding-right: 20px;
+            }
+        }
+        #driller-user-input{
+            width: 100%;
+        }
+        #driller-user-rotary-number-input{
+            width: 50px;
+            text-align: center;
+        }
+
+    } 
+}

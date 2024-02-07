@@ -1,10 +1,10 @@
-.container-data{
+.container__container-data{
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    .data{
+    .container__data{
         width: 140px;
         height: 115px;
         span{

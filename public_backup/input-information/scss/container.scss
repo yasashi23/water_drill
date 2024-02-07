@@ -1,0 +1,39 @@
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+@import 'navbar.scss';
+@import 'input-style/desktop/container.scss';
+@import 'information-style/desktop/container.scss';
+
+}
+
+@media only screen and (max-width:500px) {
+    .container{
+        @import 'input-style/tablet/container.scss';
+    }
+}
+
+
+@media only screen and (max-width:490px) {
+    .container{
+        @import 'input-style/mobile/container.scss';
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .container{
+
+        @import 'information-style/tablet/container.scss';
+    }
+
+}
+
+@media only screen and (max-width:450px) {
+    .container{
+
+        @import 'information-style/mobile/container.scss';
+    }
+
+}

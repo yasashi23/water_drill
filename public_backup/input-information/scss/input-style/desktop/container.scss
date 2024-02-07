@@ -1,0 +1,13 @@
+$brand:#29957D;
+
+.container__body-input{
+    &.off{
+        display: none;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @import 'input/container.scss';
+}

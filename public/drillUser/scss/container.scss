@@ -1,4 +1,4 @@
-
+$btn : #29957D;
 
 @mixin side($left:0px,$right:0px) {
     width: 470px;
@@ -37,7 +37,7 @@
     padding: 0;
 }
 
-.containerAll{
+.container{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -48,7 +48,7 @@
     padding-bottom: 50px;
     
 
-    .container-form{
+    .container__form{
         display: flex;
         width: 100%;
         // align-items: center;
@@ -75,8 +75,8 @@
 }
 
 @media only screen  and (min-width:876px) and (max-width: 996px){
-    .containerAll{
-        .container-form{
+    .container{
+        .container__form{
 
             @import 'responsive/tab/leftSide/leftSide.scss';
             @import 'responsive/tab/rightSide/rightSide.scss';
@@ -85,8 +85,8 @@
 }
 
 @media only screen and (max-width: 875px){
-    .containerAll{
-        .container-form{
+    .container{
+        .container__form{
             flex-wrap: wrap;
             gap: 50px;
             @import 'responsive/mob/leftSide/leftSide.scss';
@@ -96,8 +96,8 @@
 }
 
 @media only screen and (max-width: 440px){
-    .containerAll{
-        .container-form{
+    .container{
+        .container__form{
             display: flex;
             flex-wrap: wrap;
             gap: 50px;

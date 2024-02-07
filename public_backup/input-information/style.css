@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .container__navbar {
+  display: flex;
+  margin-top: 53px;
+  margin-bottom: 60px;
+  height: 50px;
+}
+.container .container__navbar div {
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 23px;
+  padding-left: 23px;
+  box-sizing: border-box;
+}
+.container .container__navbar .container__input-navbar {
+  border: 2px solid #000;
+  background-color: black;
+  color: #fff;
+}
+.container .container__navbar .container__input-navbar.off {
+  background-color: #fff;
+  color: black;
+}
+.container .container__navbar .container__information-navbar {
+  background-color: black;
+  border: 2px solid #000;
+  color: white;
+}
+.container .container__navbar .container__information-navbar.off {
+  background-color: #fff;
+  color: black;
+}
+.container .container__body-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .container__body-input.off {
+  display: none;
+}
+.container .container__body-input .container__user {
+  padding-bottom: 100px;
+}
+.container .container__body-input .container__user .container__user-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  padding: 30px;
+}
+.container .container__body-input .container__user .container__user-input form {
+  display: flex;
+  flex-direction: column;
+  gap: 51px;
+  width: 400px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-user {
+  width: 380px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-user div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-user div label {
+  width: 120px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-user div select {
+  cursor: pointer;
+  height: 30px;
+  width: 240px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-user div:nth-child(3) {
+  margin-top: 24px;
+  margin-bottom: 23px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-cost {
+  width: 380px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content:nth-child(4) {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content:nth-child(3) {
+  margin-top: 24px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content label {
+  width: 120px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content div {
+  display: flex;
+  justify-content: center;
+  width: 240px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content div input {
+  border: none;
+  border-bottom: 1px solid #000;
+  height: 23px;
+  width: 60px;
+  padding-left: 5px;
+  font-size: 18px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content div input:focus {
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-earn {
+  width: 380px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn:nth-child(3) {
+  margin-top: 24px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn label {
+  width: 120px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn div {
+  display: flex;
+  justify-content: center;
+  width: 240px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn div input {
+  border: none;
+  border-bottom: 1px solid #000;
+  height: 23px;
+  width: 60px;
+  padding-left: 5px;
+  font-size: 18px;
+}
+.container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn div input:focus {
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+}
+.container .container__body-input .container__user .container__user-input form button {
+  padding: 11px 110px 11px 110px;
+  cursor: pointer;
+  background-color: #29957D;
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 18px;
+}
+.container .container__body-input .container__user .container__user-input form button:hover {
+  background-color: transparent;
+  color: #29957D;
+  border: 1px solid #29957D;
+}
+.container .container__body-information {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.container .container__body-information.off {
+  display: none;
+}
+.container .container__body-information .container__edit-process {
+  width: 100%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.315);
+  position: fixed;
+  overflow: hidden;
+}
+.container .container__body-information .container__edit-process.off {
+  display: none;
+}
+.container .container__body-information .container__data {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.container .container__body-information .container__data .container__data-list table {
+  border-spacing: 0px 20px;
+  position: relative;
+}
+.container .container__body-information .container__data .container__data-list table tr th, .container .container__body-information .container__data .container__data-list table tr td {
+  text-align: center;
+  box-sizing: border-box;
+  width: 200px;
+}
+.container .container__body-information .container__data .container__data-list table tr th:nth-child(3),
+.container .container__body-information .container__data .container__data-list table tr th:nth-child(4),
+.container .container__body-information .container__data .container__data-list table tr td:nth-child(3),
+.container .container__body-information .container__data .container__data-list table tr td:nth-child(4) {
+  width: 80px;
+}
+.container .container__body-information .container__data .container__data-list table tr:first-child th {
+  border-bottom: 1px solid #000;
+  padding-bottom: 5px;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 15px 15px;
+  box-sizing: border-box;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:first-child, .container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(2) {
+  font-weight: 500;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:first-child {
+  border-left: 1px solid #000;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(3) {
+  font-size: 24px;
+  font-weight: 600;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:last-child {
+  border-right: 1px solid #000;
+  font-weight: 500;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:last-child u {
+  cursor: pointer;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:last-child u:hover {
+  color: #29957D;
+}
+.container .container__body-information .container__modal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 80px;
+}
+.container .container__body-information .container__modal.off {
+  display: none;
+}
+.container .container__body-information .container__modal .container__modal-edit {
+  background-color: #fff;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  height: 410px;
+  flex-direction: column;
+  position: relative;
+}
+.container .container__body-information .container__modal .container__modal-edit .container__modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+}
+.container .container__body-information .container__modal .container__modal-edit .container__modal-close:hover {
+  color: red;
+}
+.container .container__body-information .container__modal .container__modal-edit h2 {
+  padding-bottom: 25px;
+}
+.container .container__body-information .container__modal .container__modal-edit form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.container .container__body-information .container__modal .container__modal-edit form div select {
+  width: 230px;
+  height: 35px;
+}
+.container .container__body-information .container__modal .container__modal-edit form div label {
+  font-weight: 600;
+}
+.container .container__body-information .container__modal .container__modal-edit form div label.container__label-earn {
+  width: 80px;
+}
+.container .container__body-information .container__modal .container__modal-edit form div #earn {
+  width: 60px;
+  height: 25px;
+  padding-left: 6px;
+}
+.container .container__body-information .container__modal .container__modal-edit form div:nth-child(3) {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 230px;
+}
+.container .container__body-information .container__modal .container__modal-edit form .container__btn {
+  margin-top: 10px;
+  background-color: #29957D;
+  border: none;
+  color: white;
+  padding: 7px 0px 7px 0px;
+  width: 220px;
+}
+
+@media only screen and (max-width: 490px) {
+  .container .container__body-input .container__user {
+    padding-bottom: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .container__body-input .container__user .container__user-input {
+    box-sizing: border-box;
+    padding: 15px;
+    width: 98%;
+  }
+  .container .container__body-input .container__user .container__user-input form {
+    width: 100%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-user {
+    width: 100%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-user div label {
+    width: 40%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-user div select {
+    width: 60%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-cost {
+    width: 100%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-cost .container__content label {
+    width: 40%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-cost .container__content div {
+    width: 60%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-earn {
+    width: 100%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn label {
+    width: 40%;
+  }
+  .container .container__body-input .container__user .container__user-input form .container__section-earn .container__content-earn div {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container .container__body-information .container__data {
+    width: 450px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .container .container__body-information .container__data {
+    width: 90%;
+  }
+  .container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(3) {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

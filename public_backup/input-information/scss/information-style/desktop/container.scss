@@ -1,0 +1,26 @@
+.container__body-information{
+    &.off{
+        display: none;
+    }
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .container__edit-process{
+        &.off{
+            display: none;
+        }
+        width: 100%;
+        height: 200%;
+        background-color: rgba(0, 0, 0, 0.315);
+        position: fixed;
+        overflow:hidden;
+    }
+
+    @import 'section2/container-list.scss';
+    @import 'edit/container-edit.scss';
+}

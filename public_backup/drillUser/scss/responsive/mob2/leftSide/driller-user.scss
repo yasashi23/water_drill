@@ -1,0 +1,20 @@
+.driller-user{
+
+    table {
+        tr{
+            &:nth-child(n+2){
+                td{
+                    padding-top: 15px;
+                }
+            }
+            // &:nth-child(2),&:nth-child(4),&:nth-child(6){
+            //     padding: 15px 0px;
+            // }
+            &:nth-child(2) {
+                > td {
+                    padding-right: 0px;
+                }
+            }
+        }
+    }
+}
