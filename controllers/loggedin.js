@@ -2,29 +2,7 @@ const pool = require('../routes/db-config')
 const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
 
-// exports.isLoggedIn = async (req,res,next) => {
-//     console.log(req.cookie.userSave)
-//     if(req.cookie.userSave){
-//         try{
 
-//             const {id} = await promisify(jwt.verify)(req.cookies.userSave,process.env.JWT_SECRET);
-//             console.log(id)
-
-//             const [result] = pool.pool.execute(`SELECT * FROM login_user where id="${id}"`)
-//             console.log(id,result)
-//             if(result.length == 0) return next()
-//             req.user = result
-//             return next()
-
-
-//         }catch(err){
-//             console.log(err)
-//             return next()
-//         }
-//     }else{
-//         next()
-//     }
-// }
 
 exports.isLoggedIn = async (req,res,next)=>{
     const authHeader = req.headers['authorization']
@@ -45,9 +23,7 @@ exports.isLoggedIn = async (req,res,next)=>{
             return res.json({permission:"403",msg:"unverified"})
 
         }
-
             next()
-        // console.log(decode)
     })
 }
 
