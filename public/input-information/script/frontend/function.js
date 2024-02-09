@@ -68,6 +68,26 @@ function addOffClass(a){
     data_list.innerHTML += element
   }
 
+  function isLoggedIn() {
+    const token = localStorage.getItem('userSave');
+    console.log(token)
+    return token !== null;
+}
+
+function authCheck() {
+  if (!isLoggedIn()) {
+      window.location.href = '/login/admin1'; 
+  }
+}
+
+function listenerLoad() {
+  if (window.location.pathname === '/input') {
+      cekAutentikasiInput();
+  }
+}
+
+// fetch
+
 
 function serializeFormData(form) {
     var formData = new FormData(form);

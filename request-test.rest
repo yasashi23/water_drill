@@ -1,0 +1,14 @@
+GET http://localhost:3000/auth/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA3NDg4NzI0LCJleHAiOjE3MDc0ODg5NjR9.sdXxElGBTOWSOD8OVA5be1kw8E90TQNBLRx7ewSemDM
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "user":"udin",
+    "password":"u123"
+}
+
+
+###
+GET http://localhost:3000/auth/token

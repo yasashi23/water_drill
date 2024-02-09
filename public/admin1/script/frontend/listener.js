@@ -1,1 +1,3 @@
-processData();
+
+permissionToken(tokenCode)
+// processData();

@@ -13,4 +13,5 @@ const input_post_btn = document.querySelector(".container__body-input .container
 const data_list = body_information.querySelector(".container__data .container__data-list .container__table tbody")
 let listData
 let numberOfDataList
-
+let tokenCode
+const host = "http://localhost:3000"

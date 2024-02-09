@@ -1,28 +1,9 @@
-async function getData() {
-    try {
-      const res = await fetch("http://localhost:3000/admin1Read");
-      const data = await res.json();
-      return data;
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      throw error; 
-    }
+
+  function toInputPage(){
+    // window.location.href = "/input-information"
+    console.log("diklik")
   }
-  
-  async function processData() {
-    try {
-      const result = await getData();
-  
-      for(let i = 0; i < result.length; i++){
-        const name = result[i].customer_name
-        const num = result[i].well_number
-        const progress = result[i].well_group
-        appendElem(num,name,progress)
-      }
-    } catch (error) {
-      console.error("Error processing data:", error);
-    }
-  }
+
 
   function appendElem(span1,span2,opt){
     // create Element
@@ -62,7 +43,7 @@ async function getData() {
   }
   function onClick(e){
     const [dataName,dataNum] = [e.getAttribute("dataName"),e.getAttribute("dataNum")]
-    const url = `http://localhost:3000/completion/${dataName}-${dataNum}`
+    const url = `${host}/completion/${dataName}-${dataNum}`
 
     window.open(url,'_blank')
 
