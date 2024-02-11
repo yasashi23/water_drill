@@ -1,0 +1,15 @@
+.container__table-profit{
+    border-spacing: 15px;
+    tr{
+        td{
+            &:first-child{
+                width: 150px;
+            }
+        }
+        &:last-child{
+            td{
+                font-weight: 600;
+            }
+        }
+    }
+}

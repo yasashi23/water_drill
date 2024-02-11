@@ -11,4 +11,4 @@ input_post_btn.addEventListener("click",addNewDataList)
 document.addEventListener('DOMContentLoaded',listenerLoad)
 
 // fetch api
-permissionToken(tokenCode)
+permissionToken()

@@ -1,0 +1,29 @@
+.login__form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .login__user{
+
+        .login__input{
+            width: 253px;
+            height: 25px;
+            padding-left: 5px;
+        }
+    }
+    .login__btn{
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-top: 10px;
+        border: none;
+        background-color: $brand;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        &:hover{
+            border: 1px solid $brand;
+            color: $brand;
+            background-color: transparent;
+        }
+
+    }
+}

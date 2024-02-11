@@ -15,8 +15,13 @@ app.use(express.json());
 app.use(cors())
 
 app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public/loginPage')));
 
-// app.use('/drillUser', express.static(path.join(__dirname, 'public', 'drillUser')));
+
+app.use('/login/admin1', express.static(path.join(__dirname, 'public', 'login1')));
+app.use('/login/admin2', express.static(path.join(__dirname, 'public', 'login2')));
+app.use('/login/driller', express.static(path.join(__dirname, 'public', 'login3')));
+
 
 // app.use('/admin1', express.static(path.join(__dirname, 'public', 'admin1')));
 
@@ -26,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/',require('./routes/pages'))
 app.use('/auth',require('./routes/auth'))
+app.use('/db',require('./routes/crud'))
+
 
 
 

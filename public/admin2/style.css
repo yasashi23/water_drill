@@ -3,12 +3,7 @@
   padding: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-.containerAll {
+.container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -17,14 +12,14 @@
   padding: 50px 0px 50px 0px;
   box-sizing: border-box;
 }
-.containerAll .container-form {
+.container .container__form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 80px;
   width: 80%;
 }
-.containerAll .section1 {
+.container .container__section1 {
   border: 1px solid black;
   width: 316px;
   height: 400px;
@@ -35,27 +30,27 @@
   gap: 15px;
   font-size: 18px;
 }
-.containerAll .section1 label {
+.container .container__section1 label {
   font-weight: bold;
 }
-.containerAll .section1 input {
+.container .container__section1 input {
   width: 250px;
   height: 30px;
   padding-left: 5px;
 }
-.containerAll .section1 input[type=submit] {
+.container .container__section1 input[type=submit] {
   width: 186px;
-  background-color: #5CC974;
+  background-color: #29957D;
   color: white;
   border: none;
   cursor: pointer;
 }
-.containerAll .section1 input[type=submit]:hover {
+.container .container__section1 input[type=submit]:hover {
   background-color: white;
-  border: 1px solid #5CC974;
-  color: #5CC974;
+  border: 1px solid #29957D;
+  color: #29957D;
 }
-.containerAll .section2 {
+.container .container__section2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,45 +58,45 @@
   gap: 50px;
   width: 100%;
 }
-.containerAll .section2 .search {
+.container .container__section2 .container__search {
   border-bottom: 1px solid;
   height: 35px;
   width: 70%;
   display: flex;
   justify-content: space-between;
 }
-.containerAll .section2 .search input {
+.container .container__section2 .container__search input {
   width: 100%;
   border: none;
   font-size: 20px;
 }
-.containerAll .section2 .search input:focus {
+.container .container__section2 .container__search input:focus {
   border: none;
   outline: none;
 }
-.containerAll .section2 .search button {
+.container .container__section2 .container__search button {
   background-color: transparent;
   border: none;
   cursor: pointer;
   transform: scale(1.6);
   color: rgba(0, 0, 0, 0.384);
 }
-.containerAll .section2 .search button:hover {
+.container .container__section2 .container__search button:hover {
   transform: scale(2);
 }
-.containerAll .section2 .search button:focus {
+.container .container__section2 .container__search button:focus {
   transform: scale(2);
   outline: none;
   color: black;
 }
-.containerAll .section2 .container-data {
+.container .container__section2 .container__container-data {
   display: flex;
   width: 750px;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
-.containerAll .section2 .container-data .data {
+.container .container__section2 .container__container-data .container__data {
   width: 180px;
   height: 115px;
   display: flex;
@@ -112,49 +107,29 @@
   height: 100px;
   gap: 5px;
 }
-.containerAll .section2 .container-data .data span {
+.container .container__section2 .container__container-data .container__data span {
   cursor: pointer;
 }
-.containerAll .section2 .container-data .data span:first-child {
+.container .container__section2 .container__container-data .container__data span:first-child {
   font-weight: bold;
   font-size: 32px;
 }
-.containerAll .section2 .container-data .data span:nth-child(2) {
+.container .container__section2 .container__container-data .container__data span:nth-child(2) {
   font-size: 18px;
 }
-.containerAll .section2 .container-data .data select {
+.container .container__section2 .container__container-data .container__data select {
   height: 30px;
 }
-.containerAll .section3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.container .container__link-input a {
+  text-decoration: none;
+  color: black;
 }
-.containerAll .section3 .title {
-  padding-bottom: 10px;
-}
-.containerAll .section3 .title h2 {
-  font-size: 32px;
-  padding-bottom: 5px;
-}
-.containerAll .section3 table {
-  border-spacing: 0px 15px;
-}
-.containerAll .section3 table tr td {
-  font-size: 20px;
-}
-.containerAll .section3 table tr td:first-child {
-  width: 100%;
-  padding-right: 40px;
-  opacity: 0.7;
-}
-.containerAll .section3 table tr td:last-child {
-  text-align: right;
+.container .container__link-input a:hover {
+  color: #29957D;
 }
 
 @media only screen and (max-width: 755px) {
-  .containerAll .container-form .section1 {
+  .containerAll .container-form .container__section1 {
     border: 1px solid black;
     width: 316px;
     height: 400px;
@@ -165,72 +140,72 @@
     gap: 15px;
     font-size: 18px;
   }
-  .containerAll .container-form .section1 label {
+  .containerAll .container-form .container__section1 label {
     font-weight: bold;
   }
-  .containerAll .container-form .section1 input {
+  .containerAll .container-form .container__section1 input {
     width: 250px;
     height: 30px;
     padding-left: 5px;
   }
-  .containerAll .container-form .section1 input[type=submit] {
+  .containerAll .container-form .container__section1 input[type=submit] {
     width: 186px;
-    background-color: #5CC974;
+    background-color: #29957D;
     color: white;
     border: none;
     cursor: pointer;
   }
-  .containerAll .container-form .section1 input[type=submit]:hover {
+  .containerAll .container-form .container__section1 input[type=submit]:hover {
     background-color: white;
-    border: 1px solid #5CC974;
-    color: #5CC974;
+    border: 1px solid #29957D;
+    color: #29957D;
   }
-  .containerAll .container-form .section2 {
+  .containerAll .container-form .container__section2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 50px;
   }
-  .containerAll .container-form .section2 .search {
+  .containerAll .container-form .container__section2 .container__search {
     border-bottom: 1px solid;
     height: 35px;
     width: 70%;
     display: flex;
     justify-content: space-between;
   }
-  .containerAll .container-form .section2 .search input {
+  .containerAll .container-form .container__section2 .container__search input {
     width: 100%;
     border: none;
     font-size: 20px;
   }
-  .containerAll .container-form .section2 .search input:focus {
+  .containerAll .container-form .container__section2 .container__search input:focus {
     border: none;
     outline: none;
   }
-  .containerAll .container-form .section2 .search button {
+  .containerAll .container-form .container__section2 .container__search button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     transform: scale(1.6);
     color: rgba(0, 0, 0, 0.384);
   }
-  .containerAll .container-form .section2 .search button:hover {
+  .containerAll .container-form .container__section2 .container__search button:hover {
     transform: scale(2);
   }
-  .containerAll .container-form .section2 .search button:focus {
+  .containerAll .container-form .container__section2 .container__search button:focus {
     transform: scale(2);
     outline: none;
     color: black;
   }
-  .containerAll .container-form .section2 .container-data {
+  .containerAll .container-form .container__section2 .container__container-data {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }
-  .containerAll .container-form .section2 .container-data .data {
+  .containerAll .container-form .container__section2 .container__container-data .container__data {
     width: 140px;
     height: 115px;
     display: flex;
@@ -241,45 +216,18 @@
     height: 100px;
     gap: 5px;
   }
-  .containerAll .container-form .section2 .container-data .data span {
+  .containerAll .container-form .container__section2 .container__container-data .container__data span {
     cursor: pointer;
   }
-  .containerAll .container-form .section2 .container-data .data span:first-child {
+  .containerAll .container-form .container__section2 .container__container-data .container__data span:first-child {
     font-weight: bold;
     font-size: 32px;
   }
-  .containerAll .container-form .section2 .container-data .data span:nth-child(2) {
+  .containerAll .container-form .container__section2 .container__container-data .container__data span:nth-child(2) {
     font-size: 18px;
   }
-  .containerAll .container-form .section2 .container-data .data select {
+  .containerAll .container-form .container__section2 .container__container-data .container__data select {
     height: 30px;
-  }
-  .containerAll .container-form .section3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .containerAll .container-form .section3 .title {
-    padding-bottom: 10px;
-  }
-  .containerAll .container-form .section3 .title h2 {
-    font-size: 24px;
-    padding-bottom: 5px;
-  }
-  .containerAll .container-form .section3 table {
-    border-spacing: 0px 15px;
-  }
-  .containerAll .container-form .section3 table tr td {
-    font-size: 18px;
-  }
-  .containerAll .container-form .section3 table tr td:first-child {
-    width: 100%;
-    padding-right: 40px;
-    opacity: 0.7;
-  }
-  .containerAll .container-form .section3 table tr td:last-child {
-    text-align: right;
   }
 }
 

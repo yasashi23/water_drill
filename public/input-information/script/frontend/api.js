@@ -1,5 +1,5 @@
 function verifiedPage(a){
-    if(a === 'unverified') window.location.href = "/login"
+    if(a === 'unverified') window.location.href = "/login/admin1"
     }
 async function getData(hs) {
     try {
@@ -32,7 +32,7 @@ async function getData(hs) {
 
     async function auth(){
     try{
-        const {token} = await getData(`${host}/auth/token`)
+        const {token} = await getData(`${host}/auth/token_admin1`)
         tokenCode = `Bearer ${token}`
         return tokenCode
     }catch(error){
@@ -43,7 +43,7 @@ async function getData(hs) {
     
     try{
         const token = await auth()
-        const {id,user,msg} = await authToken(`${host}/auth/user`,token)
+        const {id,user,msg} = await authToken(`${host}/auth/user_admin1`,token)
         verifiedPage(msg)
         console.log({id,user,msg})
     }catch(error){

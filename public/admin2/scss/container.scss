@@ -1,0 +1,49 @@
+$btn:#29957D;
+$fU:18px;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 50px 0px 50px 0px;
+    box-sizing: border-box;
+    .container__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+        width: 80%;
+    }
+    @import 'section1/section1.scss';
+    @import 'section2/section2.scss';
+    // @import 'section3/section3.scss';
+    .container__link-input{
+        a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+                color: $btn;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:755px){
+    .containerAll{
+        .container-form{
+
+            @import "responsive/section1/section1.scss";
+            @import "responsive/section2/section2.scss";
+            // @import "responsive/section3/section3.scss";
+        }
+    }
+
+}

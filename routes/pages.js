@@ -1,39 +1,44 @@
 const express = require('express')
 const router = express.Router()
 
-// page static
+// page static from public folder
 const {drillerUser} = require('../public/drillUser/script/script')
 const {admin1} = require('../public/admin1/script/script')
 const {admin2} = require('../public/admin2/script/script')
-const {completion} = require('../public/completion/script/script')
-const {loginAdmin1} = require('../public/login/script/script')
+const {completion1} = require('../public/completion1/script/script')
+const {completion2} = require('../public/completion2/script/script')
+const {loginAdmin1} = require('../public/login1/script/script')
+const {loginAdmin2} = require('../public/login2/script/script')
+const {loginDriller} = require('../public/login3/script/script')
 const {inputInformation} = require('../public/input-information/script/script')
 
 
-// authentication
-const {isLoggedIn} = require("../controllers/loggedin")
-
+// controllers
+const {isLoggedIn_admin1,isLoggedIn_admin1_completion} = require("../controllers/login_flow1/loggedin")
+const {isLoggedIn_admin2} = require("../controllers/login_flow2/loggedin")
+const {isLoggedIn_driller} = require("../controllers/login_flow3/loggedin")
 const {admin1Post} = require('../controllers/create')
 const {dataAdmin1,completionRead,checkData} = require('../controllers/read')
 
 
 
-// drill user
-router.get('/drillUser',drillerUser)
-
-
-// admin1
-router.get('/admin1',isLoggedIn,admin1)
-// router.get('/admin1',admin2)
-
-// input-information
-router.get('/input-information',isLoggedIn,inputInformation)
-
-// completion
-router.get('/completion/:user-:num',completion)
-
-// Login
+// Login flow 1
 router.get('/login/admin1',loginAdmin1)
+router.get('/admin1',isLoggedIn_admin1,admin1)
+router.get('/completion1/:user-:num',isLoggedIn_admin1_completion,completion1)
+router.get('/input-information',isLoggedIn_admin1,inputInformation)
+
+// Login FLow 2
+router.get('/login/admin2',loginAdmin2)
+router.get('/admin2',isLoggedIn_admin2,admin2)
+router.get('/completion2/:user-:num',isLoggedIn_admin2,completion2)
+
+
+// Login flow 3
+router.get('/login/driller',loginDriller)
+router.get('/driller',isLoggedIn_driller,drillerUser)
+
+
 
 
 

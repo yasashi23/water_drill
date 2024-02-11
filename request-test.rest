@@ -12,3 +12,58 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/auth/token
+
+
+
+#######################################################
+### FLOW 1
+
+### submit data di admin1
+POST http://localhost:3000/db/admin1Post
+Content-Type: application/json
+
+{
+    "well_number":"00003",
+    "customer_name":"hana aren",
+    "well_group":"",
+    "progress":"completed"
+}
+
+### admin1 untuk list data
+GET http://localhost:3000/db/admin1Read
+
+
+### completion read data
+GET http://localhost:3000/db/completionRead/john-00001
+
+
+
+### submit di input page 
+POST http://localhost:3000/db/earnInput
+Content-Type: application/json
+
+{
+    "driller":"dilviefre",
+    "assistant":"uangelw",
+    "diesel_liters":"133",
+    "engine_oil":"111",
+    "grease_kg":"91",
+    "earn_driller":"121",
+    "earn_assistant":"920"
+}
+
+###read data information page
+GET http://localhost:3000/db/earnInput
+
+### edit di page information
+POST http://localhost:3000/db/earnEdit1
+Content-Type: application/json
+
+{
+    "driller":"jothane",
+    "assistant":"silvio alemua",
+    "earn_driller":"50",
+    "earn_assistant":"20"
+}
+
+#######################################################

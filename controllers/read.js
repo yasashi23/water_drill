@@ -2,7 +2,7 @@ const pool = require('../routes/db-config')
 const {updateUser,getAllData,getDataMeter} = require('./sql')
 
 
-const dataAdmin1 = async(req,res) =>{
+exports.dataAdmin1 = async(req,res) =>{
     try{
         const [result] = await pool.pool.execute("select * from admin_data1")
         res.status(200).send(result)
@@ -13,7 +13,7 @@ const dataAdmin1 = async(req,res) =>{
     }
 }
 
-const checkData = async(req,res) => {
+exports.checkData = async(req,res) => {
     const obj = Object.keys(req.body)
     const [drill_user,customer_name,meter] = [String(req.body[obj[0]]),String(req.body[obj[1]]),String(req.body[obj[5]])]
     try{
@@ -34,10 +34,54 @@ const checkData = async(req,res) => {
     }
 }
 
-const completionRead = async(req,res) => {
+exports.completionRead = async(req,res) => {
     const [user,num] = [req.params.user,req.params.num]
     const data = await getAllData(pool.pool,num,user)
+    console.log(user,num)
     res.send(data)
 }
 
-module.exports = {dataAdmin1,checkData,completionRead}
+exports.editInformation = async(req,res)=>{
+    const data = req.body
+    const where = Object.keys(data)
+  .map(key => `${key} = '${data[key]}'`)
+  .join(' AND ');
+    const sql = `select * from input_earn where ${where}`
+    pool.pool.query(sql)
+    .then(result => {
+        console.log(result[0])
+        res.json(result[0])
+    })
+    .catch(error => {
+        console.error(error)
+        res.json({error})
+    })
+}
+
+exports.getIdInput = async(req,res) => {
+    const data = req.body
+    try {
+      const where = Object.keys(data)
+        .map(key => `${key} = '${data[key]}'`)
+        .join(' AND ');
+      const sql = `SELECT * FROM input_earn WHERE ${where}`;
+      const result = await pool.pool.query(sql);
+      const newData = result[0][0];
+      res.json(newData)
+      console.log(newData);
+    } catch (error) {
+      console.error(error);
+      return "error";
+    }
+  }
+
+exports.getInformationList = async(req,res) =>{
+    const sql = "select * from input_earn"
+     try{
+        const result = await pool.pool.query(sql)
+        console.log(result[0])
+        res.json(result[0])
+     }catch(err){
+        console.error(err)
+     }
+}
