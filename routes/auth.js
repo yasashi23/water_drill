@@ -3,7 +3,7 @@ const router = express.Router()
 
 // variable auth flow1
 const {authLogin_admin1} = require('../controllers/login_flow1/login')
-const {isLoggedIn_admin1, getUsers_admin1,refreshToken_admin1} = require('../controllers/login_flow1/loggedin_2')
+const {isLoggedIn_admin1, getUsers_admin1,refreshToken_admin1} = require('../controllers/login_flow1/loggedin')
 
 const {authLogin_admin2} = require('../controllers/login_flow2/login')
 const {isLoggedIn_admin2, getUsers_admin2,refreshToken_admin2} = require('../controllers/login_flow2/loggedin')

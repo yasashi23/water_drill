@@ -129,7 +129,7 @@
 }
 
 @media only screen and (max-width: 755px) {
-  .containerAll .container-form .container__section1 {
+  .container .container__form .container__section1 {
     border: 1px solid black;
     width: 316px;
     height: 400px;
@@ -140,72 +140,72 @@
     gap: 15px;
     font-size: 18px;
   }
-  .containerAll .container-form .container__section1 label {
+  .container .container__form .container__section1 label {
     font-weight: bold;
   }
-  .containerAll .container-form .container__section1 input {
+  .container .container__form .container__section1 input {
     width: 250px;
     height: 30px;
     padding-left: 5px;
   }
-  .containerAll .container-form .container__section1 input[type=submit] {
+  .container .container__form .container__section1 input[type=submit] {
     width: 186px;
     background-color: #29957D;
     color: white;
     border: none;
     cursor: pointer;
   }
-  .containerAll .container-form .container__section1 input[type=submit]:hover {
+  .container .container__form .container__section1 input[type=submit]:hover {
     background-color: white;
     border: 1px solid #29957D;
     color: #29957D;
   }
-  .containerAll .container-form .container__section2 {
+  .container .container__form .container__section2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 50px;
   }
-  .containerAll .container-form .container__section2 .container__search {
+  .container .container__form .container__section2 .container__search {
     border-bottom: 1px solid;
     height: 35px;
     width: 70%;
     display: flex;
     justify-content: space-between;
   }
-  .containerAll .container-form .container__section2 .container__search input {
+  .container .container__form .container__section2 .container__search input {
     width: 100%;
     border: none;
     font-size: 20px;
   }
-  .containerAll .container-form .container__section2 .container__search input:focus {
+  .container .container__form .container__section2 .container__search input:focus {
     border: none;
     outline: none;
   }
-  .containerAll .container-form .container__section2 .container__search button {
+  .container .container__form .container__section2 .container__search button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     transform: scale(1.6);
     color: rgba(0, 0, 0, 0.384);
   }
-  .containerAll .container-form .container__section2 .container__search button:hover {
+  .container .container__form .container__section2 .container__search button:hover {
     transform: scale(2);
   }
-  .containerAll .container-form .container__section2 .container__search button:focus {
+  .container .container__form .container__section2 .container__search button:focus {
     transform: scale(2);
     outline: none;
     color: black;
   }
-  .containerAll .container-form .container__section2 .container__container-data {
+  .container .container__form .container__section2 .container__container-data {
     display: flex;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
   }
-  .containerAll .container-form .container__section2 .container__container-data .container__data {
+  .container .container__form .container__section2 .container__container-data .container__data {
     width: 140px;
     height: 115px;
     display: flex;
@@ -216,17 +216,17 @@
     height: 100px;
     gap: 5px;
   }
-  .containerAll .container-form .container__section2 .container__container-data .container__data span {
+  .container .container__form .container__section2 .container__container-data .container__data span {
     cursor: pointer;
   }
-  .containerAll .container-form .container__section2 .container__container-data .container__data span:first-child {
+  .container .container__form .container__section2 .container__container-data .container__data span:first-child {
     font-weight: bold;
     font-size: 32px;
   }
-  .containerAll .container-form .container__section2 .container__container-data .container__data span:nth-child(2) {
+  .container .container__form .container__section2 .container__container-data .container__data span:nth-child(2) {
     font-size: 18px;
   }
-  .containerAll .container-form .container__section2 .container__container-data .container__data select {
+  .container .container__form .container__section2 .container__container-data .container__data select {
     height: 30px;
   }
 }

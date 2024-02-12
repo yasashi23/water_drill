@@ -1,4 +1,2 @@
-
 permissionToken()
 getDataCompletion()
-// auth();

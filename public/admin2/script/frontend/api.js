@@ -4,6 +4,22 @@ function verifiedPage(status) {
         window.location.href = "/login/admin2";
     }
 }
+async function postData(url,dt){
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                "Content-Type": 'application/json'
+            },
+            body:dt
+        });
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+    }
+}
 
 async function getData(url) {
     try {
@@ -15,6 +31,8 @@ async function getData(url) {
         throw error;
     }
 }
+
+
 
 async function authToken(url, token) {
     try {
@@ -34,7 +52,7 @@ async function authToken(url, token) {
 
 async function processData() {
     try {
-        const result = await getData(`${host}/admin1Read`);
+        const result = await getData(`${host}/db/admin1Read`);
         result.forEach(item => {
             const { customer_name: name, well_number: num, well_group: progress } = item;
             appendElem(num, name, progress);
@@ -64,3 +82,19 @@ async function permissionToken() {
         console.error("Error fetching permission token:", error);
     }
 }
+function serializeFormData(form) {
+    var formData = new FormData(form);
+    var serializedData = {};
+    for (var [name, value] of formData) {
+      if (serializedData[name]) {
+        if (!Array.isArray(serializedData[name])) {
+          serializedData[name] = [serializedData[name]];
+        }
+        serializedData[name].push(value);
+      } else {
+        serializedData[name] = value;
+      }
+    }
+    return serializedData;
+  }
+  

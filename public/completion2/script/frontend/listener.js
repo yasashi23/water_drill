@@ -1,2 +1,2 @@
-
 permissionToken()
+getDataCompletion()

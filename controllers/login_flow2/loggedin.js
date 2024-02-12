@@ -5,6 +5,7 @@ const { promisify } = require("util");
 
 
 exports.isLoggedIn_admin2 = async (req,res,next)=>{
+    console.log("isLoggedIn_admin2")
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
     if(token == null) {
@@ -22,10 +23,12 @@ exports.isLoggedIn_admin2 = async (req,res,next)=>{
     })
 }
 
+
 exports.getUsers_admin2 = async(req,res)=>{
+    console.log("getUsers_admin2")
     try{
         const {user,id} = req
-        console.log("lihat ini",req.id,req.user)
+        // console.log("lihat ini",req.id,req.user)
         res.json({id,user,msg:"verified"})
     }catch(err){
         console.error("errors nih",err)
@@ -33,9 +36,11 @@ exports.getUsers_admin2 = async(req,res)=>{
 }
 
 exports.refreshToken_admin2 = async (req,res) =>{
+    console.log("refreshToken_admin2")
     try{
         const token = req.cookies.userSave
         const[users] = await pool.pool.execute(`select * from login_user where token=("${token}") AND page="admin2"`)
+        // console.log("refresh Token",token)
         if(users.length==0){
             return res.json({msg:"error"})
         }
@@ -47,10 +52,10 @@ exports.refreshToken_admin2 = async (req,res) =>{
                     expiresIn:process.env.JWT_ACCESS_TOKEN
                 })
                 if(decode.id!==id){
-                    console.log("BEDA CUYY")
+                    // console.log("BEDA CUYY")
                 }else{
     
-                    console.log("new Token",decode)
+                    // console.log("new Token",decode)
                 }
                 res.json({token:accessToken})
             })
@@ -63,3 +68,5 @@ exports.refreshToken_admin2 = async (req,res) =>{
     }
 
 }
+
+

@@ -13,10 +13,6 @@ function changeElement(data){
     container_number.textContent = num
     
     const{bits,casing,daily_consumption,drill_bits,driller_user,hammers,inches,inventory,reamer,tricone_bits,various} = data
-
-
-
-
     // meter driller
     elementNumber(driller_user[0].meters_drilled,total_depth)
 

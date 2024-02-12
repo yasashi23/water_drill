@@ -14,7 +14,7 @@ const {inputInformation} = require('../public/input-information/script/script')
 
 
 // controllers
-const {isLoggedIn_admin1,isLoggedIn_admin1_completion} = require("../controllers/login_flow1/loggedin_2")
+const {isLoggedIn_admin1,isLoggedIn_admin1_completion} = require("../controllers/login_flow1/loggedin")
 const {isLoggedIn_admin2} = require("../controllers/login_flow2/loggedin")
 const {isLoggedIn_driller} = require("../controllers/login_flow3/loggedin")
 const {admin1Post} = require('../controllers/create')
@@ -25,8 +25,8 @@ const {dataAdmin1,completionRead,checkData} = require('../controllers/read')
 // Login flow 1
 router.get('/login/admin1',loginAdmin1)
 router.get('/admin1',isLoggedIn_admin1,admin1)
-router.get('/completion1/',isLoggedIn_admin1,completion1)
 router.get('/input-information',isLoggedIn_admin1,inputInformation)
+router.get('/completion1/',isLoggedIn_admin1,completion1)
 
 // Login FLow 2
 router.get('/login/admin2',loginAdmin2)

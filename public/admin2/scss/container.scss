@@ -37,8 +37,8 @@ $fU:18px;
 
 
 @media only screen and (max-width:755px){
-    .containerAll{
-        .container-form{
+    .container{
+        .container__form{
 
             @import "responsive/section1/section1.scss";
             @import "responsive/section2/section2.scss";

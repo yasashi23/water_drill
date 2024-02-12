@@ -5,6 +5,7 @@ const { promisify } = require("util");
 
 
 exports.isLoggedIn_admin1 = async (req,res,next)=>{
+    console.log("isLoggedIn_admin1")
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
     if(token == null) {
@@ -18,18 +19,16 @@ exports.isLoggedIn_admin1 = async (req,res,next)=>{
         }
             req.id = decode.id
             req.user = decode.user
-    // console.log("isLoggedIn 1")
-
             next()
     })
 }
 
 
 exports.getUsers_admin1 = async(req,res)=>{
-    console.log("getUseradmin1")
+    console.log("getUsers_admin1")
     try{
         const {user,id} = req
-        console.log("lihat ini",req.id,req.user)
+        // console.log("lihat ini",req.id,req.user)
         res.json({id,user,msg:"verified"})
     }catch(err){
         console.error("errors nih",err)
@@ -37,11 +36,11 @@ exports.getUsers_admin1 = async(req,res)=>{
 }
 
 exports.refreshToken_admin1 = async (req,res) =>{
-    console.log("refreshTOken 1 ")
+    console.log("refreshToken_admin1")
     try{
         const token = req.cookies.userSave
         const[users] = await pool.pool.execute(`select * from login_user where token=("${token}") AND page="admin1"`)
-        console.log("refresh Token",token)
+        // console.log("refresh Token",token)
         if(users.length==0){
             return res.json({msg:"error"})
         }
