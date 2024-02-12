@@ -52,7 +52,7 @@ const submitBtn= async() => {
   }
   function onClick(e){
     const [dataName,dataNum] = [e.getAttribute("dataName"),e.getAttribute("dataNum")]
-    const url = `${host}/completion1/${dataName}-${dataNum}`
+    const url = `${host}/completion1/?user=${dataName}&num=${dataNum}`
     // const url = `${host}/completion1`
 
 

@@ -1,3 +1,4 @@
 
 permissionToken()
+getDataCompletion()
 // auth();

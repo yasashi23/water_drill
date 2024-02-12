@@ -1,7 +1,7 @@
 GET http://localhost:3000/auth/user
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzA3NDg4NzI0LCJleHAiOjE3MDc0ODg5NjR9.sdXxElGBTOWSOD8OVA5be1kw8E90TQNBLRx7ewSemDM
 ###
-POST http://localhost:3000/auth/login
+POST http://localhost:3000/auth/login_admin1
 Content-Type: application/json
 
 {
@@ -12,6 +12,12 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/auth/token
+
+###
+GET http://localhost:3000/auth/testing
+
+###
+GET http://localhost:3000/completion1/
 
 
 
@@ -56,11 +62,11 @@ Content-Type: application/json
 GET http://localhost:3000/db/earnInput
 
 ### edit di page information
-POST http://localhost:3000/db/earnEdit1
+POST http://localhost:3000/db/earnEdit13
 Content-Type: application/json
 
 {
-    "driller":"jothane",
+    "driller":"jothanwwe",
     "assistant":"silvio alemua",
     "earn_driller":"50",
     "earn_assistant":"20"

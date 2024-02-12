@@ -6,10 +6,9 @@ navbar_information.addEventListener("click",()=>navbarsClick("information"))
 
 // multiple listener
 // editListData.forEach(loopEditListData)
-input_post_btn.addEventListener("click",postDataList)
+input_post_btn.addEventListener("click",addNewDataList)
 
 document.addEventListener('DOMContentLoaded',listenerLoad)
 
 // fetch api
 permissionToken()
-informationData()

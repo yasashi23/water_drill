@@ -5,25 +5,16 @@ function clickToClose(a){
 function clickToEdit(i){
     addOffClass("")
     listData = i.parentNode.parentNode.querySelectorAll("td")
-    // listData[0].getAttribute("data-id")
   }
   
-async function clickToUpdate(a){
+function clickToUpdate(a){
     addOffClass("off")
-    const i = listData[0].getAttribute("data-id")
-    const link = `${host}/db/earnEdit${i}`
+    const i = numberOfDataList
     const dataform = serializeFormData(updateForm)
-
-    try{
-      const data = await postData(link,JSON.stringify(dataform))
-      listData[0].querySelector("span:first-child").innerHTML = dataform.driller
-      listData[0].querySelector("span:last-child").innerHTML = dataform.assistant
-      listData[1].querySelector("span:first-child").innerHTML = '$'+dataform.earn_driller
-      listData[1].querySelector("span:last-child").innerHTML = '$'+dataform.earn_assistant
-      console.log(data)
-    }catch(er){
-      console.error(er)
-    }
+    listData[0].querySelector("span:first-child").innerHTML = dataform.driller
+    listData[0].querySelector("span:last-child").innerHTML = dataform.assistants
+    listData[1].querySelector("span:first-child").innerHTML = '$'+dataform.earn_driller
+    listData[1].querySelector("span:last-child").innerHTML = '$'+dataform.earn_assistant
   }
   
 // functions
@@ -59,40 +50,18 @@ function addOffClass(a){
       body_input.setAttribute("class","container__body-input off")
     }
   }
-
-async function postDataList(){
-  const dataFormInput = serializeFormData(input_form)
-  const link = `${host}/db/earnInput`
-  try{
-    const data = await postData(link,JSON.stringify(dataFormInput))
-    console.log(data)
-  }catch(err){
-    console.error(err)
-  }
-}
-async function informationData(){
-  try{
-    const data = await getData(`${host}/db/earnInput`)
-    data.forEach(el => {
-      const{id,driller,assistant,earn_assistant,earn_driller}=el
-      addNewDataList(id,driller,assistant,earn_assistant,earn_driller)
-    });
-  }catch(err){
-    console.error(err)
-  }
-}
-
-  // /db/earnInput
-  function addNewDataList(id,driller,assistant,earn_assistant,earn_driller){
+  function addNewDataList(){
+    const dataFormInput = serializeFormData(input_form)
+    console.log(dataFormInput)
     const element = `            
     <tr>
-      <td data-id="${id}">
-        <span>${driller}</span><br>
-        <span>${assistant}</span>
+      <td>
+        <span>${dataFormInput.driller}</span><br>
+        <span>${dataFormInput.assistants}</span>
       </td>
-      <td data-id="${id}">
-        <span>$${earn_driller}</span><br>
-        <span>$${earn_assistant}</span>
+      <td>
+        <span>$${dataFormInput.earn_driller}</span><br>
+        <span>$${dataFormInput.earn_assistan}</span>
       </td>
       <td><u class="container__edit-data" onclick="clickToEdit(this)">edit</u></td>
   </tr>`
