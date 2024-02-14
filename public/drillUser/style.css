@@ -109,17 +109,17 @@
 .container .container__form .container__right-side .container__inventory table tr td {
   padding-right: 20px;
 }
-.container .container__form .container__right-side .completion h2 {
+.container .container__form .container__right-side .container__completion h2 {
   text-align: center;
   padding-top: 20px;
 }
-.container .container__form .container__right-side .completion table {
+.container .container__form .container__right-side .container__completion table {
   width: 100%;
 }
-.container .container__form .container__right-side .completion table tr td:nth-child(1) {
+.container .container__form .container__right-side .container__completion table tr td:nth-child(1) {
   width: 70%;
 }
-.container .container__form .container__right-side .completion table tr td:nth-child(2) {
+.container .container__form .container__right-side .container__completion table tr td:nth-child(2) {
   width: 30%;
   font-weight: bold;
 }

@@ -14,4 +14,3 @@ const data_list = body_information.querySelector(".container__data .container__d
 let listData
 let numberOfDataList
 let tokenCode
-const host = "http://localhost:3000"

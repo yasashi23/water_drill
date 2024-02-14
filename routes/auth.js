@@ -13,17 +13,12 @@ const {isLoggedIn_driller, getUsers_driller,refreshToken_driller} = require('../
 
 
 
-const testing = async(req,res)=>{
-    console.log("masuk")
-}
-
-
 // Login Flow 1
 router.post('/login_admin1',authLogin_admin1)
 router.get('/token_admin1',refreshToken_admin1)
 router.get('/user_admin1',isLoggedIn_admin1,getUsers_admin1)
 // Testing
-router.get('/testing',testing)
+// router.get('/testing',testing)
 
 
 

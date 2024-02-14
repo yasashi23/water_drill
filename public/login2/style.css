@@ -51,4 +51,17 @@
   background-color: transparent;
 }
 
+@media only screen and (max-width: 500px) {
+  .login .login__container {
+    padding: 30px;
+  }
+  .login .login__container .login__form .login__user .login__label {
+    font-size: 14px;
+  }
+  .login .login__container .login__form .login__user .login__input {
+    width: 200px;
+    height: 20px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

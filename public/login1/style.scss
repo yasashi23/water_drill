@@ -11,4 +11,8 @@ $brand: #29957D;
 
 @import 'scss/desktop/container.scss';
 @import 'scss/tablet/container.scss';
-@import 'scss/mobile/container.scss';
+
+@media only screen and (max-width:500px){
+
+    @import 'scss/mobile/container.scss';
+}

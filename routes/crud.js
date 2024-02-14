@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
-const {admin1Post,inputEarn} = require('../controllers/create')
+const {admin1Post,inputEarn,postDriller} = require('../controllers/create')
 
-const {dataAdmin1,completionRead,checkData,getIdInput,getInformationList} = require('../controllers/read')
+const {dataAdmin1,completionRead,getIdInput,getInformationList} = require('../controllers/read')
 
 const {editInformation} = require('../controllers/update')
 
@@ -15,7 +15,7 @@ router.get('/admin1Read',dataAdmin1)
 router.post('/admin1Post',admin1Post)
 
 router.get('/completionRead/:user-:num',completionRead)
-router.post('/checkData',checkData)
+router.post('/postDriller',postDriller)
 
 
 // input Page

@@ -32,6 +32,23 @@ async function authToken(url, token) {
     }
 }
 
+async function postData(url, dt) {
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(dt)
+        });
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+    }
+}
+
 
 async function auth() {
     try {

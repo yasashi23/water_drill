@@ -15,11 +15,14 @@ function changeElement(data){
     const{bits,casing,daily_consumption,drill_bits,driller_user,hammers,inches,inventory,reamer,tricone_bits,various} = data
     // meter driller
     elementNumber(driller_user[0].meters_drilled,total_depth)
+    // console.log(driller_user[0],total_depth)
 
     // Cost Table
 
     const {diesel_liters,engine_oil,grease_kg} = spreateData(daily_consumption) //for daily Consumption
     totalCost(nullToNumber(diesel_liters),nullToNumber(engine_oil),nullToNumber(grease_kg))
+    profit()
+    console.log(profit_earnings,profit_total_cost,profit_profit)
 }
 
 
@@ -29,11 +32,12 @@ function spreateData(b){
 }
 
 function elementNumber(a,elem){
+    console.log(a,elem)
     if(a === null){
         elem.textContent = 0
         // console.log(a)
     }else{
-        elem.textContent = 0
+        elem.textContent = a
     }
 }
 
@@ -41,6 +45,12 @@ function totalCost(diesel,engine,grease){
     sumCost(diesel,perliter_diesel,total_liter_diesel,total_cost_diesel)
     sumCost(engine,perliter_engine,total_liter_engine,total_cost_engine)
     sumCost(grease,perliter_grease,total_liter_grease,total_cost_grease)
+}
+
+
+function profit(){
+    profit_total_cost.textContent = `${Number(total_cost_diesel.textContent)+Number(total_cost_engine.textContent)+Number(total_cost_grease.textContent)}`
+    profit_profit.textContent = `${Number(profit_earnings.textContent)-Number(profit_total_cost.textContent)}`
 
 }
 

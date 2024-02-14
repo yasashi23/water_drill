@@ -19,6 +19,7 @@ const {isLoggedIn_admin2} = require("../controllers/login_flow2/loggedin")
 const {isLoggedIn_driller} = require("../controllers/login_flow3/loggedin")
 const {admin1Post} = require('../controllers/create')
 const {dataAdmin1,completionRead,checkData} = require('../controllers/read')
+const {editHost} = require('../controllers/editHost')
 
 
 
@@ -39,7 +40,8 @@ router.get('/login/driller',loginDriller)
 router.get('/driller',isLoggedIn_driller,drillerUser)
 
 
-
+// edit variable host in every folder
+router.post('/editHost',editHost)
 
 
 module.exports = router
