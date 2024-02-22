@@ -1,0 +1,19 @@
+.container__inventory{
+    table{
+        tr{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            td{
+                width: 150px;
+                input{
+                    width: 100%;
+                }
+            }
+            td{
+                padding-right: 20px;
+            }
+        }
+    }
+}

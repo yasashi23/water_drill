@@ -65,3 +65,13 @@ exports.getInformationList = async(req,res) =>{
         console.error(err)
      }
 }
+
+exports.getDataDriller = async(req,res) => {
+  const sql = "select * from admin_data1"
+  try{
+    const result = await pool.pool.query(sql)
+    res.json(result[0])
+  }catch(er){
+    res.json(er)
+  }
+}

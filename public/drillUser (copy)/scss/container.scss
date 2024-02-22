@@ -1,0 +1,124 @@
+$btn : #29957D;
+
+@mixin side($left:0px,$right:0px) {
+    width: 470px;
+    padding-right: $right;
+    padding-left: $left;
+    box-sizing: border-box;
+  }
+
+  @mixin sideTab1($left:0px,$right:0px) {
+    width: 410px;
+    // 8px
+    padding-right: $right;
+    padding-left: $left;
+    box-sizing: border-box;
+  }
+
+  @mixin sideMobile1($left:0px,$right:0px) {
+    width: 400px;
+    // 8px
+    padding-right: $right;
+    padding-left: $left;
+    box-sizing: border-box;
+  }
+
+  @mixin sideMobile2($left:0px,$right:0px) {
+    width: 100%;
+    // 8px
+    padding-right: $right;
+    padding-left: $left;
+    box-sizing: border-box;
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+
+    .container__form{
+        display: flex;
+        width: 100%;
+        // align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        gap: 50px;
+        input{
+            height: 30px;
+            padding-left: 5px;
+            box-sizing: border-box;
+        }
+        select{
+            height: 31px;
+        }
+
+        table{
+            border-collapse: separate; 
+            border-spacing: 0 20px;
+        }
+
+        @import 'leftSide/leftSide.scss';
+        @import 'rightSide/rightSide.scss';
+    }   
+}
+
+@media only screen  and (min-width:876px) and (max-width: 996px){
+    .container{
+        .container__form{
+
+            @import 'responsive/tab/leftSide/leftSide.scss';
+            @import 'responsive/tab/rightSide/rightSide.scss';
+        }
+    }
+}
+
+@media only screen and (max-width: 875px){
+    .container{
+        .container__form{
+            flex-wrap: wrap;
+            gap: 50px;
+            @import 'responsive/mob/leftSide/leftSide.scss';
+            @import 'responsive/mob/rightSide/rightSide.scss';
+        }
+    }
+}
+
+@media only screen and (max-width: 440px){
+    .container{
+        .container__form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+
+            tr{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                justify-content: flex-start;
+                // gap: 20px;
+                td{
+                    width: 100%;
+                    padding-right: 0px !important;
+                    input{
+                        width: 100%;
+                    }
+                }
+            }
+
+            @import 'responsive/mob2/leftSide/leftSide.scss';
+            @import 'responsive/mob2/rightSide/rightSide.scss';
+        }
+    }
+}

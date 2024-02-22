@@ -3,7 +3,7 @@ const router = express.Router()
 
 const {admin1Post,inputEarn,postDriller} = require('../controllers/create')
 
-const {dataAdmin1,completionRead,getIdInput,getInformationList} = require('../controllers/read')
+const {dataAdmin1,completionRead,getIdInput,getInformationList,getDataDriller} = require('../controllers/read')
 
 const {editInformation} = require('../controllers/update')
 
@@ -17,6 +17,8 @@ router.post('/admin1Post',admin1Post)
 router.get('/completionRead/:user-:num',completionRead)
 router.post('/postDriller',postDriller)
 
+// DRILLER GET driller Number and customer name
+router.get('/getDataDriller',getDataDriller)
 
 // input Page
 router.post('/earnInput',inputEarn,getIdInput)

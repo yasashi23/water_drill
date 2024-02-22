@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.containerAll {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.containerAll .container-form {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 50px;
+}
+.containerAll .container-form input {
+  height: 30px;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.containerAll .container-form select {
+  height: 31px;
+}
+.containerAll .container-form table {
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+.containerAll .container-form .left-side {
+  width: 470px;
+  padding-right: 0px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+.containerAll .container-form .left-side .bits table tr td input {
+  width: 90px;
+}
+.containerAll .container-form .left-side .bits table tr td:first-child, .containerAll .container-form .left-side .bits table tr td:nth-child(2) {
+  padding-right: 20px;
+}
+.containerAll .container-form .left-side .driller-bits table tr > td {
+  padding-right: 20px;
+}
+.containerAll .container-form .left-side .driller-user table tr:nth-child(2) > td {
+  padding-right: 20px;
+}
+.containerAll .container-form .left-side .driller-user table #driller-user-input {
+  width: 100%;
+}
+.containerAll .container-form .left-side .driller-user table #driller-user-rotary-number-input {
+  width: 50px;
+  text-align: center;
+}
+.containerAll .container-form .left-side .tricone-bits table tr td input {
+  width: 90px;
+}
+.containerAll .container-form .left-side .tricone-bits table tr td:first-child, .containerAll .container-form .left-side .tricone-bits table tr td:nth-child(2) {
+  padding-right: 20px;
+}
+.containerAll .container-form .left-side .various table tr textarea {
+  width: 300px;
+  height: 141px;
+}
+.containerAll .container-form .right-side {
+  width: 470px;
+  padding-right: 16px;
+  padding-left: 0px;
+  box-sizing: border-box;
+}
+.containerAll .container-form .right-side .completion h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+.containerAll .container-form .right-side .completion table {
+  width: 100%;
+}
+.containerAll .container-form .right-side .completion table tr td:nth-child(1) {
+  width: 70%;
+}
+.containerAll .container-form .right-side .completion table tr td:nth-child(2) {
+  width: 30%;
+  font-weight: bold;
+}
+.containerAll .container-form .right-side .daily-consumption table tr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+.containerAll .container-form .right-side .daily-consumption table tr td {
+  width: 120px;
+}
+.containerAll .container-form .right-side .daily-consumption table tr td input {
+  width: 100%;
+}
+.containerAll .container-form .right-side .daily-consumption table tr td {
+  padding-right: 0px;
+}
+.containerAll .container-form .right-side .hammers table tr td input {
+  width: 90px;
+}
+.containerAll .container-form .right-side .hammers table tr td:first-child, .containerAll .container-form .right-side .hammers table tr td:nth-child(2) {
+  padding-right: 20px;
+}
+.containerAll .container-form .right-side .inventory table tr {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.containerAll .container-form .right-side .inventory table tr td {
+  width: 150px;
+}
+.containerAll .container-form .right-side .inventory table tr td input {
+  width: 100%;
+}
+.containerAll .container-form .right-side .inventory table tr td {
+  padding-right: 20px;
+}
+.containerAll .container-form .right-side .reamer table tr td input {
+  width: 90px;
+}
+.containerAll .container-form .right-side .reamer table tr td:first-child, .containerAll .container-form .right-side .reamer table tr td:nth-child(2) {
+  padding-right: 20px;
+}
+.containerAll .container-form .right-side .btn-submit {
+  width: 100%;
+  background-color: #5CC974;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+}
+.containerAll .container-form .right-side .btn-submit:hover {
+  background-color: transparent;
+  color: #5CC974;
+  border: 1px solid #5CC974;
+}
+
+@media only screen and (min-width: 876px) and (max-width: 996px) {
+  .containerAll .container-form .left-side {
+    width: 410px;
+    padding-right: 0px;
+    padding-left: 8px;
+    box-sizing: border-box;
+  }
+  .containerAll .container-form .right-side {
+    width: 410px;
+    padding-right: 8px;
+    padding-left: 0px;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (max-width: 875px) {
+  .containerAll .container-form {
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .containerAll .container-form .left-side {
+    width: 400px;
+    padding-right: 8px;
+    padding-left: 8px;
+    box-sizing: border-box;
+  }
+  .containerAll .container-form .right-side {
+    width: 400px;
+    padding-right: 8px;
+    padding-left: 8px;
+    box-sizing: border-box;
+  }
+  .containerAll .container-form .right-side .daily-consumption table tr {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+  .containerAll .container-form .right-side .daily-consumption table tr td {
+    width: 150px;
+  }
+  .containerAll .container-form .right-side .daily-consumption table tr td input {
+    width: 100%;
+  }
+  .containerAll .container-form .right-side .daily-consumption table tr td {
+    padding-right: 20px;
+  }
+  .containerAll .container-form .right-side .inventory table tr {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .containerAll .container-form .right-side .inventory table tr td {
+    width: 160px;
+  }
+  .containerAll .container-form .right-side .inventory table tr td input {
+    width: 100%;
+  }
+  .containerAll .container-form .right-side .inventory table tr td {
+    padding-right: 20px;
+  }
+}
+@media only screen and (max-width: 440px) {
+  .containerAll .container-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .containerAll .container-form tr {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .containerAll .container-form tr td {
+    width: 100%;
+    padding-right: 0px !important;
+  }
+  .containerAll .container-form tr td input {
+    width: 100%;
+  }
+  .containerAll .container-form .left-side {
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;
+    box-sizing: border-box;
+  }
+  .containerAll .container-form .left-side .bits table tr td {
+    width: 120px;
+  }
+  .containerAll .container-form .left-side .bits table tr td:nth-child(2) {
+    padding: 0px 10px !important;
+  }
+  .containerAll .container-form .left-side .bits table tr td input {
+    width: 120px;
+  }
+  .containerAll .container-form .left-side .driller-bits table tr td:nth-child(2) {
+    padding-top: 15px;
+  }
+  .containerAll .container-form .left-side .driller-bits table tr > td {
+    padding-right: 0px !important;
+  }
+  .containerAll .container-form .left-side .driller-user table tr:nth-child(n+2) td {
+    padding-top: 15px;
+  }
+  .containerAll .container-form .left-side .driller-user table tr:nth-child(2) > td {
+    padding-right: 0px;
+  }
+  .containerAll .container-form .left-side .tricone-bits table tr td {
+    width: 120px;
+  }
+  .containerAll .container-form .left-side .tricone-bits table tr td:nth-child(2) {
+    padding: 0px 10px !important;
+  }
+  .containerAll .container-form .left-side .tricone-bits table tr td input {
+    width: 120px;
+  }
+  .containerAll .container-form .right-side {
+    width: 100%;
+    padding-right: 8px;
+    padding-left: 8px;
+    box-sizing: border-box;
+  }
+  .containerAll .container-form .right-side .hammers table tr td {
+    width: 120px;
+  }
+  .containerAll .container-form .right-side .hammers table tr td input {
+    width: 120px;
+  }
+  .containerAll .container-form .right-side .reamer table tr {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .containerAll .container-form .right-side .reamer table tr td {
+    width: 120px;
+  }
+  .containerAll .container-form .right-side .reamer table tr td input {
+    width: 120px;
+  }
+  .containerAll .container-form .right-side .reamer table tr td:first-child, .containerAll .container-form .right-side .reamer table tr td:nth-child(2) {
+    padding-right: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

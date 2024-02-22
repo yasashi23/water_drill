@@ -25,14 +25,15 @@
                                 <tr>
                                     <td colspan="2">
                                         <label for="driller-user-input">Driller User</label><br>
-                                        <input type="text" id="driller-user-input" name="driller-user" >
+                                        <select id="driller-user-input" name="driller-user" onchange="drillerNumber(this)">
+                                        </select>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <label for="driller-user-customer-name-input">Customer Name</label><br>
-                                        <input type="text" id="driller-user-customer-name-input" name="driller-user-customer-name-input" >
+                                        <input type="text" id="driller-user-customer-name-input" name="driller-user-customer-name-input" readonly value="john">
                                     </td>
                                     <td>
                                         <label for="driller-user-rotary-number-input">Rotary Number</label><br>

@@ -1,0 +1,12 @@
+.container__right-side{
+    @include side(0px,16px);
+    
+
+    @import 'daily-consumption.scss';
+    @import 'hammers.scss';
+    @import 'inventory.scss';
+    @import 'completion.scss';
+    @import 'reamer.scss';
+    @import 'inches.scss';
+    @import 'button.scss';
+}
