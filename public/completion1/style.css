@@ -103,5 +103,17 @@
 .container .container__profit .container__table-profit tr:last-child td {
   font-weight: 600;
 }
+.container .container__download button {
+  background-color: #29957D;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.container .container__download button:hover {
+  border: 1px solid #29957D;
+  background-color: transparent;
+  color: #29957D;
+}
 
 /*# sourceMappingURL=style.css.map */

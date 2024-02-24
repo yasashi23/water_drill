@@ -125,8 +125,26 @@ POST http://localhost:3000/editHost
 Content-Type: application/json
 
 {
-    "host":"https://48b7-2001-448a-2061-bafe-1959-4134-164b-78c9.ngrok-free.app"
+    "host":"http://localhost:3000"
 }
 
 ########### Driller user select driller number ###############
 GET http://localhost:3000/db/getDataDriller
+
+###### DOWNLOAD
+POST http://localhost:3000/db/download?page=completion1
+Content-Type: application/json
+
+{
+    "Filters":"20",
+    "Driller":"John",
+    "Assistans":"dani",
+    "Charged":"$20",
+    "Diesel_liters":"30",
+    "Engine_Oil":"90",
+    "Grease_Kg":"90",
+    "Earnings":"$200",
+    "Total_Cost":"$150",
+    "Profit":"$350"
+
+}

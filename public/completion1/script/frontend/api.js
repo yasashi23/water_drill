@@ -31,6 +31,29 @@ async function authToken(url, token) {
         throw error;
     }
 }
+
+async function downloadCsvMethod(url, dt) {
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dt)
+        });
+        
+        if (!response.ok) {
+            throw new Error('Failed to download CSV');
+        }
+
+        const csvData = await response.text()
+        return csvData;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+    }
+}
+
 async function auth() {
     try {
         // const { token } = await getData(`${host}/auth/token_admin12/${splitUrl[0]}-${splitUrl[1]}`);

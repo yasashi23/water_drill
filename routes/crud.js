@@ -6,7 +6,7 @@ const {admin1Post,inputEarn,postDriller} = require('../controllers/create')
 const {dataAdmin1,completionRead,getIdInput,getInformationList,getDataDriller} = require('../controllers/read')
 
 const {editInformation} = require('../controllers/update')
-
+const {downloadCsv,downloadCsvGet} = require('../controllers/download')
 
 
 
@@ -24,5 +24,10 @@ router.get('/getDataDriller',getDataDriller)
 router.post('/earnInput',inputEarn,getIdInput)
 router.get('/earnInput',getInformationList)
 router.post('/earnEdit:id',editInformation)
+
+// download
+router.post('/download',downloadCsv)
+router.get('/download2',downloadCsvGet)
+
 
 module.exports = router

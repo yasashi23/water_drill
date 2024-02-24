@@ -10,4 +10,18 @@
     @import 'charged/container.scss';
     @import 'cost/container.scss';
     @import 'profit/container.scss';
+    .container__download{
+        button{
+            background-color: $brand;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            &:hover{
+                border: 1px solid $brand;
+                background-color: transparent;
+                color: $brand;
+            }
+        }
+    }
 }

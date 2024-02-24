@@ -67,3 +67,37 @@ function nullToNumber(a){
         return Number(a)
     }
 }
+
+async function downloadCsv(){
+    const url = `${host}/db/download`
+    const data = {
+        Filters:returnText('.container__filters'),
+        Driller:returnText('.container__user .container__name'),
+        Assistans:returnText('.container__assistans'),
+        Charged:"$20",
+        "Diesel liters":total_liter_diesel.textContent,
+        "Engine Oil":total_liter_engine.textContent,
+        "Grease Kg":total_liter_grease.textContent,
+        Earnings:profit_earnings.textContent,
+        "Total Cost":profit_total_cost.textContent,
+        Profit:profit_profit.textContent
+    }
+
+    try {
+        const res = await downloadCsvMethod(url, data);
+        console.log(res);         
+        const blob = new Blob([res], { type: 'text/csv' });
+        const link = document.createElement('a');
+        link.href = window.URL.createObjectURL(blob);
+        link.download = `data-${data.Driller}.csv`;
+        link.click();
+    } catch (err) {
+        console.log(err);
+    }
+
+}
+
+function returnText(a){
+    const data = document.querySelector(a)
+    return `${data.textContent}`
+}
