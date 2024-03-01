@@ -21,6 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/login/admin1', express.static(path.join(__dirname, 'public', 'login1')));
 app.use('/login/admin2', express.static(path.join(__dirname, 'public', 'login2')));
 app.use('/login/driller', express.static(path.join(__dirname, 'public', 'login3')));
+app.use('/dataCompleted', express.static(path.join(__dirname, 'public', 'completed')));
+
 
 
 // app.use('/admin1', express.static(path.join(__dirname, 'public', 'admin1')));

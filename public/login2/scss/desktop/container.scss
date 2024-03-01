@@ -17,6 +17,8 @@
 
         .login__title{
             margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
         }
 
         @import 'form.scss';

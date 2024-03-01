@@ -9,7 +9,7 @@ exports.dataAdmin1 = async(req,res) =>{
 
     }catch(err){
         console.error("error:",err) 
-        res.status(500).send("terjadi kesalahan")
+        res.status(500).send("error")
     }
 }
 

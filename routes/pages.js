@@ -8,6 +8,8 @@ const {admin2} = require('../public/admin2/script/script')
 const {completion1} = require('../public/completion1/script/script')
 const {completion2} = require('../public/completion2/script/script')
 const {loginAdmin1} = require('../public/login1/script/script')
+const {dataCompleted} = require('../public/completed/script/script')
+
 const {loginAdmin2} = require('../public/login2/script/script')
 const {loginDriller} = require('../public/login3/script/script')
 const {inputInformation} = require('../public/input-information/script/script')
@@ -28,6 +30,8 @@ router.get('/login/admin1',loginAdmin1)
 router.get('/admin1',isLoggedIn_admin1,admin1)
 router.get('/input-information',isLoggedIn_admin1,inputInformation)
 router.get('/completion1/',isLoggedIn_admin1,completion1)
+router.get('/dataCompleted',isLoggedIn_admin1,dataCompleted)
+
 
 // Login FLow 2
 router.get('/login/admin2',loginAdmin2)

@@ -14,6 +14,9 @@ Content-Type: application/json
 GET http://localhost:3000/auth/token
 
 ###
+GET https://9143-2001-448a-2061-bafe-589b-2902-a60c-1a54.ngrok-free.app/db/admin1Read
+
+###
 GET http://localhost:3000/auth/testing
 
 ###
@@ -125,7 +128,7 @@ POST http://localhost:3000/editHost
 Content-Type: application/json
 
 {
-    "host":"http://localhost:3000"
+    "host":"https://9143-2001-448a-2061-bafe-589b-2902-a60c-1a54.ngrok-free.app"
 }
 
 ########### Driller user select driller number ###############
@@ -147,4 +150,12 @@ Content-Type: application/json
     "Total_Cost":"$150",
     "Profit":"$350"
 
+}
+
+###
+POST http://localhost:3000/db/adminUpdate?id=10
+Content-Type: application/json
+
+{
+    "data":"in progress"
 }

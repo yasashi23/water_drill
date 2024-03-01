@@ -5,7 +5,7 @@ const {admin1Post,inputEarn,postDriller} = require('../controllers/create')
 
 const {dataAdmin1,completionRead,getIdInput,getInformationList,getDataDriller} = require('../controllers/read')
 
-const {editInformation} = require('../controllers/update')
+const {editInformation,adminUpdate} = require('../controllers/update')
 const {downloadCsv,downloadCsvGet} = require('../controllers/download')
 
 
@@ -13,6 +13,7 @@ const {downloadCsv,downloadCsvGet} = require('../controllers/download')
 // CRUD DB system
 router.get('/admin1Read',dataAdmin1)
 router.post('/admin1Post',admin1Post)
+router.post('/adminUpdate',adminUpdate)
 
 router.get('/completionRead/:user-:num',completionRead)
 router.post('/postDriller',postDriller)
@@ -28,6 +29,8 @@ router.post('/earnEdit:id',editInformation)
 // download
 router.post('/download',downloadCsv)
 router.get('/download2',downloadCsvGet)
+
+
 
 
 module.exports = router

@@ -111,13 +111,10 @@ function authCheck() {
   }
 }
 
-function listenerLoad() {
-  if (window.location.pathname === '/input') {
-      cekAutentikasiInput();
-  }
-}
 
-// fetch
+function backButton(){
+  window.location.href = '/admin1'; 
+}
 
 
 function serializeFormData(form) {

@@ -24,6 +24,8 @@
 }
 .login .login__container .login__title {
   margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
 }
 .login .login__container .login__form {
   display: flex;
@@ -40,14 +42,14 @@
   padding-bottom: 7px;
   margin-top: 10px;
   border: none;
-  background-color: #29957D;
+  background-color: #0088B6;
   font-weight: 600;
   color: white;
   cursor: pointer;
 }
 .login .login__container .login__form .login__btn:hover {
-  border: 1px solid #29957D;
-  color: #29957D;
+  border: 1px solid #0088B6;
+  color: #0088B6;
   background-color: transparent;
 }
 

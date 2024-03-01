@@ -1,0 +1,1 @@
+submitFormBtn.addEventListener("click",clickToSubmit)

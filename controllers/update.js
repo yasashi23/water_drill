@@ -18,17 +18,15 @@ exports.editInformation = async(req,res)=>{
       })
 }
 
-const update = async(data,id)=>{
-    const set = Object.keys(data)
-  .map(key => `${key} = '${data[key]}'`)
-  .join(' AND ');
-
-    const sql = `update input_earn set ${set} where "${id}"`
+exports.adminUpdate = async(req,res)=>{
+    const {id} = req.query
+    const {data} = req.body
+    const sql = `update admin_data1 set progress = "${data}" where id=${id}`;
     pool.pool.query(sql)
-    .then(res =>{
-        res.json({msg:"success"})
-    })
-    .catch(err=>{
+    .then(resp =>{
+
+        res.json({id,data})
+    }).catch(err=>{
         res.json({err})
     })
 }

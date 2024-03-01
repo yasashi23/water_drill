@@ -1,0 +1,10 @@
+.container__section2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    @import 'search.scss';
+    @import 'data.scss';
+
+}
