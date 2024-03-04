@@ -2,7 +2,7 @@
 
 func(){
     for arg in "$@"; do
-        code $arg/style.scss
+        code $arg/index.html
     done
 }
 

@@ -42,7 +42,7 @@ function addOffClass(a){
 }
   function navbarsClick(a){
     if(a=="input"){
-      title.textContent = "Input"
+      title.textContent = "Entrada"
       navbar_information.setAttribute("class","container__information-navbar off")
       navbar_input.setAttribute("class","container__input-navbar")
 
@@ -51,7 +51,7 @@ function addOffClass(a){
 
 
     }else{
-      title.textContent = "Information"
+      title.textContent = "Información"
       navbar_information.setAttribute("class","container__information-navbar")
       navbar_input.setAttribute("class","container__input-navbar off")
 
@@ -94,7 +94,7 @@ async function informationData(){
         <span>$${earn_driller}</span><br>
         <span>$${earn_assistant}</span>
       </td>
-      <td><u class="container__edit-data" onclick="clickToEdit(this)">edit</u></td>
+      <td><u class="container__edit-data" onclick="clickToEdit(this)">editar</u></td>
   </tr>`
     data_list.innerHTML += element
   }

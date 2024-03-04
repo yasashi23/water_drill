@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.7">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+    <title>Administrator 2</title>
+</head>
+<body>
+    <div class="container">
+        <h1><span><img width="40px" src="logo.png"></span><u>Administrator User 2</u></h1>
+            <div class="container__form">
+                <form>
+
+                <div class="container__section1">
+                    <div class="container__well-number">
+                        <label for="well-number-input">Well Number</label><br>
+                        <input type="text" id="well-number-input" name="well-number" >
+                    </div>
+                    <div class="container__customer-name">
+                        <label for="customer-name-input">Customer Name</label><br>
+                        <input type="text" id="customer-name-input" name="customer-name" >
+                    </div>
+                    <div class="container__well-group">
+                        <label for="well-group-input">Well Group</label><br>
+                        <input type="text" id="well-group-input" name="well-group" >
+                        <input type="text" name="progress" value="in progress" hidden>
+                    </div>
+                    <input type="submit" id="inputSection1">
+                </div>
+                </form>
+                <div class="container__section2">
+                    <div class="container__search">
+                            <input class="search-input" type="text" placeholder="Search...">
+                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="container__container-data">
+                        <!-- <div class="container__data">
+                            <span>00000000</span>
+                            <span>john</span>
+                            <select id="driller-user-rotary-number-input" name="driller-user-rotary-number" >
+                                <option >Completed</option>
+                                <option >In Progress</option>
+                            </select>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+    </div>
+    <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
+    <script src="script/frontend/host.js"></script>
+    <script src="script/frontend/variabel.js"></script>
+    <script src="script/frontend/api.js"></script>
+    <script src="script/frontend/function.js"></script>
+    <script src="script/frontend/listener.js"></script>
+
+</body>
+</html>

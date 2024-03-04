@@ -15,9 +15,9 @@ const submitBtn= async() => {
   }
 
   function appendElem(num, name, progress,id){
-    const toBeDone = "To Be Done"
-    const progressText = "In Progress"
-    const completedText = "Completed"
+    const toBeDone = "Por Hacer"
+    const progressText = "En Progreso"
+    const completedText = "Completado"
     let option
 
     if(progress === "in progress"){

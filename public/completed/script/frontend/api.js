@@ -22,7 +22,7 @@ async function processData() {
         result.forEach(item => {
             const {id,well_number,customer_name,well_group,progress} = item;
             if(progress === 'completed') {
-                appendElem(id,well_number,customer_name,well_group);
+                appendElem(id,well_number,customer_name,progress);
                 console.log({item})
             }
         });
