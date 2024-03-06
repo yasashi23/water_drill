@@ -1,0 +1,41 @@
+.container{
+display: flex;
+flex-direction: column;
+align-items: center;
+
+@import 'information-style/desktop/container.scss';
+
+.container__back-button{
+    background-color: $brand;
+    padding: 5px 8px;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    &:active,&:hover{
+        border: 1px solid $brand;
+        background-color: transparent;
+        color: $brand;
+    }
+}
+
+}
+
+@media only screen and (max-width:600px) {
+    .container{
+
+        @import 'information-style/tablet/container.scss';
+    }
+
+}
+
+@media only screen and (max-width:450px) {
+    .container{
+
+        @import 'information-style/mobile/container.scss';
+    }
+
+}

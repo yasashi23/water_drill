@@ -1,0 +1,18 @@
+.container__data-completed{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    h1{
+        display: flex;
+        gap: 10px;
+    }
+
+    @import 'section2/container-list.scss';
+}

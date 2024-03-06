@@ -37,6 +37,8 @@ router.get('/dataCompleted',isLoggedIn_admin1,dataCompleted)
 router.get('/login/admin2',loginAdmin2)
 router.get('/admin2',isLoggedIn_admin2,admin2)
 router.get('/completion2/',isLoggedIn_admin2,completion2)
+router.get('/dataCompleted2',isLoggedIn_admin2,dataCompleted)
+
 
 
 // Login flow 3
