@@ -31,6 +31,19 @@ exports.adminUpdate = async(req,res)=>{
     })
 }
 
+exports.adminUpdateDate = async(req,res)=>{
+    const {id} = req.query
+    const {data} = req.body
+    const sql = `update admin_data1 set completion_day = "${data}" where id=${id}`;
+    pool.pool.query(sql)
+    .then(resp =>{
+
+        res.json({id,data})
+    }).catch(err=>{
+        res.json({err})
+    })
+}
+
 exports.inputCost = async(req,res)=>{
     const data = req.body
     const set = Object.keys(data)

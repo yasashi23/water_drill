@@ -2,11 +2,12 @@
 
 const submitBtn= async() => {
     const url = `${host}/db/admin1Post`
-    const data = JSON.stringify(serializeFormData(submitForm))
-    console.log(data)
-
+    const data = serializeFormData(submitForm)
+    const today = new Date().toISOString().split('T')[0];
+    data.started_day = today
+    const dataString = JSON.stringify(data)
     try{
-      const submitData = await postData(url,data)
+      const submitData = await postData(url,dataString)
       const responseData = await submitData.json()
       console.log(responseData)
     }catch(er){
@@ -80,6 +81,10 @@ async function onChange(a){
   console.log(response)
   const containerElem = a.parentElement
   if(dataProgress==="completed"){
+  const url = `${host}/db/adminUpdateDate?id=${dataId}`
+    const today = new Date().toISOString().split('T')[0];
+    const resDate = await postData(url,JSON.stringify({data:today}))
+    console.log(resDate)
     containerElem.remove()
   }
 }

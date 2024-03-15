@@ -5,7 +5,7 @@ const {admin1Post,inputEarn,postDriller} = require('../controllers/create')
 
 const {dataAdmin1,completionRead,getIdInput,getInformationList,getDataDriller,inputCostRead,searchDataCompleted} = require('../controllers/read')
 
-const {editInformation,adminUpdate,inputCost} = require('../controllers/update')
+const {editInformation,adminUpdate,inputCost,adminUpdateDate} = require('../controllers/update')
 const {deleteInformation} = require('../controllers/delete')
 
 const {downloadCsv,downloadCsvGet} = require('../controllers/download')
@@ -16,6 +16,8 @@ const {downloadCsv,downloadCsvGet} = require('../controllers/download')
 router.get('/admin1Read',dataAdmin1)
 router.post('/admin1Post',admin1Post)
 router.post('/adminUpdate',adminUpdate)
+router.post('/adminUpdateDate',adminUpdateDate)
+
 
 router.get('/completionRead/:user-:num',completionRead)
 router.post('/postDriller',postDriller)
