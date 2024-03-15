@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 22, 2024 at 02:56 AM
+-- Generation Time: Mar 15, 2024 at 11:25 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -41,13 +41,17 @@ CREATE TABLE `admin_data1` (
 
 INSERT INTO `admin_data1` (`id`, `well_number`, `customer_name`, `well_group`, `progress`) VALUES
 (10, '00001', 'john', '', 'completed'),
-(11, '00002', 'udin', '', 'completed'),
-(12, '00003', 'hana aren', '', 'completed'),
-(13, '00004', 'bambang', 'in progress', 'in progress'),
-(14, '00005', 'yadi', 'in progress', 'in progress'),
-(15, '00006', 'martin', 'in progress', 'in progress'),
+(11, '00002', 'udin', '', 'to be done'),
+(12, '00003', 'hana aren', '', 'in progress'),
+(13, '00004', 'bambang', '', 'completed'),
+(14, '00005', 'yadi', '', 'completed'),
+(15, '00006', 'martin', '', 'completed'),
 (16, '1000', 'John', '', 'in progress'),
-(17, 'Yamil', '00002', '', 'in progress');
+(17, 'Yamil', '00002', '', 'completed'),
+(18, '00007', 'hani', '', 'completed'),
+(19, '00008', 'huna', '', 'completed'),
+(20, '10000007', 'AA', '1', 'completed'),
+(21, '00009', 'johan', '6', 'in progress');
 
 -- --------------------------------------------------------
 
@@ -75,7 +79,11 @@ INSERT INTO `bits` (`id`, `driller_user`, `customer_name`, `quantity`, `measurem
 (12, '00005', 'yadi', '', ''),
 (13, '00006', 'martin', NULL, NULL),
 (14, '1000', 'John', '', ''),
-(15, 'Yamil', '00002', NULL, NULL);
+(15, 'Yamil', '00002', '3', ''),
+(16, '00007', 'hani', NULL, NULL),
+(17, '00008', 'huna', NULL, NULL),
+(18, '10000007', 'AA', NULL, NULL),
+(19, '00009', 'johan', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -102,7 +110,11 @@ INSERT INTO `casing` (`id`, `customer_name`, `driller_user`, `casing`) VALUES
 (12, 'yadi', '00005', ''),
 (13, 'martin', '00006', NULL),
 (14, 'John', '1000', 'W'),
-(15, '00002', 'Yamil', NULL);
+(15, '00002', 'Yamil', '4'),
+(16, 'hani', '00007', NULL),
+(17, 'huna', '00008', NULL),
+(18, 'AA', '10000007', NULL),
+(19, 'johan', '00009', NULL);
 
 -- --------------------------------------------------------
 
@@ -135,7 +147,11 @@ INSERT INTO `daily_consumption` (`id`, `customer_name`, `driller_user`, `diesel_
 (12, 'yadi', '00005', '23', '24', '10', '', '', '', ''),
 (13, 'martin', '00006', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (14, 'John', '1000', '', '', '', '', '', '', ''),
-(15, '00002', 'Yamil', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(15, '00002', 'Yamil', '200', '20', '10', '20', '5', '20', '10'),
+(16, 'hani', '00007', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, 'huna', '00008', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(18, 'AA', '10000007', NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(19, 'johan', '00009', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -167,7 +183,11 @@ INSERT INTO `driller_user` (`driller_user`, `customer_name`, `rotary_num`, `addr
 ('00005', 'yadi', '3', '', '', '90', '', '', 12),
 ('00006', 'martin', NULL, NULL, NULL, NULL, NULL, NULL, 13),
 ('1000', 'John', '3', 'AVCHIOSS', '', 'NaN', '', 'WD', 14),
-('Yamil', '00002', NULL, NULL, NULL, NULL, NULL, NULL, 15);
+('Yamil', '00002', '3', 'Av chiossi', '', '23', 'D', '3', 15),
+('00007', 'hani', NULL, NULL, NULL, NULL, NULL, NULL, 16),
+('00008', 'huna', NULL, NULL, NULL, NULL, NULL, NULL, 17),
+('10000007', 'AA', NULL, NULL, NULL, NULL, NULL, NULL, 18),
+('00009', 'johan', NULL, NULL, NULL, NULL, NULL, NULL, 19);
 
 -- --------------------------------------------------------
 
@@ -195,7 +215,11 @@ INSERT INTO `drill_bits` (`id`, `customer_name`, `driller_user`, `type`, `usage_
 (12, 'yadi', '00005', '', ''),
 (13, 'martin', '00006', NULL, NULL),
 (14, 'John', '1000', '', ''),
-(15, '00002', 'Yamil', NULL, NULL);
+(15, '00002', 'Yamil', '3', '3'),
+(16, 'hani', '00007', NULL, NULL),
+(17, 'huna', '00008', NULL, NULL),
+(18, 'AA', '10000007', NULL, NULL),
+(19, 'johan', '00009', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -223,7 +247,11 @@ INSERT INTO `hammers` (`id`, `customer_name`, `driller_user`, `type`, `usage_hou
 (12, 'yadi', '00005', '5 Inches', ''),
 (13, 'martin', '00006', NULL, NULL),
 (14, 'John', '1000', '5 Inches', ''),
-(15, '00002', 'Yamil', NULL, NULL);
+(15, '00002', 'Yamil', '5 Pulgadas', '1'),
+(16, 'hani', '00007', NULL, NULL),
+(17, 'huna', '00008', NULL, NULL),
+(18, 'AA', '10000007', NULL, NULL),
+(19, 'johan', '00009', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -250,7 +278,34 @@ INSERT INTO `inches` (`id`, `customer_name`, `driller_user`, `inches`) VALUES
 (12, 'yadi', '00005', ''),
 (13, 'martin', '00006', NULL),
 (14, 'John', '1000', ''),
-(15, '00002', 'Yamil', NULL);
+(15, '00002', 'Yamil', '8'),
+(16, 'hani', '00007', NULL),
+(17, 'huna', '00008', NULL),
+(18, 'AA', '10000007', NULL),
+(19, 'johan', '00009', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `input_cost`
+--
+
+CREATE TABLE `input_cost` (
+  `id` int(11) NOT NULL,
+  `diesel_liters` varchar(255) DEFAULT NULL,
+  `engine_oil` varchar(255) DEFAULT NULL,
+  `grease_kg` varchar(255) DEFAULT NULL,
+  `bentonite_km` varchar(255) DEFAULT NULL,
+  `cmc_km` varchar(255) DEFAULT NULL,
+  `hammers_oil` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `input_cost`
+--
+
+INSERT INTO `input_cost` (`id`, `diesel_liters`, `engine_oil`, `grease_kg`, `bentonite_km`, `cmc_km`, `hammers_oil`) VALUES
+(1, '20', '20', '0', '0', '0', '30');
 
 -- --------------------------------------------------------
 
@@ -262,9 +317,6 @@ CREATE TABLE `input_earn` (
   `id` int(11) NOT NULL,
   `driller` varchar(255) DEFAULT NULL,
   `assistant` varchar(255) DEFAULT NULL,
-  `diesel_liters` varchar(255) DEFAULT NULL,
-  `engine_oil` varchar(255) DEFAULT NULL,
-  `grease_kg` varchar(255) DEFAULT NULL,
   `earn_driller` varchar(255) DEFAULT NULL,
   `earn_assistant` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -273,15 +325,15 @@ CREATE TABLE `input_earn` (
 -- Dumping data for table `input_earn`
 --
 
-INSERT INTO `input_earn` (`id`, `driller`, `assistant`, `diesel_liters`, `engine_oil`, `grease_kg`, `earn_driller`, `earn_assistant`) VALUES
-(1, 'Jonathan Marcos', 'Silvio Alem', '10', '10', '10', '10', '9'),
-(2, 'Jonathan Marcos', 'Silvio Alem', '13', '11', '9', '21', '21'),
-(9, 'Jonathan Marcos', 'Silvio Alem', '133', '111', '91', '43', '43'),
-(10, 'Eduardo Garrel', 'Silvio Alem', '133', '111', '91', '21', '21'),
-(11, 'Jonathan Marcos', 'Silvio Alem', '21', '21', '21', '21', '21'),
-(12, 'jothane', 'silvio alemua', '', '', '', '50', '20'),
-(13, 'jothanwwe', 'silvio alemua', '', '', '', '50', '20'),
-(14, 'Jonathan Marcos', 'Silvio Alem', '', '', '', '1200', '120');
+INSERT INTO `input_earn` (`id`, `driller`, `assistant`, `earn_driller`, `earn_assistant`) VALUES
+(1, 'ranklin Giménez', 'Silvio Alem', '', ''),
+(2, 'Jonathan Marcos', 'Silvio Alem', '21', '21'),
+(9, 'Jonathan Marcos', 'Silvio Alem', '43', '43'),
+(10, 'Eduardo Garrel', 'Silvio Alem', '21', '21'),
+(11, 'Jonathan Marcos', 'Silvio Alem', '21', '21'),
+(12, 'jothane', 'silvio alemua', '50', '20'),
+(13, 'jothanwwe', 'silvio alemua', '50', '20'),
+(14, 'Jonathan Marcos', 'Silvio Alem', '1200', '120');
 
 -- --------------------------------------------------------
 
@@ -313,7 +365,11 @@ INSERT INTO `inventory` (`id`, `customer_name`, `driller_user`, `diesel_liters`,
 (12, 'yadi', '00005', '', '', '', '', '', ''),
 (13, 'martin', '00006', NULL, NULL, NULL, NULL, NULL, NULL),
 (14, 'John', '1000', '', '', '', '', '', ''),
-(15, '00002', 'Yamil', NULL, NULL, NULL, NULL, NULL, NULL);
+(15, '00002', 'Yamil', '1', '1', '1', '1', '1', '1'),
+(16, 'hani', '00007', NULL, NULL, NULL, NULL, NULL, NULL),
+(17, 'huna', '00008', NULL, NULL, NULL, NULL, NULL, NULL),
+(18, 'AA', '10000007', NULL, NULL, NULL, NULL, NULL, NULL),
+(19, 'johan', '00009', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -334,11 +390,11 @@ CREATE TABLE `login_user` (
 --
 
 INSERT INTO `login_user` (`id`, `user`, `password`, `page`, `token`) VALUES
-(1, 'udin', 'u123', 'admin1', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InVkaW4iLCJwYWdlIjoiYWRtaW4xIiwiaWF0IjoxNzA4MzUyOTgyLCJleHAiOjE3MDgzNTMyMjJ9.xIylkJ9f0wTXUg0vzbu_7wdabqWcTdECHZQYZi20SjE'),
-(2, 'john', 'j123', 'admin2', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlciI6ImpvaG4iLCJwYWdlIjoiYWRtaW4yIiwiaWF0IjoxNzA4MzUzMTgyLCJleHAiOjE3MDgzNTM0MjJ9.LWYW7qZMPYoAgfWiLoI00ux2XC0Q4nGFUGkattH_-K4'),
+(1, 'udin', 'u123', 'admin1', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InVkaW4iLCJwYWdlIjoiYWRtaW4xIiwiaWF0IjoxNzEwNDk3Mjc5LCJleHAiOjE3MTA0OTc1MTl9.2dkwHtYFaN32YuTcqGi6Duq9beRJOXlSsse_EjuRGwU'),
+(2, 'john', 'j123', 'admin2', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlciI6ImpvaG4iLCJwYWdlIjoiYWRtaW4yIiwiaWF0IjoxNzEwNDk2MTIyLCJleHAiOjE3MTA0OTYzNjJ9.1T4v7VZzSfAs1ugZq9ttjR88Q5jXQxUvBzQYDxVPwDo'),
 (3, 'steve', 's123', 'admin1', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlciI6InN0ZXZlIiwicGFnZSI6ImFkbWluMSIsImlhdCI6MTcwNzYxNzU2NywiZXhwIjoxNzA3NjE3ODA3fQ.pBBS3gpf37kKl7QhVLLv1UTPwp3bNWYz_Qs3hcGDqC4'),
 (4, 'hana', 'h123', 'admin2', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlciI6ImhhbmEiLCJwYWdlIjoiYWRtaW4yIiwiaWF0IjoxNzA3NjE4NTg4LCJleHAiOjE3MDc2MTg4Mjh9.HRaHSNIBEAoLnLXw5NjSCvoqmW7NDXtD2qkXXks1fV4'),
-(5, 'aren', 'a123', 'driller', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlciI6ImFyZW4iLCJwYWdlIjoiZHJpbGxlciIsImlhdCI6MTcwODM1MjgwNiwiZXhwIjoxNzA4MzUzMDQ2fQ.xA-lCtZZr9xz0CkribgAeo7DlJU9-8E2PLEyeCvrgIY'),
+(5, 'aren', 'a123', 'driller', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlciI6ImFyZW4iLCJwYWdlIjoiZHJpbGxlciIsImlhdCI6MTcxMDQ5NjQ1OCwiZXhwIjoxNzEwNDk2Njk4fQ.y5tMmCl4tvTByHOwcUkZWARUcYGm_-dRIFM4AdMj0h0'),
 (6, 'budi', 'b123', 'driller', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlciI6ImJ1ZGkiLCJwYWdlIjoiZHJpbGxlciIsImlhdCI6MTcwNzYxOTUwNCwiZXhwIjoxNzA3NjE5NzQ0fQ.Ea_a8ZRQptlVs6J32Q5CD22pdqlqcZt5Qq1fEsaQZJ8');
 
 -- --------------------------------------------------------
@@ -367,7 +423,11 @@ INSERT INTO `reamer` (`id`, `customer_name`, `driller_user`, `quantity`, `measur
 (12, 'yadi', '00005', '', ''),
 (13, 'martin', '00006', NULL, NULL),
 (14, 'John', '1000', '', ''),
-(15, '00002', 'Yamil', NULL, NULL);
+(15, '00002', 'Yamil', '3', '1'),
+(16, 'hani', '00007', NULL, NULL),
+(17, 'huna', '00008', NULL, NULL),
+(18, 'AA', '10000007', NULL, NULL),
+(19, 'johan', '00009', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -396,7 +456,11 @@ INSERT INTO `tricone_bits` (`id`, `customer_name`, `driller_user`, `quantity`, `
 (12, 'yadi', '00005', '', '', ''),
 (13, 'martin', '00006', NULL, NULL, NULL),
 (14, 'John', '1000', '', '', ''),
-(15, '00002', 'Yamil', NULL, NULL, NULL);
+(15, '00002', 'Yamil', '2', 'W', 'Bit'),
+(16, 'hani', '00007', NULL, NULL, NULL),
+(17, 'huna', '00008', NULL, NULL, NULL),
+(18, 'AA', '10000007', NULL, NULL, NULL),
+(19, 'johan', '00009', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -423,7 +487,11 @@ INSERT INTO `various` (`id`, `customer_name`, `driller_user`, `various`) VALUES
 (12, 'yadi', '00005', ''),
 (13, 'martin', '00006', NULL),
 (14, 'John', '1000', ''),
-(15, '00002', 'Yamil', NULL);
+(15, '00002', 'Yamil', 'Isjaja'),
+(16, 'hani', '00007', NULL),
+(17, 'huna', '00008', NULL),
+(18, 'AA', '10000007', NULL),
+(19, 'johan', '00009', NULL);
 
 --
 -- Indexes for dumped tables
@@ -478,6 +546,12 @@ ALTER TABLE `inches`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `input_cost`
+--
+ALTER TABLE `input_cost`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `input_earn`
 --
 ALTER TABLE `input_earn`
@@ -521,61 +595,67 @@ ALTER TABLE `various`
 -- AUTO_INCREMENT for table `admin_data1`
 --
 ALTER TABLE `admin_data1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `bits`
 --
 ALTER TABLE `bits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `casing`
 --
 ALTER TABLE `casing`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `daily_consumption`
 --
 ALTER TABLE `daily_consumption`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `driller_user`
 --
 ALTER TABLE `driller_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `drill_bits`
 --
 ALTER TABLE `drill_bits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `hammers`
 --
 ALTER TABLE `hammers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `inches`
 --
 ALTER TABLE `inches`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `input_cost`
+--
+ALTER TABLE `input_cost`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `input_earn`
 --
 ALTER TABLE `input_earn`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `inventory`
 --
 ALTER TABLE `inventory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `login_user`
@@ -587,19 +667,19 @@ ALTER TABLE `login_user`
 -- AUTO_INCREMENT for table `reamer`
 --
 ALTER TABLE `reamer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `tricone_bits`
 --
 ALTER TABLE `tricone_bits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `various`
 --
 ALTER TABLE `various`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

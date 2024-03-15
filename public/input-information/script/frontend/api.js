@@ -47,6 +47,18 @@ async function postData(link, dt) {
         throw error;
     }
 }
+async function deleteData(link) {
+    try {
+        const res = await fetch(link, {
+            method: 'DELETE'
+        });
+        const data = await res.json();
+        return data;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        throw error;
+    }
+}
 
 async function auth() {
     try {

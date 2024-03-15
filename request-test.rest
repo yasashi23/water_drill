@@ -41,6 +41,14 @@ Content-Type: application/json
 ### admin1 untuk list data
 GET http://localhost:3000/db/admin1Read
 
+### search data
+GET http://localhost:3000/db/searchdatah
+# Content-Type: application/json
+
+# {
+#     "well_number":"00003"
+# }
+
 
 ### completion read data
 GET http://localhost:3000/db/completionRead/john-00001
@@ -48,7 +56,22 @@ GET http://localhost:3000/db/completionRead/john-00001
 
 
 ### submit di input page 
-POST http://localhost:3000/db/earnInput
+POST http://localhost:3000/db/inputCost
+Content-Type: application/json
+
+{
+    "diesel_liters":"2",
+    "engine_oil":"0",
+    "grease_kg":"0",
+    "bentonite_km":"0",
+    "cmc_km":"0",
+    "hammers_oil":"0"
+}
+###
+GET http://localhost:3000/db/inputCost
+
+###
+POST http://localhost:3000/db/inputCost
 Content-Type: application/json
 
 {
@@ -74,6 +97,10 @@ Content-Type: application/json
     "earn_driller":"50",
     "earn_assistant":"20"
 }
+
+###
+DELETE http://localhost:3000/db/earnDelete15
+
 
 #######################################################
 
@@ -128,7 +155,7 @@ POST http://localhost:3000/editHost
 Content-Type: application/json
 
 {
-    "host":"https://9b4e-2001-448a-2061-bafe-36d4-f396-76b7-7909.ngrok-free.app"
+    "host":"http://localhost:3000"
 }
 
 ########### Driller user select driller number ###############

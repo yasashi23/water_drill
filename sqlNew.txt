@@ -1,0 +1,3 @@
+ALTER TABLE `input_earn` ADD `bentonite_km` VARCHAR(255) NULL DEFAULT NULL AFTER `earn_assistant`, ADD `cmc_km` VARCHAR(255) NULL DEFAULT NULL AFTER `bentonite_km`, ADD `hammers_oil` VARCHAR(255) NULL DEFAULT NULL AFTER `cmc_km`;
+
+CREATE TABLE `water_drill`.`input_cost` (`id` INT NOT NULL AUTO_INCREMENT , `diesel_liters` VARCHAR(255) NULL DEFAULT NULL , `engine_oil` VARCHAR(255) NULL DEFAULT NULL , `grease_kg` VARCHAR(255) NULL DEFAULT NULL , `bentonite_km` VARCHAR(255) NULL DEFAULT NULL , `cmc_km` VARCHAR(255) NULL DEFAULT NULL , `hammers_oil` VARCHAR(255) NULL DEFAULT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

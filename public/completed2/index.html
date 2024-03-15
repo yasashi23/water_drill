@@ -13,9 +13,13 @@
         <div class="container__data-completed">  
             <div class="container__data">
                 <h1><span><img width="40px" src="logo.png"></span><u>PÁGINA COMPLETADA</u></h1>
+                <div class="container__data-search">
+                    <input class="search-input" type="text" placeholder="Buscar..." oninput="searchFinding(this)">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
                 <div class="container__data-list">
                     <table class="container__table">
-                        <tbody>
+                        <thead>
                             <tr>
                                 <th>
                                     <h3>Número de Pozo</h3>
@@ -26,11 +30,17 @@
                                 <th>
                                     <h3>Grupo de Pozo</h3>
                                 </th>
+                                <th>
+                                    <h3>Status</h3>
+                                </th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <!-- <tr>
                                 <td class="container__well-number">00001</td>
                                 <td class="container__customer-name">John</td>            
-                                <td class="container__well-group">Grupo Brillante</td>              
+                                <td class="container__well-group">Grupo Brillante</td> 
+                                <td class="container__status">12</td>              
                             </tr> -->
                         </tbody>
                     </table>
@@ -47,5 +57,7 @@
     <script src="script/frontend/function.js"></script>
     <script src="script/frontend/api.js"></script>
     <script src="script/frontend/listener.js"></script>
+    <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

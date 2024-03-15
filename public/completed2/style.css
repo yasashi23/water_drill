@@ -45,28 +45,59 @@
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
 }
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+2) td {
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
   padding: 15px 15px;
   box-sizing: border-box;
 }
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+2) td:first-child {
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:first-child {
   border-left: 1px solid #000;
   font-weight: 600;
 }
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(2) {
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:nth-child(2) {
   font-weight: 600;
 }
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+2) td:last-child {
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:last-child {
   border-right: 1px solid #000;
   font-weight: 600;
 }
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+2) td:last-child u {
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:last-child u {
   cursor: pointer;
 }
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+2) td:last-child u:hover {
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:last-child u:hover {
   color: #0088B6;
+}
+.container .container__data-completed .container__data-search {
+  border-bottom: 1px solid;
+  height: 35px;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+.container .container__data-completed .container__data-search input {
+  width: 100%;
+  border: none;
+  font-size: 20px;
+}
+.container .container__data-completed .container__data-search input:focus {
+  border: none;
+  outline: none;
+}
+.container .container__data-completed .container__data-search button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: scale(1.6);
+  color: rgba(0, 0, 0, 0.384);
+}
+.container .container__data-completed .container__data-search button:hover {
+  transform: scale(2);
+}
+.container .container__data-completed .container__data-search button:focus {
+  transform: scale(2);
+  outline: none;
+  color: black;
 }
 .container .container__back-button {
   background-color: #0088B6;

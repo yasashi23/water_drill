@@ -98,20 +98,19 @@
   align-items: center;
   justify-content: center;
 }
-.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content:nth-child(4) {
+.container .container__body-input .container__user .container__user-input form .container__section-cost .container__content:nth-child(n+4) {
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 .container .container__body-input .container__user .container__user-input form .container__section-cost .container__content:nth-child(3) {
   margin-top: 24px;
 }
 .container .container__body-input .container__user .container__user-input form .container__section-cost .container__content label {
-  width: 120px;
+  width: 125px;
 }
 .container .container__body-input .container__user .container__user-input form .container__section-cost .container__content div {
   display: flex;
   justify-content: center;
-  width: 240px;
+  width: 235px;
 }
 .container .container__body-input .container__user .container__user-input form .container__section-cost .container__content div input {
   border: none;
@@ -198,6 +197,17 @@
 .container .container__body-information .container__edit-process.off {
   display: none;
 }
+.container .container__body-information .container__add-group {
+  padding: 5px 10px 5px 10px;
+  color: white;
+  background-color: #0088B6;
+  cursor: pointer;
+}
+.container .container__body-information .container__add-group:hover {
+  color: #0088B6;
+  background-color: transparent;
+  border: 1px solid #0088B6;
+}
 .container .container__body-information .container__data {
   width: 600px;
   display: flex;
@@ -239,15 +249,18 @@
 .container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(2) span:nth-child(1) {
   font-weight: 700;
 }
-.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:last-child {
-  border-right: 1px solid #000;
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(n+3) {
   font-weight: 500;
 }
-.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:last-child u {
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(n+3) u {
   cursor: pointer;
 }
-.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:last-child u:hover {
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:nth-child(n+3) u:hover {
   color: #0088B6;
+}
+.container .container__body-information .container__data .container__data-list table tr:nth-child(n+2) td:last-child {
+  border-right: 1px solid #000;
+  color: rgb(145, 0, 0);
 }
 .container .container__body-information .container__modal {
   width: 100%;

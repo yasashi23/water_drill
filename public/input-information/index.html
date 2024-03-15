@@ -20,7 +20,7 @@
                 <div class="container__user-input">
                     <h1><span><img width="40px" src="logo.png"></span><u>ENTRADA</u></h1>
                     <form>
-                        <div class="container__section-user">
+                        <!-- <div class="container__section-user">
                             <h2>Usuario</h2>
                             <hr>
                             <div>
@@ -43,7 +43,7 @@
                                     <option value="Pereira">Pereira</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="container__section-cost">
                             <h2>Costo</h2>
                             <hr>
@@ -51,7 +51,7 @@
                                 <label for="diesel-liters" class="container__label container__label-cost">Litros de Diesel</label>
                                 <div>
                                     <span>$</span>
-                                    <input name="diesel_liters" type="text">
+                                    <input name="diesel_liters" id="diesel-liters" type="text">
                                 </div>
                             </div>
                             <div class="container__content">
@@ -68,8 +68,29 @@
                                     <input id="grease-kg" name="grease_kg" type="text">
                                 </div>
                             </div>
+                            <div class="container__content">
+                                <label for="bentonite-km" class="container__label container__label-cost">Bentonita Km</label>
+                                <div>
+                                    <span>$</span>
+                                    <input id="bentonite-km" name="bentonite_km" type="text">
+                                </div>
+                            </div>
+                            <div class="container__content">
+                                <label for="cmc-km" class="container__label container__label-cost">CMC Km</label>
+                                <div>
+                                    <span>$</span>
+                                    <input id="cmc-km" name="cmc_km" type="text">
+                                </div>
+                            </div>
+                            <div class="container__content">
+                                <label for="hammers-oil" class="container__label container__label-cost">Martillos aceite lts Lts</label>
+                                <div>
+                                    <span>$</span>
+                                    <input id="hammers-oil" name="hammers_oil" type="text">
+                                </div>
+                            </div>
                         </div>
-                        <div class="container__section-earn">
+                        <!-- <div class="container__section-earn">
                             <h2>Ganancia</h2>
                             <hr>
                             <div class="container__content-earn">
@@ -86,7 +107,7 @@
                                     <input type="text" id="earn earn-assistan" name="earn_assistant">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <button type="submit">PUBLICAR</button>
                     </form>
                 </div>
@@ -97,6 +118,9 @@
             <div class="container__edit-process off"></div>        
             <div class="container__data">
                 <h1><span><img width="40px" src="logo.png"></span><u>LISTA DE INFORMACIÓN</u></h1>
+                <div class="container__add-group" onclick="clickToOpenModalGrup()">
+                    <h4>+ Agregar nuevo grupo</h4>
+                </div>
                 <div class="container__data-list">
                     <table class="container__table">
                         <tbody>
@@ -108,8 +132,10 @@
                                     <h3>Ganancia</h3>
                                 </th>
                                 <th></th>
+                                <th></th>
+
                             </tr>
-                            <!-- <tr >
+                            <tr >
                                 <td data-id="1">
                                     <span>Jonathan Marcus</span><br>
                                     <span>Silvio Alem</span>
@@ -119,8 +145,10 @@
                                     <span>$60</span>
                                 </td>
                                 <td><u class="container__edit-data" onclick="clickToEdit(this)">editar</u></td>
+                                <td><u class="container__delete-data" onclick="clickToDelete(this)">del</u></td>
+
             
-                            </tr> -->
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -160,7 +188,8 @@
                             <label for="earn" class="container__label container__label-earn">Ganancia del Asistente</label>
                             <input type="text" id="earn" name="earn_assistant">
                         </div>
-                        <button class="container__btn" type="button">ACTUALIZAR</button>
+                        <button class="container__btn update-btn" type="button" onclick="clickToUpdate()">ACTUALIZAR</button>
+                        <button class="container__btn add-btn" type="button" onclick="clickToAddNewGroup()">Agregar nueva</button>
                     </form>
                 </div>
             </div>
@@ -175,8 +204,8 @@
     </div>
     <script src="script/frontend/host.js"></script>
     <script src="script/frontend/variable.js"></script>
-    <script src="script/frontend/function.js"></script>
     <script src="script/frontend/api.js"></script>
+    <script src="script/frontend/function.js"></script>
     <script src="script/frontend/listener.js"></script>
 </body>
 </html>

@@ -4,7 +4,6 @@ function verifiedPage(a) {
     }
 }
 async function getData(url) {
-    console.log(url)
     try {
         const response = await fetch(url);
         const data = await response.json();
@@ -22,7 +21,8 @@ async function processData() {
         result.forEach(item => {
             const {id,well_number,customer_name,well_group,progress} = item;
             if(progress === 'completed') {
-                appendElem(id,well_number,customer_name,progress);
+                appendElem(id,well_number,customer_name,progress,well_group);
+
                 console.log({item})
             }
         });

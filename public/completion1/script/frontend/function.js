@@ -15,7 +15,6 @@ function changeElement(data){
     const{bits,casing,daily_consumption,drill_bits,driller_user,hammers,inches,inventory,reamer,tricone_bits,various} = data
     // meter driller
     elementNumber(driller_user[0].meters_drilled,total_depth)
-    // console.log(driller_user[0],total_depth)
 
     // Cost Table
 

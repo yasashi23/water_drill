@@ -20,8 +20,7 @@ async function getDataDriller(){
     const url = `${host}/db/getDataDriller`
     try{
         const data = await getData(url)
-        // console.log(data)
-        loopData(data)
+            loopData(data)
     }catch(er){
         console.error(er)
     }
@@ -29,12 +28,14 @@ async function getDataDriller(){
 
 function loopData(dt){
     dt.forEach(data => {
-        const {well_number,customer_name} = data
-        console.log(well_number,customer_name)
-        const newOption = cE("option")
-        newOption.textContent = well_number
-        newOption.setAttribute("data-customer",customer_name)
-        driller_user.appendChild(newOption)
+        const {well_number,customer_name,progress} = data
+        if(progress === "in progress"){
+            console.log(well_number,customer_name)
+            const newOption = cE("option")
+            newOption.textContent = well_number
+            newOption.setAttribute("data-customer",customer_name)
+            driller_user.appendChild(newOption)
+        }
     });
 }
 

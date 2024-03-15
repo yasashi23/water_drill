@@ -4,21 +4,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
-            &:nth-child(4) {
-                    margin-top: 20px;
-                    margin-bottom: 20px;
-                }
+            // &:nth-child(4),&:nth-child(6) {
+            //         margin-top: 20px;
+            //         margin-bottom: 20px;
+            //     }
+            &:nth-child(n+4){
+                margin-top: 20px;
+            }
             &:nth-child(3) {
                 margin-top: 24px;
             }
 
         label{
-            width: 120px;
+            width: 125px;
         }
         div{
             display: flex;
             justify-content: center;
-            width: 240px;
+            width: 235px;
             input {
                 &:focus{
                     border: none;

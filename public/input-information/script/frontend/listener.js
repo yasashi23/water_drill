@@ -1,6 +1,6 @@
 // single listener
 close.addEventListener("click",()=>clickToClose("off"))
-buttonUpdate.addEventListener("click",clickToUpdate)
+// buttonUpdate.addEventListener("click",clickToUpdate)
 navbar_input.addEventListener("click",()=>navbarsClick("input"))
 navbar_information.addEventListener("click",()=>navbarsClick("information"))
 back_btn.addEventListener("click",backButton)
@@ -14,3 +14,5 @@ input_post_btn.addEventListener("click",postDataList)
 // fetch api
 permissionToken()
 informationData()
+setValueForCostForm()
+

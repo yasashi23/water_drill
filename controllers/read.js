@@ -81,3 +81,27 @@ exports.getDataDriller = async(req,res) => {
     res.json(er)
   }
 }
+
+exports.inputCostRead=async(req,res)=>{
+  const sql = "select * from input_cost"
+  try{
+    const result = await pool.pool.query(sql)
+    res.json(result[0][0])
+  }catch(er){
+    res.json(er)
+  }
+}
+
+exports.searchDataCompleted = async(req,res) =>{
+  const {name} = req.params
+  const sql = `select * from admin_data1 where customer_name like "%${name}%"`
+    try{
+          const [result] = await pool.pool.execute(sql)
+          res.status(200).send(result)
+
+
+    }catch(err){
+        console.error("error:",err) 
+        res.status(500).send("error")
+    }
+}

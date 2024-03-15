@@ -20,6 +20,17 @@
         position: fixed;
         overflow:hidden;
     }
+    .container__add-group{
+        padding: 5px 10px 5px 10px;
+        color: white;
+        background-color: $brand;
+        cursor: pointer;
+        &:hover{
+            color: $brand;
+            background-color: transparent;
+            border: 1px solid $brand;
+        }
+    }
 
 
     @import 'section2/container-list.scss';

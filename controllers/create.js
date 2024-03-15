@@ -1,8 +1,7 @@
 const pool = require('../routes/db-config')
-const {updateUser,getAllData,getDataMeter,addDataUser} = require('./sql')
+const {updateUser,getDataMeter,addDataUser} = require('./sql')
 
 
-const host = "http://localhost:3000/admin1"
 
 
 exports.admin1Post = async(req,res)=>{
@@ -13,7 +12,6 @@ exports.admin1Post = async(req,res)=>{
         const [result]= await pool.pool.execute("insert into admin_data1 (well_number,customer_name,well_group,progress) values (?,?,?,?)",[well_number,customer_name,well_group,progress])
 
         addDataUser(pool.pool,customer_name,well_number)
-        res.redirect(host)
 
       } catch (error) {
         console.error('Error:', error);

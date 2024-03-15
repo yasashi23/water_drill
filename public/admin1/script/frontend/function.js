@@ -63,14 +63,9 @@ container.innerHTML += elem
 
 
   function onClick(e){
-    const [dataName,dataNum] = [e.getAttribute("dataName"),e.getAttribute("dataNum")]
+    const [dataName,dataNum] = [e.getAttribute("dataname"),e.getAttribute("datanum")]
     const url = `${host}/completion1/?user=${dataName}&num=${dataNum}`
-    // const url = `${host}/completion1`
-
-
     window.open(url,'_blank')
-
-
 }
 
 function cE(str){

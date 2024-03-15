@@ -21,9 +21,7 @@
                 }
             }
         }
-
-        &:last-child{
-            border-right: 1px solid #000;
+        &:nth-child(n+3){
             font-weight: 500;
             u{
                 &:hover{
@@ -31,6 +29,10 @@
                 }
                 cursor: pointer;
             }
+        }
+        &:last-child{
+            border-right: 1px solid #000;
+            color: rgb(145, 0, 0);
         }
     }
     
