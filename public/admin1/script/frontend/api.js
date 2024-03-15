@@ -52,8 +52,8 @@ async function authToken(url, token) {
 
 async function processData() {
     try {
-        const result = await getData(`${host}/db/admin1Read`);
-        console.log({result})
+        const result = await getData(`${host}/db/admin1Read?sort=desc`);
+        // console.log(result)
         result.forEach(item => {
             const { customer_name: name, well_number: num, well_group,id, progress } = item;
             if(progress === 'in progress' || progress === 'to be done') {

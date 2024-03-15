@@ -83,4 +83,8 @@ async function onChange(a){
   const url = `${host}/db/adminUpdate?id=${dataId}`
   const response = await postData(url,JSON.stringify({data:dataProgress}))
   console.log(response)
+  const containerElem = a.parentElement
+  if(dataProgress==="completed"){
+    containerElem.remove()
+  }
 }

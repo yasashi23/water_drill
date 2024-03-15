@@ -3,9 +3,15 @@ const {getAllData} = require('./sql')
 
 
 exports.dataAdmin1 = async(req,res) =>{
+  const {sort} = req.query
     try{
-        const [result] = await pool.pool.execute("select * from admin_data1")
-        res.status(200).send(result)
+        if(sort === "desc"){
+          const [result] = await pool.pool.execute("select * from admin_data1 order by id desc")
+          res.status(200).send(result)
+        }else{
+          const [result] = await pool.pool.execute("select * from admin_data1")
+          res.status(200).send(result)
+        }
 
     }catch(err){
         console.error("error:",err) 

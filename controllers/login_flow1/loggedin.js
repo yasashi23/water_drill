@@ -3,7 +3,6 @@ const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
 
 
-
 exports.isLoggedIn_admin1 = async (req,res,next)=>{
     console.log("isLoggedIn_admin1")
     const authHeader = req.headers['authorization']

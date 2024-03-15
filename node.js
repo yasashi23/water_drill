@@ -25,13 +25,6 @@ app.use('/dataCompleted', express.static(path.join(__dirname, 'public', 'complet
 app.use('/dataCompleted2', express.static(path.join(__dirname, 'public', 'completed2')));
 
 
-
-// app.use('/admin1', express.static(path.join(__dirname, 'public', 'admin1')));
-
-// app.use('/admin2', express.static(path.join(__dirname, 'public', 'admin2')));
-
-// app.use('/completion', express.static(path.join(__dirname, 'public', 'completion')));
-
 app.use('/',require('./routes/pages'))
 app.use('/auth',require('./routes/auth'))
 app.use('/db',require('./routes/crud'))
