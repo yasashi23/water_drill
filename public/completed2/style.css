@@ -45,6 +45,9 @@
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
 }
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) {
+  cursor: pointer;
+}
 .container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;

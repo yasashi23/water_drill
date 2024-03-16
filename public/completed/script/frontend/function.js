@@ -33,7 +33,6 @@ function clickToCompletion(e){
 
 async function searchFinding(e){
     const searchWord = e.value.trim().toLowerCase()
-    const url = `${host}/db/searchdata${searchWord}`
     const getData = tableTr.querySelectorAll('tr')
     if(searchWord === ""){
         // processData()

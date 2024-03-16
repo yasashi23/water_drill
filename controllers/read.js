@@ -22,9 +22,14 @@ exports.dataAdmin1 = async(req,res) =>{
 
 exports.completionRead = async(req,res) => {
     const [user,num] = [req.params.user,req.params.num]
-    const data = await getAllData(pool.pool,num,user)
-    console.log(user,num)
-    res.send(data)
+    const getDrillerData = await pool.pool.query(`select * from driller_data where du_driller_user="${num}" and du_customer_name="${user}"`);
+
+    const getAdminData = await pool.pool.query(`select * from admin_data1 where well_number="${num}" and customer_name="${user}"`);
+
+    const getCostData = await pool.pool.query(`select * from input_cost`);
+
+    // console.log(user,num)
+    res.send({driller:getDrillerData[0],admin:getAdminData[0],cost:getCostData[0]})
 }
 
 exports.editInformation = async(req,res)=>{

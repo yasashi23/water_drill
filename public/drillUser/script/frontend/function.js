@@ -3,12 +3,8 @@ async function onSubmit(){
     const url = `${host}/db/postDriller`
     try{
 
-        const {msg,meters} = await postData(url,dataForm)
-        if(msg === "not found"){
-            alert("Driller User or Customer name not found")
-        }else{
-            total_depth.textContent = meters
-        }
+        const {meters}= await postData(url,dataForm)
+        const meterRes = meters.reduce((n,{du_meters_drilled})=> Number(n)+Number(du_meters_drilled),0)
 
     }catch(err){
         console.error(err)
@@ -30,7 +26,6 @@ function loopData(dt){
     dt.forEach(data => {
         const {well_number,customer_name,progress} = data
         if(progress === "in progress"){
-            console.log(well_number,customer_name)
             const newOption = cE("option")
             newOption.textContent = well_number
             newOption.setAttribute("data-customer",customer_name)

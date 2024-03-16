@@ -30,7 +30,23 @@ app.use('/auth',require('./routes/auth'))
 app.use('/db',require('./routes/crud'))
 
 
+const data = {
+    "Filters":"20",
+    "Driller":"John",
+    "Assistans":"dani",
+    "Charged":"$20",
+    "Diesel_liters":"30",
+    "Engine_Oil":"90",
+    "Grease_Kg":"90",
+    "Earnings":"$200",
+    "Total_Cost":"$150",
+    "Profit":"$350"
 
+}
+delete data.Charged
+const newData = {...data,"Profit":"MAHALLL"}
+
+// console.log(newData)
 
 
 app.listen(port,()=>{

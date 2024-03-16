@@ -37,7 +37,7 @@
   padding-left: 20px;
 }
 .container .container__completion .container__table tr:nth-child(n+2) td:first-child {
-  width: 250px;
+  width: 200px;
   opacity: 0.5;
 }
 .container .container__completion .container__table tr:nth-child(n+2) td:last-child {

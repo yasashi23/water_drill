@@ -15,15 +15,15 @@
                 <div class="container__section1">
                     <div class="container__well-number">
                         <label for="well-number-input">Número de Pozo</label><br>
-                        <input type="number" id="well-number-input" name="well-number" placeholder="00000">
+                        <input type="number" id="well-number-input" name="well_number" placeholder="00000">
                     </div>
                     <div class="container__customer-name">
                         <label for="customer-name-input">Nombre del Cliente</label><br>
-                        <input type="text" id="customer-name-input" name="customer-name" >
+                        <input type="text" id="customer-name-input" name="customer_name" >
                     </div>
                     <div class="container__well-group">
                         <label for="well-group-input">Grupo de Pozo</label><br>
-                        <input type="text" id="well-group-input" name="well-group" >
+                        <input type="text" id="well-group-input" name="well_group" >
                         <input type="text" name="progress" value="to be done" hidden>
                         <input type="date" name="started_day" hidden>
                     </div>
@@ -32,7 +32,11 @@
                 </form>
                 <div class="container__section2">
                     <div class="container__search">
-                            <input class="search-input" type="text" placeholder="Buscar...">
+                            <input 
+                            class="search-input" 
+                            type="text" 
+                            placeholder="Buscar Nombre del Cliente.."
+                            oninput="searchFinding(this)">
                             <button class="search-btn"><i class="fas fa-search"></i></button>
                     </div>
                     

@@ -12,28 +12,28 @@
         <h1><span><img width="40px" src="logo.png"></span><u>Administrador de Usuario 2</u></h1>
             <div class="container__form">
                 <form>
-
-                <div class="container__section1">
-                    <div class="container__well-number">
-                        <label for="well-number-input">Número de Pozo</label><br>
-                        <input type="number" id="well-number-input" name="well-number" placeholder="00000">
+                    <div class="container__section1">
+                        <div class="container__well-number">
+                            <label for="well-number-input">Número de Pozo</label><br>
+                            <input type="number" id="well-number-input" name="well_number" placeholder="00000">
+                        </div>
+                        <div class="container__customer-name">
+                            <label for="customer-name-input">Nombre del Cliente</label><br>
+                            <input type="text" id="customer-name-input" name="customer_name">
+                        </div>
+                        <div class="container__well-group">
+                            <label for="well-group-input">Grupo de Pozo</label><br>
+                            <input type="text" id="well-group-input" name="well_group">
+                            <input type="text" name="progress" value="to be done" hidden>
+                            <input type="date" name="started_day" hidden>
+                        </div>
+                        <input type="submit" id="inputSection1">
                     </div>
-                    <div class="container__customer-name">
-                        <label for="customer-name-input">Nombre del Cliente</label><br>
-                        <input type="text" id="customer-name-input" name="customer-name" >
-                    </div>
-                    <div class="container__well-group">
-                        <label for="well-group-input">Grupo de Pozo</label><br>
-                        <input type="text" id="well-group-input" name="well-group" >
-                        <input type="text" name="progress" value="in progress" hidden>
-                    </div>
-                    <input type="submit" id="inputSection1">
-                </div>
                 </form>
                 <div class="container__section2">
                     <div class="container__search">
-                            <input class="search-input" type="text" placeholder="Buscar...">
-                            <button class="search-btn"><i class="fas fa-search"></i></button>
+                        <input class="search-input" type="text" placeholder="Buscar Nombre del Cliente.." oninput="searchFinding(this)">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
                     </div>
                     
                     <div class="container__container-data">
@@ -60,6 +60,8 @@
     <script src="script/frontend/api.js"></script>
     <script src="script/frontend/function.js"></script>
     <script src="script/frontend/listener.js"></script>
+    <script src="https://kit.fontawesome.com/d97b87339f.js" crossorigin="anonymous"></script>
+
 
 </body>
 </html>

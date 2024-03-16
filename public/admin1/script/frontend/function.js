@@ -1,5 +1,3 @@
-
-
 const submitBtn= async() => {
     const url = `${host}/db/admin1Post`
     const data = serializeFormData(submitForm)
@@ -20,6 +18,7 @@ const submitBtn= async() => {
     const progressText = "En Progreso"
     const completedText = "Completado"
     let option
+    let lowerCaseName = name.toLowerCase()
 
     if(progress === "in progress"){
       option = `
@@ -42,8 +41,9 @@ const submitBtn= async() => {
       `
     }
 
+
+
     const elem = `
-    <div class="container__data">
       <span onclick="onClick(this)" dataname="${name}" datanum="${num}">${num}</span>
       <span>${name}</span>
       <select 
@@ -54,9 +54,15 @@ const submitBtn= async() => {
         data="${num}">
           ${option}
       </select>
-    </div>
 `
-container.innerHTML += elem
+
+    const newDiv = cE('div');
+    newDiv.className = "container__data"
+    newDiv.setAttribute("dataname", lowerCaseName);
+    newDiv.innerHTML = elem
+
+
+container.appendChild(newDiv)
   }
 
 
@@ -87,4 +93,25 @@ async function onChange(a){
     console.log(resDate)
     containerElem.remove()
   }
+}
+
+async function searchFinding(e){
+    const searchWord = e.value.trim().toLowerCase()
+    const getData = container.querySelectorAll('.container__data')
+    if(searchWord === ""){
+        // processData()
+        getData.forEach(item=>{
+            item.style.display = "flex"
+        })
+    }else{
+        getData.forEach(item=>{
+            const dataName = item.getAttribute("dataname")
+            if(searchWord === "" ||dataName.startsWith(searchWord)){
+                item.style.display = "flex"
+            }else{
+                item.style.display = "none"
+            }
+
+        })
+    }
 }

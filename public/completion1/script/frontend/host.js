@@ -1,1 +1,1 @@
-const host = "https://f09b-2001-448a-2061-bafe-1482-364-50eb-fe06.ngrok-free.app"
+const host = "http://localhost:3000"

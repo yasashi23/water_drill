@@ -23,7 +23,7 @@
                             <tr>
                                 <td colspan="2">
                                     <label for="driller-user-input">Usuario Perforador</label><br>
-                                    <select id="driller-user-input" name="driller-user" onchange="drillerNumber(this)">
+                                    <select id="driller-user-input" name="du_driller_user" onchange="drillerNumber(this)">
                                     </select>
                                 </td>
                                 <td></td>
@@ -31,11 +31,11 @@
                             <tr>
                                 <td>
                                     <label for="driller-user-customer-name-input">Nombre del Cliente</label><br>
-                                    <input type="text" id="driller-user-customer-name-input" name="driller-user-customer-name-input" readonly value="john">
+                                    <input type="text" id="driller-user-customer-name-input" name="du_customer_name" readonly value="john">
                                 </td>
                                 <td>
                                     <label for="driller-user-rotary-number-input">Número Rotativo</label><br>
-                                    <select id="driller-user-rotary-number-input" name="driller-user-rotary-number" >
+                                    <select id="driller-user-rotary-number-input" name="du_rotary_number" >
                                         <option >3</option>
                                         <option >5</option>
                                         <option >7</option>
@@ -47,27 +47,27 @@
                             <tr>
                                 <td>
                                     <label for="driller-user-address">Dirección</label><br>
-                                    <input type="text" id="driller-user-address" name="driller-user-address" >
+                                    <input type="text" id="driller-user-address" name="du_address" >
                                 </td>
                                 <td>
                                     <label for="driller-user-date">Fecha</label><br>
-                                    <input type="date" id="driller-user-date" name="driller-user-date" >
+                                    <input type="date" id="driller-user-date" name="work_day" >
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="driller-user-meter-drilled-input">Metros Perforados</label><br>
-                                    <input type="text" id="driller-user-meter-drilled-input" name="driller-user-meter-drilled-input" >
+                                    <input type="number" id="driller-user-meter-drilled-input" name="du_meters_drilled" >
                                 </td>
                                 <td>
                                     <label for="driller-user-terain-des-input">Descripción del Terreno</label><br>
-                                    <input type="text" id="driller-user-terain-des-input" name="driller-user-terain-des-input" >
+                                    <input type="text" id="driller-user-terain-des-input" name="du_terain_description" >
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="driller-user-water-tables-input">Niveles Freáticos</label><br>
-                                    <input type="text" id="driller-user-water-tables-input" name="driller-user-water-tables-input" >
+                                    <input type="text" id="driller-user-water-tables-input" name="du_waters_tables" >
                                 </td>
                                 <td></td>
                             </tr>
@@ -81,11 +81,11 @@
                             <tr>
                                 <td>
                                     <label for="driller-bits-type-input">Tipo</label><br>
-                                    <input type="text" id="driller-bits-type-input" name="driller-bits-type" >
+                                    <input type="text" id="driller-bits-type-input" name="db_type" >
                                 </td>
                                 <td>
                                     <label for="driller-bits-usage-input">Horas de Uso</label><br>
-                                    <input type="text" id="driller-bits-usage-input" name="driller-bits-usage-input" >
+                                    <input type="number" id="driller-bits-usage-input" name="db_usage_hours" >
                                 </td>
                             </tr>
                         </table>
@@ -98,15 +98,15 @@
                             <tr>
                                 <td>
                                     <label for="tricone-bits-quantity-input">Cantidad</label><br>
-                                    <input type="text" id="tricone-bits-quantity-input" name="tricone-bits-quantity" >
+                                    <input type="text" id="tricone-bits-quantity-input" name="tb_quantity" >
                                 </td>
                                 <td>
                                     <label for="tricone-bits-measurement-input">Medición</label><br>
-                                    <input type="text" id="tricone-bits-measurement-input" name="tricone-bits-measurement-input" >
+                                    <input type="text" id="tricone-bits-measurement-input" name="tb_measurement" >
                                 </td>
                                 <td>
                                     <label for="tricone-bits-type-input">Tipo</label><br>
-                                    <input type="text" id="tricone-bits-type-input" name="tricone-bits-type-input" >
+                                    <input type="text" id="tricone-bits-type-input" name="tb_type" >
                                 </td>
                             </tr>
                         </table>
@@ -119,11 +119,11 @@
                             <tr>
                                 <td>
                                     <label for="bits-quantity-input">Cantidad</label><br>
-                                    <input type="text" id="bits-quantity-input" name="bits-quantity" >
+                                    <input type="text" id="bits-quantity-input" name="b_quantity" >
                                 </td>
                                 <td>
                                     <label for="bits-measurement-input">Medición</label><br>
-                                    <input type="text" id="bits-measurement-input" name="bits-measurement-input" >
+                                    <input type="text" id="bits-measurement-input" name="b_measurement" >
                                 </td>
                             </tr>
                         </table>
@@ -136,7 +136,7 @@
                             <tr>
                                 <td>
                                     <label for="casing-input">Revestimiento:</label><br>
-                                    <input type="text" id="casing-input" name="casing" >
+                                    <input type="text" id="casing-input" name="c_casing" >
                                 </td>
                             </tr>
                         </table>
@@ -149,7 +149,7 @@
                             <tr>
                                 <td colspan="2">
                                     <label for="various-input">Varios</label><br>
-                                    <textarea id="various-input" name="various"></textarea>
+                                    <textarea id="various-input" name="v_various"></textarea>
                                 </td>
                                 <td></td>
                             </tr>
@@ -165,31 +165,31 @@
                             <tr>
                                 <td>
                                     <label for="daily-consumption-diesel-liters-input">Litros de Diesel</label><br>
-                                    <input type="text" id="daily-consumption-diesel-liters-input" name="daily-consumption-diesel-liters" >
+                                    <input type="number" id="daily-consumption-diesel-liters-input" name="dc_diesel_liters" >
                                 </td>
                                 <td>
                                     <label for="daily-consumption-engine-oil-input">Aceite del Motor</label><br>
-                                    <input type="text" id="daily-consumption-engine-oil-input" name="daily-consumption-engine-oil" >
+                                    <input type="number" id="daily-consumption-engine-oil-input" name="dc_engine_oils" >
                                 </td>
                                 <td>
                                     <label for="daily-consumption-grease-kg-input">Kilogramos de Grasa</label><br>
-                                    <input type="text" id="daily-consumption-grease-kg-input" name="daily-consumption-grease-kg" >
+                                    <input type="number" id="daily-consumption-grease-kg-input" name="dc_grease_kg" >
                                 </td>
                                 <td>
                                     <label for="daily-consumption-engine-hour-input">Horas del Motor</label><br>
-                                    <input type="text" id="daily-consumption-engine-hour-input" name="daily-consumption-engine-hour" >
+                                    <input type="number" id="daily-consumption-engine-hour-input" name="dc_engine_hours" >
                                 </td>
                                 <td>
                                     <label for="daily-consumption-bentonite-kg-input">Kilogramos de Bentonita</label><br>
-                                    <input type="text" id="daily-consumption-bentonite-kg-input" name="daily-consumption-bentonite-kg" >
+                                    <input type="number" id="daily-consumption-bentonite-kg-input" name="dc_bentonite_kg" >
                                 </td>
                                 <td>
                                     <label for="daily-consumption-cmc-kg-input">Kilogramos de CMC</label><br>
-                                    <input type="text" id="daily-consumption-cmc-kg-input" name="daily-consumption-cmc-kg" >
+                                    <input type="number" id="daily-consumption-cmc-kg-input" name="dc_cmc_kg" >
                                 </td>
                                 <td>
                                     <label for="daily-consumption-Hammer-oil-address">Litros de Aceite de Martillo</label><br>
-                                    <input type="text" id="daily-consumption-Hammer-oil-address" name="daily-consumption-Hammer-oil-address" >
+                                    <input type="number" id="daily-consumption-Hammer-oil-address" name="dc_hammer_oils" >
                                 </td>
                             </tr>                                
                         </table>
@@ -201,14 +201,14 @@
                             <tr>
                                 <td>
                                     <label for="hammers-input">Litros de Diesel</label><br>
-                                    <select id="hammers-input" name="hammers" >
+                                    <select id="hammers-input" name="h_type" >
                                         <option >5 Pulgadas</option>
                                         <option >6 Pulgadas</option>
                                     </select>
                                 </td>
                                 <td>
                                     <label for="hammers-engine-oil-input">Aceite del Motor</label><br>
-                                    <input type="text" id="hammers-engine-oil-input" name="hammers-engine-oil" >
+                                    <input type="number" id="hammers-engine-oil-input" name="h_usage_hours" >
                                 </td>
                             </tr>
                         </table>
@@ -220,27 +220,27 @@
                             <tr>
                                 <td>
                                     <label for="inventory-diesel-liters-input">Litros de Diesel</label><br>
-                                    <input type="text" id="inventory-diesel-liters-input" name="inventory-diesel-liters" >
+                                    <input type="number" id="inventory-diesel-liters-input" name="i_diesel_liters" >
                                 </td>
                                 <td>
                                     <label for="inventory-grease-kg-input">Kilogramos de Grasa</label><br>
-                                    <input type="text" id="inventory-grease-kg-input" name="inventory-grease-kg" >
+                                    <input type="number" id="inventory-grease-kg-input" name="i_grease_kg" >
                                 </td>
                                 <td>
                                     <label for="inventory-bentonite-input">Kilogramos de Bentonita</label><br>
-                                    <input type="text" id="inventory-bentonite-input" name="inventory-bentonite" >
+                                    <input type="number" id="inventory-bentonite-input" name="i_bentonite_kg" >
                                 </td>
                                 <td>
                                     <label for="daily-consumption-engine-liters-input">Horas del Motor en Litros</label><br>
-                                    <input type="text" id="daily-consumption-engine-liters-input" name="daily-consumption-engine-liters" >
+                                    <input type="number" id="daily-consumption-engine-liters-input" name="i_engine_oils" >
                                 </td>
                                 <td>
                                     <label for="hammer-oil-liters-input">Litros de Aceite de Martillo</label><br>
-                                    <input type="text" id="hammer-oil-liters-input" name="hammer-oil-liters" >
+                                    <input type="number" id="hammer-oil-liters-input" name="i_hammer_oils" >
                                 </td>
                                 <td>
                                     <label for="hydraulic-oil-liters-input">Litros de Aceite Hidráulico</label><br>
-                                    <input type="text" id="hydraulic-oil-liters-input" name="hydraulic-oil-liters" >
+                                    <input type="number" id="hydraulic-oil-liters-input" name="i_hydraulic_oils" >
                                 </td>
                             </tr>
                         </table>
@@ -252,11 +252,11 @@
                             <tr>
                                 <td>
                                     <label for="reamer-quantity-input">Cantidad</label><br>
-                                    <input type="text" id="reamer-quantity-input" name="reamer-quantity" >
+                                    <input type="text" id="reamer-quantity-input" name="r_quantity" >
                                 </td>
                                 <td>
                                     <label for="reamer-measurement-input">Medición</label><br>
-                                    <input type="text" id="reamer-measurement-input" name="reamer-measurement" >
+                                    <input type="text" id="reamer-measurement-input" name="r_measurement" >
                                 </td>
                             </tr>
                         </table>

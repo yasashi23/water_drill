@@ -1,70 +1,70 @@
 async function getDataCompletion(){
     const url = `${host}/db/completionRead/${user}-${num}`
     try{
-        const data = await getData(url)
-        changeElement(data)
+        const {admin,driller,cost} = await getData(url)
+        changeElement(admin[0],driller,cost[0])
     }catch(err){
         console.error(err)
     }
 }
 
-function changeElement(data){
+function changeElement(admin,driller,cost){
+    const {started_day,completion_day} = admin
+    const {diesel_liters,engine_oil,grease_kg} = cost
+
+    
+    
+    // Completion
+    const meterRes = driller.reduce((n,{du_meters_drilled})=> Number(n)+Number(du_meters_drilled),0)
     container_user.textContent = user
     container_number.textContent = num
-    
-    const{bits,casing,daily_consumption,drill_bits,driller_user,hammers,inches,inventory,reamer,tricone_bits,various} = data
-    // meter driller
-    elementNumber(driller_user[0].meters_drilled,total_depth)
+    changeContent("started",started_day.split("T")[0])
+    changeContent("total-depth",meterRes)
+    if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
 
-    // Cost Table
+    // COSTO
+    const dieselLitersTotal = driller.reduce((n,{dc_diesel_liters})=> Number(n)+Number(dc_diesel_liters),0)
+    const engineOilTotal = driller.reduce((n,{dc_engine_oils})=> Number(n)+Number(dc_engine_oils),0)
+    const greaseKgTotal = driller.reduce((n,{dc_grease_kg})=> Number(n)+Number(dc_grease_kg),0)
 
-    const {diesel_liters,engine_oil,grease_kg} = spreateData(daily_consumption) //for daily Consumption
-    totalCost(nullToNumber(diesel_liters),nullToNumber(engine_oil),nullToNumber(grease_kg))
-    profit()
-    console.log(profit_earnings,profit_total_cost,profit_profit)
-}
+    const totalDieselLiters = Number(diesel_liters*dieselLitersTotal)
+    const totalengineOils = Number(engine_oil*engineOilTotal)
+    const totalGreaseKg = Number(grease_kg*greaseKgTotal)
 
+    perliter_diesel.textContent = diesel_liters
+    perliter_engine.textContent = engine_oil
+    perliter_grease.textContent = grease_kg
 
-function spreateData(b){
-    const {...data} = b[0]
-    return data
-}
+    total_liter_diesel.textContent = dieselLitersTotal
+    total_liter_engine.textContent = engineOilTotal
+    total_liter_grease.textContent = greaseKgTotal
 
-function elementNumber(a,elem){
-    console.log(a,elem)
-    if(a === null){
-        elem.textContent = 0
-        // console.log(a)
-    }else{
-        elem.textContent = a
-    }
-}
+    total_cost_diesel.textContent = totalDieselLiters
+    total_cost_engine.textContent = totalengineOils
+    total_cost_grease.textContent = totalGreaseKg
 
-function totalCost(diesel,engine,grease){
-    sumCost(diesel,perliter_diesel,total_liter_diesel,total_cost_diesel)
-    sumCost(engine,perliter_engine,total_liter_engine,total_cost_engine)
-    sumCost(grease,perliter_grease,total_liter_grease,total_cost_grease)
-}
+    // Beneficio
+    const earningsTotal = 50000
+    const costTotal = (totalDieselLiters+totalGreaseKg+totalengineOils)
+    const profitTotal = earningsTotal-costTotal
 
+    profit_earnings.textContent = earningsTotal
+    profit_total_cost.textContent = costTotal
+    profit_profit.textContent = profitTotal
 
-function profit(){
-    profit_total_cost.textContent = `${Number(total_cost_diesel.textContent)+Number(total_cost_engine.textContent)+Number(total_cost_grease.textContent)}`
-    profit_profit.textContent = `${Number(profit_earnings.textContent)-Number(profit_total_cost.textContent)}`
 
 }
 
-function sumCost(liter,perliter,total_liter,total_cost){
-    const total = Number(liter)*Number(perliter.textContent)
-    total_liter.textContent = liter
-    total_cost.textContent = total
-}
 
-function nullToNumber(a){
-    if(a === null){
-        return 0
-    }else{
-        return Number(a)
-    }
+
+function changeContent(cl,val){
+    const hh = document.querySelectorAll(`.container .container__completion tr:nth-child(n+2) td:last-child`)
+
+    hh.forEach(el => {
+        if(el.className.includes(cl)){
+            document.querySelector(`.container .container__completion tr:nth-child(n+2) .${el.className}`).textContent = val
+        }
+    })
 }
 
 async function downloadCsv(){
