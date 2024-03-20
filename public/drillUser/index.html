@@ -29,6 +29,13 @@
                                 <td></td>
                             </tr>
                             <tr>
+                                <td colspan="2">
+                                    <label for="driller-driller-input">Perforador</label><br>
+                                    <input type="text" id="driller-driller-input" name="du_driller">
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
                                 <td>
                                     <label for="driller-user-customer-name-input">Nombre del Cliente</label><br>
                                     <input type="text" id="driller-user-customer-name-input" name="du_customer_name" readonly value="john">
@@ -51,7 +58,8 @@
                                 </td>
                                 <td>
                                     <label for="driller-user-date">Fecha</label><br>
-                                    <input type="date" id="driller-user-date" name="work_day" >
+                                    <input type="date" id="driller-user-date" name="work_day" 
+                                    required>
                                 </td>
                             </tr>
                             <tr>
@@ -69,7 +77,10 @@
                                     <label for="driller-user-water-tables-input">Niveles Freáticos</label><br>
                                     <input type="text" id="driller-user-water-tables-input" name="du_waters_tables" >
                                 </td>
-                                <td></td>
+                                <td>
+                                    <label for="driller-assistant-input">Asistentes</label><br>
+                                    <input type="text" id="driller-assistant-input" name="du_assistant">
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -282,7 +293,7 @@
                         <table>
                             <tr>
                                 <td>Profundidad Total</td>
-                                <td class="total_depth">0</td>
+                                <td>0</td>
                             </tr>
                             <tr>
                                 <td>Niveles Estáticos en Metros</td>
@@ -302,11 +313,11 @@
                             </tr>
                             <tr>
                                 <td>Perforador</td>
-                                <td>Desconocido</td>
+                                <td>Unknown</td>
                             </tr>
                             <tr>
                                 <td>Asistentes</td>
-                                <td>John</td>
+                                <td>Unknown</td>
                             </tr>
                         </table>
                     </div>

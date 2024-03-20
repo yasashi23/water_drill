@@ -1,6 +1,7 @@
 function appendElem(id, well_number, customer_name, progress, well_group) {
     let progressText;
     let lowerCaseName = customer_name.toLowerCase()
+    let lowerCaseWellGroup = well_group.toLowerCase()
     if (progress === "completed") {
         progressText = "Completado";
     }
@@ -9,6 +10,7 @@ function appendElem(id, well_number, customer_name, progress, well_group) {
     newTr.setAttribute("onclick", "clickToCompletion(this)");
     newTr.setAttribute("dataname", lowerCaseName);
     newTr.setAttribute("datanum", well_number);
+    newTr.setAttribute("datagroup", lowerCaseWellGroup);
 
     const html = `
         <td class="container__well-number">${well_number}</td>
@@ -43,9 +45,13 @@ async function searchFinding(e){
     }else{
         getData.forEach(item=>{
             const dataName = item.getAttribute("dataname")
-            if(searchWord === "" ||dataName.startsWith(searchWord)){
+            const dataNum = item.getAttribute("datanum")
+            const datagroup = item.getAttribute("datagroup")
+
+            if(searchWord === "" ||dataName.startsWith(searchWord)||dataNum.startsWith(searchWord)||datagroup.startsWith(searchWord)){
                 item.style.display = "table-row"
-            }else{
+            }
+            else{
                 item.style.display = "none"
             }
 

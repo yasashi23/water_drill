@@ -11,6 +11,7 @@ async function getDataCompletion(){
 function changeElement(admin,driller,cost){
     const {started_day,completion_day} = admin
     const {diesel_liters,engine_oil,grease_kg} = cost
+    const {du_assistant,du_driller} = driller[driller.length-1]
 
     
     
@@ -20,7 +21,15 @@ function changeElement(admin,driller,cost){
     container_number.textContent = num
     changeContent("started",started_day.split("T")[0])
     changeContent("total-depth",meterRes)
+    changeContent("driller",du_driller)
+    changeContent("assistant",du_assistant)
     if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
+    changeContent("static-level-meters",meterRes)
+    changeContent("flow-rate",meterRes)
+    changeContent("total-depth",meterRes)
+    changeContent("dynamic-meters",meterRes)
+    changeContent("filters",meterRes)
+
 
     // COSTO
     const dieselLitersTotal = driller.reduce((n,{dc_diesel_liters})=> Number(n)+Number(dc_diesel_liters),0)
@@ -46,15 +55,24 @@ function changeElement(admin,driller,cost){
     // Beneficio
     const earningsTotal = 50000
     const costTotal = (totalDieselLiters+totalGreaseKg+totalengineOils)
-    const profitTotal = earningsTotal-costTotal
+    const profitTotal = (earningsTotal-costTotal)
+
 
     profit_earnings.textContent = earningsTotal
     profit_total_cost.textContent = costTotal
+
     profit_profit.textContent = profitTotal
 
 
 }
 
+
+function chargedClick(){
+    const numberCharged = Number(serializeFormData(formCharged).charged)
+    profit_price.textContent = numberCharged
+    const profitTotal = Number(profit_earnings.textContent-profit_total_cost.textContent)+numberCharged
+    profit_profit.textContent = profitTotal
+}
 
 
 function changeContent(cl,val){
@@ -100,3 +118,19 @@ function returnText(a){
     const data = document.querySelector(a)
     return `${data.textContent}`
 }
+
+function serializeFormData(form) {
+    var formData = new FormData(form);
+    var serializedData = {};
+    for (var [name, value] of formData) {
+      if (serializedData[name]) {
+        if (!Array.isArray(serializedData[name])) {
+          serializedData[name] = [serializedData[name]];
+        }
+        serializedData[name].push(value);
+      } else {
+        serializedData[name] = value;
+      }
+    }
+    return serializedData;
+  }

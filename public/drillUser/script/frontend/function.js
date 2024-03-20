@@ -3,8 +3,30 @@ async function onSubmit(){
     const url = `${host}/db/postDriller`
     try{
 
-        const {meters}= await postData(url,dataForm)
-        const meterRes = meters.reduce((n,{du_meters_drilled})=> Number(n)+Number(du_meters_drilled),0)
+        const {data,msg}= await postData(url,dataForm)
+        if(msg !== "success"){
+            alert(msg)
+        }else{
+            const meterRes = (data.reduce((n,{du_meters_drilled})=> Number(n)+Number(du_meters_drilled),0))
+            console.log(data,meterRes)
+            
+            //just example
+            completion_td.forEach((el,ind) =>{
+                const {du_driller,du_assistant} = data[data.length-1]
+                console.log(el,ind,du_driller,du_assistant)
+                if(ind <= 4){
+                    el.textContent = meterRes
+                }else if(ind === 5){
+                    el.textContent = du_driller
+                }else{
+                    el.textContent = du_assistant
+                }
+            })
+            alert(msg)
+
+        }
+
+        
 
     }catch(err){
         console.error(err)

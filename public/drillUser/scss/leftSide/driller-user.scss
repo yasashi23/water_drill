@@ -1,7 +1,7 @@
 .container__driller-user{
     table{
 
-        tr:nth-child(2){
+        tr:nth-child(4){
             > td{
                 padding-right: 20px;
             }
@@ -12,6 +12,9 @@
         #driller-user-rotary-number-input{
             width: 50px;
             text-align: center;
+        }
+        #driller-driller-input{
+            width: 100%;
         }
 
     } 

@@ -38,7 +38,7 @@
   padding-left: 16px;
   box-sizing: border-box;
 }
-.container .container__form .container__left-side .container__driller-user table tr:nth-child(2) > td {
+.container .container__form .container__left-side .container__driller-user table tr:nth-child(4) > td {
   padding-right: 20px;
 }
 .container .container__form .container__left-side .container__driller-user table #driller-user-input {
@@ -47,6 +47,9 @@
 .container .container__form .container__left-side .container__driller-user table #driller-user-rotary-number-input {
   width: 50px;
   text-align: center;
+}
+.container .container__form .container__left-side .container__driller-user table #driller-driller-input {
+  width: 100%;
 }
 .container .container__form .container__left-side .container__driller-bits table tr > td {
   padding-right: 20px;

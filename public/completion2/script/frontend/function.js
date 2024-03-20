@@ -10,8 +10,7 @@ async function getDataCompletion(){
 
 function changeElement(admin,driller,cost){
     const {started_day,completion_day} = admin
-    const {diesel_liters,engine_oil,grease_kg} = cost
-
+    const {du_assistant,du_driller} = driller[driller.length-1]
     
     
     // Completion
@@ -20,7 +19,14 @@ function changeElement(admin,driller,cost){
     container_number.textContent = num
     changeContent("started",started_day.split("T")[0])
     changeContent("total-depth",meterRes)
+    changeContent("driller",du_driller)
+    changeContent("assistant",du_assistant)
     if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
+    changeContent("static-level-meters",meterRes)
+    changeContent("flow-rate",meterRes)
+    changeContent("total-depth",meterRes)
+    changeContent("dynamic-meters",meterRes)
+    changeContent("filters",meterRes)
 
 }
 

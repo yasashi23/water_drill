@@ -80,12 +80,13 @@ exports.postDriller = async(req,res) => {
 
   try{  
       const insert = await pool.pool.query("INSERT INTO  driller_data SET ?",data);
-      const insert2 = await pool.pool.query(`select du_meters_drilled from driller_data where du_driller_user="${du_driller_user}" and du_customer_name="${du_customer_name}"`);
-      res.status(200).send({meters:insert2[0]})
+      const insert2 = await pool.pool.query(`select du_meters_drilled,du_driller,du_assistant from driller_data where du_driller_user="${du_driller_user}" and du_customer_name="${du_customer_name}"`);
+      console.log(insert2[0])
+      res.status(200).send({data:insert2[0],msg:"success"})
   }
   catch(err){
       console.error("error",err)
-      res.status(500).send("terjadi kesalahan")
+      res.status(500).send({msg:"date form required"})
   }
 }
 
