@@ -48,9 +48,6 @@
   width: 50px;
   text-align: center;
 }
-.container .container__form .container__left-side .container__driller-user table #driller-driller-input {
-  width: 100%;
-}
 .container .container__form .container__left-side .container__driller-bits table tr > td {
   padding-right: 20px;
 }

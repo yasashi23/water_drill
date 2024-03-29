@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 20 Mar 2024 pada 05.00
+-- Waktu pembuatan: 29 Mar 2024 pada 09.40
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -42,7 +42,7 @@ CREATE TABLE `admin_data1` (
 --
 
 INSERT INTO `admin_data1` (`id`, `well_number`, `customer_name`, `well_group`, `progress`, `started_day`, `completion_day`) VALUES
-(10, '00001', 'john', '', 'in progress', '2024-03-15', NULL),
+(10, '00001', 'john', '', 'completed', '2024-03-15', '2024-03-20'),
 (11, '00002', 'udin', '', 'in progress', '2024-03-15', NULL),
 (12, '00003', 'hana aren', '', 'in progress', '2024-03-15', NULL),
 (13, '00004', 'bambang', 'in progress', 'to be done', '2024-03-15', NULL),
@@ -50,7 +50,7 @@ INSERT INTO `admin_data1` (`id`, `well_number`, `customer_name`, `well_group`, `
 (15, '00006', 'martin', 'in progress', 'in progress', '2024-03-15', NULL),
 (16, '1000', 'John', '', 'in progress', '2024-03-15', NULL),
 (17, '00002', 'Yamil', '', 'in progress', '2024-03-15', NULL),
-(18, '000071', 'Eduardo Perozzo', '', 'in progress', '2024-03-15', NULL),
+(18, '000071', 'Eduardo Perozzo', '', 'completed', '2024-03-15', '2024-03-20'),
 (19, '175', 'Eduardo Perozzo', '', 'in progress', '2024-03-15', NULL),
 (20, '175', 'Eduardo Perozzo', '', 'in progress', '2024-03-15', NULL),
 (21, '00040', 'egi', 'briliant_p', 'in progress', '2024-03-15', NULL),
@@ -67,7 +67,10 @@ INSERT INTO `admin_data1` (`id`, `well_number`, `customer_name`, `well_group`, `
 (33, '4434334', 'tyytyt', 'ghgh', 'in progress', '2024-03-16', NULL),
 (34, '12890', 'qwert', 'gfds', 'to be done', '2024-03-16', NULL),
 (35, '000079', 'Amin', '', 'completed', '2024-03-18', '2024-03-18'),
-(36, '10000', 'Amin', '1', 'completed', '2024-03-18', '2024-03-18');
+(36, '10000', 'Amin', '1', 'completed', '2024-03-18', '2024-03-18'),
+(37, '50000007', 'Amin', '', 'in progress', '2024-03-20', NULL),
+(38, '10100', 'Roca ', '', 'completed', '2024-03-26', '2024-03-26'),
+(39, '', '', '', 'in progress', '2024-03-26', NULL);
 
 -- --------------------------------------------------------
 
@@ -254,7 +257,15 @@ INSERT INTO `driller_data` (`id`, `well_group`, `work_day`, `du_driller_user`, `
 (36, NULL, '2024-03-21', '00001', 'jack', 'john', '3', '', '23', '', '', 'steven', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5 Pulgadas', '', '', '', '', '', '', '', '', '', ''),
 (37, NULL, '2024-03-07', '00001', 'jack', 'john', '3', '', '34', '', '', 'steven', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5 Pulgadas', '', '', '', '', '', '', '', '', '', ''),
 (38, NULL, '2024-03-22', '00001', 'jack', 'john', '3', '', '56', '', '', 'steven', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5 Pulgadas', '', '', '', '', '', '', '', '', '', ''),
-(39, NULL, '2024-03-14', '00001', 'jack', 'john', '3', '', '32', '', '', 'steve', '', '', '', '', '', '', '', '', '', '33', '23', '23', '22', '112', '4', '222', '5 Pulgadas', '', '', '', '', '', '', '', '', '', '');
+(39, NULL, '2024-03-14', '00001', 'jack', 'john', '3', '', '32', '', '', 'steve', '', '', '', '', '', '', '', '', '', '33', '23', '23', '22', '112', '4', '222', '5 Pulgadas', '', '', '', '', '', '', '', '', '', ''),
+(40, NULL, '2024-03-20', '00001', 'Yonathan', 'john', '3', 'Canelones', '30', 'humedo', '20', 'Silvio', 'bit', '4', '5', '5,5', '2,8', '5', '3', 'acero', '', '4', '4', '4', '4', '4', '4', '4', '5 Pulgadas', '5', '6', '7', '7', '7', '7', '7', '5', '5', '6,8'),
+(41, NULL, '2024-03-21', '00001', 'Yonathan', 'john', '3', 'Canelones', '35', 'humedo', '20', 'Silvio', 'bit', '4', '5', '5,5', '2,8', '5', '3', 'acero', '', '4', '4', '4', '4', '4', '4', '4', '5 Pulgadas', '5', '6', '7', '7', '7', '7', '7', '5', '5', '6,8'),
+(42, NULL, '2024-03-21', '00001', 'Yonathan', 'john', '3', 'Canelones', '35', 'humedo', '20', 'Silvio', 'bit', '4', '5', '5,5', '2,8', '5', '3', 'acero', '', '4', '4', '4', '4', '4', '4', '4', '5 Pulgadas', '5', '6', '7', '7', '7', '7', '7', '5', '5', '6,8'),
+(43, NULL, '2024-03-21', '00001', 'Yonathan', 'john', '3', 'Canelones', '35', 'humedo', '20', 'Silvio', 'bit', '4', '5', '5,5', '2,8', '5', '3', 'acero', '', '5', '4', '4', '4', '4', '4', '4', '5 Pulgadas', '5', '6', '7', '7', '7', '7', '7', '5', '5', '6,8'),
+(44, NULL, '2024-03-19', '50000007', 'Yonathan', 'Amin', '3', '', '', '', '', 'Silvio', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5 Pulgadas', '', '', '', '', '', '', '', '', '', ''),
+(45, NULL, '2024-03-19', '50000007', 'Yonathan', 'Amin', '3', '', '5', '', '', 'Silvio', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5 Pulgadas', '', '', '', '', '', '', '', '', '', ''),
+(46, NULL, '2024-03-19', '50000007', 'Yonathan', 'Amin', '3', '', '5', '', '4', 'Silvio', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5 Pulgadas', '', '', '', '', '', '', '', '', '', ''),
+(47, NULL, '2024-03-19', '50000007', 'Yonathan', 'Amin', '3', '', '5', '', '4', 'Silvio', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '5 Pulgadas', '', '', '', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -532,11 +543,11 @@ CREATE TABLE `login_user` (
 --
 
 INSERT INTO `login_user` (`id`, `user`, `password`, `page`, `token`) VALUES
-(1, 'udin', 'u123', 'admin1', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InVkaW4iLCJwYWdlIjoiYWRtaW4xIiwiaWF0IjoxNzEwOTA2Nzk3LCJleHAiOjE3MTA5MDcwMzd9.shuHj9_Bt5zvvV--TIaF-bhdUXx9p1viyK0C5Dp9Aro'),
+(1, 'udin', 'u123', 'admin1', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlciI6InVkaW4iLCJwYWdlIjoiYWRtaW4xIiwiaWF0IjoxNzExNDkzNDk1LCJleHAiOjE3MTE0OTM3MzV9.mD2LkPBDv7BJUcCdCy4lKK6gtvE6YGpocoRJKd2e4Oo'),
 (2, 'john', 'j123', 'admin2', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlciI6ImpvaG4iLCJwYWdlIjoiYWRtaW4yIiwiaWF0IjoxNzEwOTA2OTU2LCJleHAiOjE3MTA5MDcxOTZ9.jTByuaXrg8Ic8Vtlk2Znnx1fMoKeWI9nfaKJFf1XlfM'),
 (3, 'steve', 's123', 'admin1', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlciI6InN0ZXZlIiwicGFnZSI6ImFkbWluMSIsImlhdCI6MTcwOTYwNzAwNSwiZXhwIjoxNzA5NjA3MjQ1fQ.9xKh9HmgVd7LYDTsxWlKys72DiUVn8wSOfvXtAoHmKo'),
 (4, 'hana', 'h123', 'admin2', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlciI6ImhhbmEiLCJwYWdlIjoiYWRtaW4yIiwiaWF0IjoxNzA5NjA3NjU1LCJleHAiOjE3MDk2MDc4OTV9.c9Kt32jjunDKi4l8tYjeAWqeKyN_f09btZ7vx71wM_8'),
-(5, 'aren', 'a123', 'driller', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlciI6ImFyZW4iLCJwYWdlIjoiZHJpbGxlciIsImlhdCI6MTcxMDkwNjc0OCwiZXhwIjoxNzEwOTA2OTg4fQ.uHiF0LumUrNO1LbazK6xCrjX_kfkefvSQFlbpyL29iI'),
+(5, 'aren', 'a123', 'driller', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlciI6ImFyZW4iLCJwYWdlIjoiZHJpbGxlciIsImlhdCI6MTcxMTU5MzM5NSwiZXhwIjoxNzExNTkzNjM1fQ.tTVSDPdZWn_iTY8CYg9hQ2x6t5ATxizpBzsFmHJyXC8'),
 (6, 'budi', 'b123', 'driller', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwidXNlciI6ImJ1ZGkiLCJwYWdlIjoiZHJpbGxlciIsImlhdCI6MTcwNzYxOTUwNCwiZXhwIjoxNzA3NjE5NzQ0fQ.Ea_a8ZRQptlVs6J32Q5CD22pdqlqcZt5Qq1fEsaQZJ8');
 
 -- --------------------------------------------------------
@@ -764,7 +775,7 @@ ALTER TABLE `various`
 -- AUTO_INCREMENT untuk tabel `admin_data1`
 --
 ALTER TABLE `admin_data1`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT untuk tabel `bits`
@@ -788,7 +799,7 @@ ALTER TABLE `daily_consumption`
 -- AUTO_INCREMENT untuk tabel `driller_data`
 --
 ALTER TABLE `driller_data`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT untuk tabel `driller_user`

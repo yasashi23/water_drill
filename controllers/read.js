@@ -27,7 +27,6 @@ exports.completionRead = async(req,res) => {
     const getAdminData = await pool.pool.query(`select * from admin_data1 where well_number="${num}" and customer_name="${user}"`);
 
     const getCostData = await pool.pool.query(`select * from input_cost`);
-
     // console.log(user,num)
     res.send({driller:getDrillerData[0],admin:getAdminData[0],cost:getCostData[0]})
 }

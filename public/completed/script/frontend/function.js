@@ -19,6 +19,7 @@ function appendElem(id, well_number, customer_name, progress, well_group) {
         <td class="container__customer-name">${customer_name}</td>
         <td class="container__well-group">${well_group}</td>
         <td class="container__status">${progressText}</td>
+        <td class="container__open"><span dataname="${customer_name}" datanum="${well_number}" onclick="clickToCompletion(this)">Open</span></td>
     `;
     newTr.innerHTML = html;
     tableTr.appendChild(newTr);
@@ -29,9 +30,10 @@ function backButton(){
   }
 
 function clickToCompletion(e){
-    const [dataName,dataNum] = [e.getAttribute("dataName"),e.getAttribute("dataNum")]
-    // console.log(dataName)
+    const [dataName,dataNum] = [e.getAttribute("dataname"),e.getAttribute("datanum")]
+    // console.log(dataName,dataNum)
     const url = `${host}/completion1/?user=${dataName}&num=${dataNum}`
+    console.log(url)
     window.open(url,'_blank')
 }
 

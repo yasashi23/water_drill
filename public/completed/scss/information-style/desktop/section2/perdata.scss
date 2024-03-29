@@ -1,5 +1,4 @@
 &:nth-child(n+1){
-    cursor: pointer;
     td{
         border-top: 1px solid #000;
         border-bottom: 1px solid #000;
@@ -17,12 +16,24 @@
         &:last-child{
             border-right: 1px solid #000;
             font-weight: 600;
-            u{
+            span{
+                background-color: $brand;
+                color: white;
+                padding: 4px 5px;
+                cursor: pointer;
                 &:hover{
+                    background-color: transparent;
+                    border: 1px solid $brand;
                     color: $brand;
                 }
-                cursor: pointer;
             }
+            // u{
+            //     &:hover{
+            //         color: $brand;
+            //     }
+            //     cursor: pointer;
+            // }
+            cursor: pointer;
         }
     }
     

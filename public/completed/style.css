@@ -45,9 +45,6 @@
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
 }
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) {
-  cursor: pointer;
-}
 .container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -64,11 +61,17 @@
 .container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:last-child {
   border-right: 1px solid #000;
   font-weight: 600;
-}
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:last-child u {
   cursor: pointer;
 }
-.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:last-child u:hover {
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:last-child span {
+  background-color: #0088B6;
+  color: white;
+  padding: 4px 5px;
+  cursor: pointer;
+}
+.container .container__data-completed .container__data .container__data-list table tr:nth-child(n+1) td:last-child span:hover {
+  background-color: transparent;
+  border: 1px solid #0088B6;
   color: #0088B6;
 }
 .container .container__data-completed .container__data-search {

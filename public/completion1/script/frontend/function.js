@@ -11,19 +11,23 @@ async function getDataCompletion(){
 function changeElement(admin,driller,cost){
     const {started_day,completion_day} = admin
     const {diesel_liters,engine_oil,grease_kg} = cost
-    const {du_assistant,du_driller} = driller[driller.length-1]
 
-    
-    
-    // Completion
-    const meterRes = driller.reduce((n,{du_meters_drilled})=> Number(n)+Number(du_meters_drilled),0)
     container_user.textContent = user
     container_number.textContent = num
     changeContent("started",started_day.split("T")[0])
+
+    if(driller.length === 0){
+    if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
+
+    }else{
+    const {du_assistant,du_driller} = driller[driller.length-1]
+    if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
+    const meterRes = driller.reduce((n,{du_meters_drilled})=> Number(n)+Number(du_meters_drilled),0)
+   
+    // Completion
     changeContent("total-depth",meterRes)
     changeContent("driller",du_driller)
     changeContent("assistant",du_assistant)
-    if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
     changeContent("static-level-meters",meterRes)
     changeContent("flow-rate",meterRes)
     changeContent("total-depth",meterRes)
@@ -62,7 +66,7 @@ function changeElement(admin,driller,cost){
     profit_total_cost.textContent = costTotal
 
     profit_profit.textContent = profitTotal
-
+    }
 
 }
 
