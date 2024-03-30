@@ -1,0 +1,36 @@
+@mixin same-style {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+@mixin container-form{
+    width: 100%;
+    border: 1px solid #ff0000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin container-all-inputs{
+    width: 470px;
+    padding-right: 0px;
+    box-sizing: border-box;
+}
+
+
+
+.container__form{
+    @include container-form;
+    .container__all-inputs{
+        @include container-all-inputs;
+        @import 'usuario-section.scss';
+        @import 'consumo-section.scss';
+        @import 'existencias-section.scss';
+        @import 'various-section.scss';
+        @import 'terminacion.scss';
+        @import 'completion-section.scss';
+        @import 'sumbit-button.scss';
+    }
+}

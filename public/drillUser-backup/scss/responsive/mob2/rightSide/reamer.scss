@@ -1,0 +1,19 @@
+.container__reamer{
+    table{
+        tr{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            td{
+                width: 120px;
+                input{
+                    width: 120px;
+                }
+            }
+            td:first-child,td:nth-child(2){
+                padding-right: 20px;
+            }
+        }
+    }
+}

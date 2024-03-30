@@ -1,0 +1,11 @@
+.container__left-side{
+    @include side(16px,0px);
+    
+
+    @import 'driller-user.scss';
+    @import 'drill-bits.scss';
+    @import 'tricone-bits.scss';
+    @import 'bits.scss';
+    @import 'casing.scss';
+    @import 'various.scss';
+}

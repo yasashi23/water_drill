@@ -1,0 +1,20 @@
+@mixin tr{
+    td{
+        input{
+            height: 31px;
+        }
+    }
+    @include same-style;
+}
+@mixin table{
+    border-collapse: separate;
+    border-spacing: 8px 20px;
+    box-sizing: border-box;
+    tr{@include tr;}
+}
+
+.container__daily-consumption{
+    table {
+        @include table;
+        }
+}

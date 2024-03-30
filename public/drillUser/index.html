@@ -7,158 +7,153 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
-    <title>Usuario del Perforador</title>
+    <title>PLANILLA DIARIA DE PERFORACION</title>
 </head>
 <body>
     <div class="container">
-        <h1><span><img width="40px" src="logo.png"></span><u>Usuario del Perforador</u></h1>
+        <h1><span><img width="40px" src="logo.png"></span><u>PLANILLA DIARIA DE PERFORACION</u></h1>
         <form class="container__form-data">
-
             <div class="container__form">
-                <div class="container__left-side">
+                <div class="container__all-inputs">
                     <div class="container__driller-user">
                         <h2>Usuario Perforador</h2>
                         <hr>
                         <table>
                             <tr>
-                                <td colspan="2">
-                                    <label for="driller-user-input">Usuario Perforador</label><br>
+                                <td>
+                                    <label for="driller-user-input">Cliente</label><br>
                                     <select id="driller-user-input" name="du_driller_user" onchange="drillerNumber(this)">
                                     </select>
                                 </td>
-                                <td></td>
-                            </tr>
-                            <tr>
                                 <td>
-                                    <label for="driller-driller-input">Perforador</label><br>
-                                    <input type="text" id="driller-driller-input" name="du_driller">
-                                </td>
-                                <td>
-                                    <label for="driller-assistant-input">Asistentes</label><br>
-                                    <input type="text" id="driller-assistant-input" name="du_assistant">
-                                </td>
-                            </tr>
-                            <!-- <tr>
-                                <td>
-                                    <label for="driller-assistant-input">Asistentes</label><br>
-                                    <input type="text" id="driller-assistant-input" name="du_assistant">
-                                </td>
-                                <td></td>
-                            </tr> -->
-                            <tr>
-                                <td>
-                                    <label for="driller-user-customer-name-input">Nombre del Cliente</label><br>
-                                    <input type="text" id="driller-user-customer-name-input" name="du_customer_name" readonly value="john">
-                                </td>
-                                <td>
-                                    <label for="driller-user-rotary-number-input">Número Rotativo</label><br>
-                                    <select id="driller-user-rotary-number-input" name="du_rotary_number" >
-                                        <option >3</option>
-                                        <option >5</option>
-                                        <option >7</option>
-                                        <option >8</option>
-                                        <option >9</option>
-                                    </select>
+                                    <label for="driller-user-date">Fecha</label><br>
+                                    <input type="date" id="driller-user-date" name="work_day" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <label for="driller-user-address">Dirección</label><br>
-                                    <input type="text" id="driller-user-address" name="du_address" >
+                                    <input type="text" id="driller-user-address" name="du_address">
                                 </td>
                                 <td>
-                                    <label for="driller-user-date">Fecha</label><br>
-                                    <input type="date" id="driller-user-date" name="work_day" 
-                                    required>
+                                    <label for="driller-user-customer-name-input">Nombre del Cliente</label><br>
+                                    <input type="text" id="driller-user-customer-name-input" name="du_customer_name" readonly value="john">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="driller-user-meter-drilled-input">Metros Perforados</label><br>
-                                    <input type="number" id="driller-user-meter-drilled-input" name="du_meters_drilled" >
+                                    <label for="driller-user-meter-drilled-input">Perfora En El Dia (mts)</label><br>
+                                    <input type="number" id="driller-user-meter-drilled-input" name="du_meters_drilled">
                                 </td>
                                 <td>
-                                    <label for="driller-user-terain-des-input">Descripción del Terreno</label><br>
-                                    <input type="text" id="driller-user-terain-des-input" name="du_terain_description" >
+                                    <label for="driller-user-terain-des-input">Total A La Fecha (mts)</label><br>
+                                    <input type="text" id="driller-user-terain-des-input" name="du_terain_description">
                                 </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <label for="driller-user-water-tables-input">Niveles Freáticos</label><br>
-                                    <input type="text" id="driller-user-water-tables-input" name="du_waters_tables" >
+                                <td colspan="2">
+                                    <label for="various-input">Filtraciones</label><br>
+                                    <textarea id="various-input" name="v_various"></textarea>
                                 </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="driller-user-water-tables-input">Napas</label><br>
+                                    <input type="text" id="driller-user-water-tables-input" name="du_waters_tables">
+                                </td>
+                                <td></td>
                             </tr>
                         </table>
-                    </div>
-                
-                    <div class="container__driller-bits">
-                        <h2>Piezas del Perforador</h2>
+                    </div> 
+                    <div class="container__daily-consumption">
+                        <h2>Consumo Diario</h2>
                         <hr>
-                        <table>
+                        <table class="container__input-daily-consumption">
                             <tr>
                                 <td>
-                                    <label for="driller-bits-type-input">Tipo</label><br>
-                                    <input type="text" id="driller-bits-type-input" name="db_type" >
+                                    <label for="dc_engine_hours">Motor(horas)</label><br>
+                                    <input type="number" name="dc_engine_hours" id="dc_engine_hours">
                                 </td>
                                 <td>
-                                    <label for="driller-bits-usage-input">Horas de Uso</label><br>
-                                    <input type="number" id="driller-bits-usage-input" name="db_usage_hours" >
+                                    <label for="dc_gasoil_lts">Gasoil(lts)</label><br>
+                                    <input type="number" name="dc_gasoil_lts" id="dc_gasoil_lts">
+                                </td>
+                                <td>
+                                    <label for="dc_grease_kgs">Grasa(kgs)</label><br>
+                                    <input type="number" name="dc_grease_kgs" id="dc_grease_kgs">
+                                </td>
+                                <td>
+                                    <label for="dc_bentonite_kgs">Bentonita(kgs)</label><br>
+                                    <input type="number" name="dc_bentonite_kgs" id="dc_bentonite_kgs">
+                                </td>
+                                <td>
+                                    <label for="dc_engine_oils">Aceites:Motor(lts)</label><br>
+                                    <input type="number" name="dc_engine_oils" id="dc_engine_oils">
+                                </td>
+                                <td>
+                                    <label for="dc_hammer_lts">Martillo(lts)</label><br>
+                                    <input type="number" name="dc_hammer_lts" id="dc_hammer_lts">
+                                </td>
+                                <td>
+                                    <label for="dc_hydraulic_lts">Hidraulico(lts)</label><br>
+                                    <input type="number" name="dc_hydraulic_lts" id="dc_hydraulic_lts">
                                 </td>
                             </tr>
                         </table>
                     </div>
-                
-                    <div class="container__tricone-bits">
-                        <h2>Piezas Tricónicas</h2>
+                    <div class="container__stock">
+                        <h2>Existencias</h2>
                         <hr>
-                        <table>
+                        <table class="container__input-stock">
                             <tr>
                                 <td>
-                                    <label for="tricone-bits-quantity-input">Cantidad</label><br>
-                                    <input type="text" id="tricone-bits-quantity-input" name="tb_quantity" >
+                                    <label for="s_engine_hours">Motor(horas)</label><br>
+                                    <input type="number" name="s_engine_hours" id="s_engine_hours">
                                 </td>
                                 <td>
-                                    <label for="tricone-bits-measurement-input">Medición</label><br>
-                                    <input type="text" id="tricone-bits-measurement-input" name="tb_measurement" >
+                                    <label for="s_gasoil_lts">Gasoil(lts)</label><br>
+                                    <input type="number" name="s_gasoil_lts" id="s_gasoil_lts">
                                 </td>
                                 <td>
-                                    <label for="tricone-bits-type-input">Tipo</label><br>
-                                    <input type="text" id="tricone-bits-type-input" name="tb_type" >
+                                    <label for="s_grease_kgs">Grasa(kgs)</label><br>
+                                    <input type="number" name="s_grease_kgs" id="s_grease_kgs">
+                                </td>
+                                <td>
+                                    <label for="s_bentonite_kgs">Bentonita(kgs)</label><br>
+                                    <input type="number" name="s_bentonite_kgs" id="s_bentonite_kgs">
+                                </td>
+                                <td>
+                                    <label for="s_engine_oils">Aceites:Motor(lts)</label><br>
+                                    <input type="number" name="s_engine_oils" id="s_engine_oils">
+                                </td>
+                                <td>
+                                    <label for="s_hammer_lts">Martillo(lts)</label><br>
+                                    <input type="number" name="s_hammer_lts" id="s_hammer_lts">
+                                </td>
+                                <td>
+                                    <label for="s_hydraulic_lts">Hidraulico(lts)</label><br>
+                                    <input type="number" name="s_hydraulic_lts" id="s_hydraulic_lts">
+                                </td>
+                                <td>
+                                    <label for="s_pipes_5">Caños 5"(mts)</label><br>
+                                    <input type="number" name="s_pipes_5" id="s_pipes_5">
+                                </td>
+                                <td>
+                                    <label for="s_pipes_6">6"(mts)</label><br>
+                                    <input type="number" name="s_pipes_6" id="s_pipes_6">
+                                </td>
+                                <td>
+                                    <label for="s_pipes_8">8"(mts)</label><br>
+                                    <input type="number" name="s_pipes_8" id="s_pipes_8">
+                                </td>
+                                <td>
+                                    <label for="s_filtros_6">6"(mts)</label><br>
+                                    <input type="number" name="s_filtros_6" id="s_filtros_6">
                                 </td>
                             </tr>
                         </table>
                     </div>
-                
-                    <div class="container__bits">
-                        <h2>Piezas</h2>
-                        <hr>
-                        <table>
-                            <tr>
-                                <td>
-                                    <label for="bits-quantity-input">Cantidad</label><br>
-                                    <input type="text" id="bits-quantity-input" name="b_quantity" >
-                                </td>
-                                <td>
-                                    <label for="bits-measurement-input">Medición</label><br>
-                                    <input type="text" id="bits-measurement-input" name="b_measurement" >
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                
-                    <div class="casing">
-                        <h2>Revestimiento</h2>
-                        <hr>
-                        <table>
-                            <tr>
-                                <td>
-                                    <label for="casing-input">Revestimiento:</label><br>
-                                    <input type="text" id="casing-input" name="c_casing" >
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                
                     <div class="container__various">
                         <h2>Varios</h2>
                         <hr>
@@ -172,163 +167,63 @@
                             </tr>
                         </table>
                     </div>
-                </div>
-                
-                <div class="container__right-side">
-                    <div class="container__daily-consumption">
-                        <h2>Consumo Diario</h2>
+                    <div class="container__termination">
+                        <h2>Terminacion</h2>
                         <hr>
                         <table>
                             <tr>
                                 <td>
-                                    <label for="daily-consumption-diesel-liters-input">Litros de Diesel</label><br>
-                                    <input type="number" id="daily-consumption-diesel-liters-input" name="dc_diesel_liters" >
+                                    <label for="t_total_depth">Profundidad Total(mts)</label><br>
+                                    <input type="number" name="t_total_depth" id="t_total_depth">
                                 </td>
                                 <td>
-                                    <label for="daily-consumption-engine-oil-input">Aceite del Motor</label><br>
-                                    <input type="number" id="daily-consumption-engine-oil-input" name="dc_engine_oils" >
-                                </td>
-                                <td>
-                                    <label for="daily-consumption-grease-kg-input">Kilogramos de Grasa</label><br>
-                                    <input type="number" id="daily-consumption-grease-kg-input" name="dc_grease_kg" >
-                                </td>
-                                <td>
-                                    <label for="daily-consumption-engine-hour-input">Horas del Motor</label><br>
-                                    <input type="number" id="daily-consumption-engine-hour-input" name="dc_engine_hours" >
-                                </td>
-                                <td>
-                                    <label for="daily-consumption-bentonite-kg-input">Kilogramos de Bentonita</label><br>
-                                    <input type="number" id="daily-consumption-bentonite-kg-input" name="dc_bentonite_kg" >
-                                </td>
-                                <td>
-                                    <label for="daily-consumption-cmc-kg-input">Kilogramos de CMC</label><br>
-                                    <input type="number" id="daily-consumption-cmc-kg-input" name="dc_cmc_kg" >
-                                </td>
-                                <td>
-                                    <label for="daily-consumption-Hammer-oil-address">Litros de Aceite de Martillo</label><br>
-                                    <input type="number" id="daily-consumption-Hammer-oil-address" name="dc_hammer_oils" >
-                                </td>
-                            </tr>                                
-                        </table>
-                    </div>
-                    <div class="container__hammers">
-                        <h2>Martillos</h2>
-                        <hr>
-                        <table>
-                            <tr>
-                                <td>
-                                    <label for="hammers-input">Litros de Diesel</label><br>
-                                    <select id="hammers-input" name="h_type" >
-                                        <option >5 Pulgadas</option>
-                                        <option >6 Pulgadas</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <label for="hammers-engine-oil-input">Aceite del Motor</label><br>
-                                    <input type="number" id="hammers-engine-oil-input" name="h_usage_hours" >
+                                    <label for="t_flow">Caudal(mts)</label><br>
+                                    <input type="number" name="t_flow" id="t_flow">
                                 </td>
                             </tr>
-                        </table>
-                    </div>
-                    <div class="container__inventory">
-                        <h2>Inventario</h2>
-                        <hr>
-                        <table>
                             <tr>
                                 <td>
-                                    <label for="inventory-diesel-liters-input">Litros de Diesel</label><br>
-                                    <input type="number" id="inventory-diesel-liters-input" name="i_diesel_liters" >
+                                    <label for="t_static_level">Niveles Estatico(lts./h)</label><br>
+                                    <input type="number" name="t_static_level" id="t_static_level">
                                 </td>
                                 <td>
-                                    <label for="inventory-grease-kg-input">Kilogramos de Grasa</label><br>
-                                    <input type="number" id="inventory-grease-kg-input" name="i_grease_kg" >
-                                </td>
-                                <td>
-                                    <label for="inventory-bentonite-input">Kilogramos de Bentonita</label><br>
-                                    <input type="number" id="inventory-bentonite-input" name="i_bentonite_kg" >
-                                </td>
-                                <td>
-                                    <label for="daily-consumption-engine-liters-input">Horas del Motor en Litros</label><br>
-                                    <input type="number" id="daily-consumption-engine-liters-input" name="i_engine_oils" >
-                                </td>
-                                <td>
-                                    <label for="hammer-oil-liters-input">Litros de Aceite de Martillo</label><br>
-                                    <input type="number" id="hammer-oil-liters-input" name="i_hammer_oils" >
-                                </td>
-                                <td>
-                                    <label for="hydraulic-oil-liters-input">Litros de Aceite Hidráulico</label><br>
-                                    <input type="number" id="hydraulic-oil-liters-input" name="i_hydraulic_oils" >
+                                    <label for="t_dynamic">Dinamico(mts)</label><br>
+                                    <input type="number" name="t_dynamic" id="t_dynamic">
                                 </td>
                             </tr>
-                        </table>
-                    </div>
-                    <div class="container__reamer">
-                        <h2>Reamers</h2>
-                        <hr>
-                        <table>
                             <tr>
-                                <td>
-                                    <label for="reamer-quantity-input">Cantidad</label><br>
-                                    <input type="text" id="reamer-quantity-input" name="r_quantity" >
+                                <td colspan="2">
+                                    <label for="t_tubed">Entubado</label><br>
+                                    <input type="number" name="t_tubed" id="t_tubed">
                                 </td>
-                                <td>
-                                    <label for="reamer-measurement-input">Medición</label><br>
-                                    <input type="text" id="reamer-measurement-input" name="r_measurement" >
-                                </td>
+                                <td></td>
                             </tr>
-                        </table>
-                    </div>
-                    <div class="container__inches">
-                        <h2>Pulgadas</h2>
-                        <hr>
-                        <table>
                             <tr>
-                                <td>
-                                    <label for="inches-input">Pulgadas:</label><br>
-                                    <input type="text" id="inches-input" name="inches" >
+                                <td colspan="2">
+                                    <label for="t_filtres">Filtros</label><br>
+                                    <input type="number" name="t_filtres" id="t_filtres">
                                 </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="t_drillers">Perforadores</label><br>
+                                    <input type="number" name="t_drillers" id="t_drillers">
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="t_helpers">Ayudantes</label><br>
+                                    <input type="number" name="t_helpers" id="t_helpers">
+                                </td>
+                                <td></td>
                             </tr>
                         </table>
                     </div>
                     <button class="container__btn-submit" type="button">Enviar</button>
-                    <!-- <input type="submit"  class="btn-submit" > -->
-                
-                    <div class="container__completion">
-                        <h2>Completado</h2>
-                        <hr>
-                        <table>
-                            <tr>
-                                <td>Profundidad Total</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Niveles Estáticos en Metros</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Tasa de Flujo en Litros/hora</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Metros Dinámicos</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Filtros</td>
-                                <td>0</td>
-                            </tr>
-                            <tr>
-                                <td>Perforador</td>
-                                <td>Unknown</td>
-                            </tr>
-                            <tr>
-                                <td>Asistentes</td>
-                                <td>Unknown</td>
-                            </tr>
-                        </table>
-                    </div>
                 </div>
-                
+
             </div>
         </form>
 
