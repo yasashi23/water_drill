@@ -1,5 +1,5 @@
 const form = document.querySelector('.container .container__form-data')
 const btn_submit = document.querySelector('.container__btn-submit')
-const driller_user = document.querySelector('#driller-user-input')
-const customer_name = document.querySelector("#driller-user-customer-name-input")
+const driller_user = document.querySelector('#du_driller_user')
+const customer_name = document.querySelector("#du_customer_name")
 const completion_td = document.querySelectorAll('.container .container__completion tr td:nth-child(2)')

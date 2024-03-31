@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="container">
-        <h1><span><img width="40px" src="logo.png"></span><u>PLANILLA DIARIA DE PERFORACION</u></h1>
+        <h1><span><img src="logo.png"></span><u>PLANILLA DIARIA DE PERFORACION</u></h1>
         <form class="container__form-data">
             <div class="container__form">
                 <div class="container__all-inputs">
@@ -21,46 +21,53 @@
                         <table>
                             <tr>
                                 <td>
-                                    <label for="driller-user-input">Cliente</label><br>
-                                    <select id="driller-user-input" name="du_driller_user" onchange="drillerNumber(this)">
+                                    <label for="du_driller_user">Cliente</label><br>
+                                    <select id="du_driller_user" name="du_driller_user" onchange="drillerNumber(this)">
                                     </select>
                                 </td>
                                 <td>
-                                    <label for="driller-user-date">Fecha</label><br>
-                                    <input type="date" id="driller-user-date" name="work_day" required>
+                                    <label for="work_day">Fecha</label><br>
+                                    <input type="date" id="work_day" name="work_day" required>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="driller-user-address">Dirección</label><br>
-                                    <input type="text" id="driller-user-address" name="du_address">
+                                    <label for="du_address">Dirección</label><br>
+                                    <input type="text" id="du_address" name="du_address">
                                 </td>
                                 <td>
-                                    <label for="driller-user-customer-name-input">Nombre del Cliente</label><br>
-                                    <input type="text" id="driller-user-customer-name-input" name="du_customer_name" readonly value="john">
+                                    <label for="du_customer_name">Nombre del Cliente</label><br>
+                                    <input type="text" id="du_customer_name" name="du_customer_name" readonly placeholder="seleccionar cliente nuevamente">
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <label for="driller-user-meter-drilled-input">Perfora En El Dia (mts)</label><br>
-                                    <input type="number" id="driller-user-meter-drilled-input" name="du_meters_drilled">
+                                    <label for="du_drills_day">Perfora En El Dia (mts)</label><br>
+                                    <input type="number" id="du_drills_day" name="du_drills_day">
                                 </td>
                                 <td>
-                                    <label for="driller-user-terain-des-input">Total A La Fecha (mts)</label><br>
-                                    <input type="text" id="driller-user-terain-des-input" name="du_terain_description">
+                                    <label for="du_total_date">Total A La Fecha (mts)</label><br>
+                                    <input type="text" id="du_total_date" name="du_total_date">
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <label for="various-input">Filtraciones</label><br>
-                                    <textarea id="various-input" name="v_various"></textarea>
+                                    <label for="du_land_description">Descripcion De Terrenos</label><br>
+                                    <textarea id="du_land_description" name="du_land_description"></textarea>
                                 </td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <label for="driller-user-water-tables-input">Napas</label><br>
-                                    <input type="text" id="driller-user-water-tables-input" name="du_waters_tables">
+                                    <label for="du_leaks">Filtraciones</label><br>
+                                    <input type="text" id="du_leaks" name="du_leaks">
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <label for="du_napas">Napas</label><br>
+                                    <input type="text" id="du_napas" name="du_napas">
                                 </td>
                                 <td></td>
                             </tr>
@@ -208,14 +215,14 @@
                             <tr>
                                 <td colspan="2">
                                     <label for="t_drillers">Perforadores</label><br>
-                                    <input type="number" name="t_drillers" id="t_drillers">
+                                    <input type="text" name="t_drillers" id="t_drillers">
                                 </td>
                                 <td></td>
                             </tr>
                             <tr>
                                 <td colspan="2">
                                     <label for="t_helpers">Ayudantes</label><br>
-                                    <input type="number" name="t_helpers" id="t_helpers">
+                                    <input type="text" name="t_helpers" id="t_helpers">
                                 </td>
                                 <td></td>
                             </tr>

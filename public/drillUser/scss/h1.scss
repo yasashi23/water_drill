@@ -1,3 +1,20 @@
-h1{
-    
+@mixin responsive-img {
+    width: 40px;
+    @media screen and (max-width: 665px){
+        width: 30px;
+    }
+}
+
+h1 {
+    display: flex;
+    gap: 10px;
+    @media screen and (max-width: 665px){
+        font-size: 24px;
+    }
+
+    span {
+        img{
+            @include responsive-img;
+        }
+    }
 }

@@ -54,6 +54,7 @@ function loopData(dt){
             driller_user.appendChild(newOption)
         }
     });
+    
 }
 
 function cE(str){
@@ -62,6 +63,5 @@ function cE(str){
 
 function drillerNumber(a){
     const data = a.options[a.selectedIndex].getAttribute("data-customer")
-    // console.log(data)
     customer_name.value = data
 }

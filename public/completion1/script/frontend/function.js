@@ -2,6 +2,7 @@ async function getDataCompletion(){
     const url = `${host}/db/completionRead/${user}-${num}`
     try{
         const {admin,driller,cost} = await getData(url)
+        console.log(admin[0],driller,cost[0])
         changeElement(admin[0],driller,cost[0])
     }catch(err){
         console.error(err)
@@ -18,16 +19,15 @@ function changeElement(admin,driller,cost){
 
     if(driller.length === 0){
     if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
-
     }else{
-    const {du_assistant,du_driller} = driller[driller.length-1]
+    const {t_helpers,t_drillers} = driller[driller.length-1]
     if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
-    const meterRes = driller.reduce((n,{du_meters_drilled})=> Number(n)+Number(du_meters_drilled),0)
+    const meterRes = driller.reduce((n,{du_drills_day})=> Number(n)+Number(du_drills_day),0)
    
     // Completion
     changeContent("total-depth",meterRes)
-    changeContent("driller",du_driller)
-    changeContent("assistant",du_assistant)
+    changeContent("driller",t_drillers)
+    changeContent("assistant",t_helpers)
     changeContent("static-level-meters",meterRes)
     changeContent("flow-rate",meterRes)
     changeContent("total-depth",meterRes)
@@ -36,9 +36,9 @@ function changeElement(admin,driller,cost){
 
 
     // COSTO
-    const dieselLitersTotal = driller.reduce((n,{dc_diesel_liters})=> Number(n)+Number(dc_diesel_liters),0)
+    const dieselLitersTotal = driller.reduce((n,{dc_gasoil_lts})=> Number(n)+Number(dc_gasoil_lts),0)
     const engineOilTotal = driller.reduce((n,{dc_engine_oils})=> Number(n)+Number(dc_engine_oils),0)
-    const greaseKgTotal = driller.reduce((n,{dc_grease_kg})=> Number(n)+Number(dc_grease_kg),0)
+    const greaseKgTotal = driller.reduce((n,{dc_grease_kgs})=> Number(n)+Number(dc_grease_kgs),0)
 
     const totalDieselLiters = Number(diesel_liters*dieselLitersTotal)
     const totalengineOils = Number(engine_oil*engineOilTotal)

@@ -1,0 +1,16 @@
+@mixin hover {
+    &:hover {
+        border: 1px solid $btn;
+        color: $btn;
+        background-color: transparent;
+    }
+}
+
+button.container__btn-submit {
+    background-color: $btn;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 8px;
+    @include hover;
+}

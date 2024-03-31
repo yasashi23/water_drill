@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 40px;
+    padding-top: 40px;
     @import 'h1.scss';
     @import 'form/form.scss';
 }
