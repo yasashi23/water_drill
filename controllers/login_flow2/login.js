@@ -12,7 +12,7 @@ exports.authLogin_admin2 = async (req,res) =>{
         }
 
     }catch(err){
-        console.log(err)
+        console.error(err)
         res.json({message:"your user or password is wrong"})
     }
 }
@@ -26,7 +26,6 @@ const jwtTokenSet = async (id,user,page,res,password) => {
     const token = jwt.sign({id,user,page}, process.env.JWT_SECRET,{
         expiresIn:process.env.JWT_ACCESS_TOKEN
     })
-    console.log("the token is flow2",token)
 
     add_token(user,password,token)
 
@@ -36,7 +35,7 @@ const jwtTokenSet = async (id,user,page,res,password) => {
 const add_token = async(user,password,token) =>{
     try{
         const [result] = await pool.pool.execute(`update login_user set token=("${token}") WHERE user="${user}" AND password="${password}" AND  page="admin2"`)
-    }catch(error){
-        console.log("47",error)
+    }catch(err){
+        console.error(err)
     }
 }

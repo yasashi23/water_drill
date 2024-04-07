@@ -1,5 +1,4 @@
 const pool = require('../routes/db-config')
-const {getAllData} = require('./sql')
 
 
 exports.dataAdmin1 = async(req,res) =>{
@@ -27,7 +26,6 @@ exports.completionRead = async(req,res) => {
     const getAdminData = await pool.pool.query(`select * from admin_data1 where well_number="${num}" and customer_name="${user}"`);
 
     const getCostData = await pool.pool.query(`select * from input_cost`);
-    // console.log(user,num)
     res.send({driller:getDrillerData[0],admin:getAdminData[0],cost:getCostData[0]})
 }
 
@@ -39,7 +37,7 @@ exports.editInformation = async(req,res)=>{
     const sql = `select * from input_earn where ${where}`
     pool.pool.query(sql)
     .then(result => {
-        console.log(result[0])
+  
         res.json(result[0])
     })
     .catch(error => {
@@ -58,7 +56,6 @@ exports.getIdInput = async(req,res) => {
       const result = await pool.pool.query(sql);
       const newData = result[0][0];
       res.json(newData)
-      console.log(newData);
     } catch (error) {
       console.error(error);
       return "error";
@@ -69,7 +66,6 @@ exports.getInformationList = async(req,res) =>{
     const sql = "select * from input_earn"
      try{
         const result = await pool.pool.query(sql)
-        console.log(result[0])
         res.json(result[0])
      }catch(err){
         console.error(err)

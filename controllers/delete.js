@@ -5,7 +5,6 @@ exports.deleteInformation = async(req,res)=>{
       const sql = `DELETE FROM input_earn WHERE id = ${id}`
       pool.pool.query(sql)
       .then(response =>{
-            // console.log(respone)
           res.json({msg:"success"})
       })
       .catch(err=>{

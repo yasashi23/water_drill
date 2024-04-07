@@ -10,7 +10,6 @@ exports.editInformation = async(req,res)=>{
       const sql = `update input_earn set ${set} where id=${id}`
       pool.pool.query(sql)
       .then(response =>{
-            // console.log(respone)
           res.json({msg:"success"})
       })
       .catch(err=>{
@@ -53,7 +52,6 @@ exports.inputCost = async(req,res)=>{
       const sql = `update input_cost set ${set} where id=1`
       pool.pool.query(sql)
       .then(response =>{
-            // console.log(respone)
           res.json({msg:"success"})
       })
       .catch(err=>{

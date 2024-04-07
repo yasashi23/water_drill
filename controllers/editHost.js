@@ -7,11 +7,8 @@ exports.editHost = async (req, res) => {
         const { host } = req.body;
         const filePattern = path.join(__dirname, '..', 'public/*/script/frontend/host.js');
         
-        // Mencari file host.js yang sesuai dengan pola
         const files = glob.sync(filePattern);
         const varHost = `const host = "${host}"`
-        
-        // Menggunakan fungsi fs.writeFile untuk menulis host baru ke setiap file
         files.forEach(file => {
             fs.writeFile(file, varHost, function (err) {
                 if (err) {

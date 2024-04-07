@@ -8,12 +8,12 @@ exports.isLoggedIn_driller = async (req,res,next)=>{
     const authHeader = req.headers['authorization']
     const token = authHeader && authHeader.split(' ')[1]
     if(token == null) {
-        console.log("HELLO ERROR TOKEN NULL",authHeader)
+        
         return res.json({permission:"401"})
     }
     jwt.verify(token, process.env.JWT_SECRET,(err,decode)=>{
         if(err) {
-            console.log("FORBIDDEN ERROR flow1",err)
+            
             return res.json({permission:"403",msg:"unverified"})
         }
             req.id = decode.id
@@ -25,7 +25,7 @@ exports.isLoggedIn_driller = async (req,res,next)=>{
 exports.getUsers_driller = async(req,res)=>{
     try{
         const {user,id} = req
-        console.log("lihat ini",req.id,req.user)
+        
         res.json({id,user,msg:"verified"})
     }catch(err){
         console.error("errors nih",err)
@@ -47,10 +47,10 @@ exports.refreshToken_driller = async (req,res) =>{
                     expiresIn:process.env.JWT_ACCESS_TOKEN
                 })
                 if(decode.id!==id){
-                    console.log("BEDA CUYY")
+                    
                 }else{
     
-                    console.log("new Token",decode)
+                    
                 }
                 res.json({token:accessToken})
             })
@@ -58,8 +58,8 @@ exports.refreshToken_driller = async (req,res) =>{
         }
 
 
-    }catch(er){
-        console.log(er)
+    }catch(err){
+        console.error(err)
     }
 
 }
