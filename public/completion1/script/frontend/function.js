@@ -2,7 +2,6 @@ async function getDataCompletion(){
     const url = `${host}/db/completionRead/${user}-${num}`
     try{
         const {admin,driller,cost} = await getData(url)
-        console.log(admin[0],driller,cost[0])
         changeElement(admin[0],driller,cost[0])
     }catch(err){
         console.error(err)
@@ -22,17 +21,26 @@ function changeElement(admin,driller,cost){
     }else{
     const {t_helpers,t_drillers} = driller[driller.length-1]
     if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
+
     const meterRes = driller.reduce((n,{du_drills_day})=> Number(n)+Number(du_drills_day),0)
+    const staticLevelMtr = driller.reduce((n,{t_static_level})=> Number(n)+Number(t_static_level),0)
+    const flowRate = driller.reduce((n,{t_flow})=> Number(n)+Number(t_flow),0)
+    const dynamicMtr = driller.reduce((n,{t_dynamic})=> Number(n)+Number(t_dynamic),0)
+    const filter = driller.reduce((n,{t_filtres})=> Number(n)+Number(t_filtres),0)
+        // console.log(filter)
    
     // Completion
     changeContent("total-depth",meterRes)
     changeContent("driller",t_drillers)
     changeContent("assistant",t_helpers)
-    changeContent("static-level-meters",meterRes)
-    changeContent("flow-rate",meterRes)
-    changeContent("total-depth",meterRes)
-    changeContent("dynamic-meters",meterRes)
-    changeContent("filters",meterRes)
+
+
+
+    changeContent("static-level-meters",staticLevelMtr || 0)
+    changeContent("flow-rate",flowRate || 0)
+    // changeContent("total-depth",meterRes)
+    changeContent("dynamic-meters",dynamicMtr || 0)
+    changeContent("filters",filter || 0)
 
 
     // COSTO
@@ -87,6 +95,11 @@ function changeContent(cl,val){
             document.querySelector(`.container .container__completion tr:nth-child(n+2) .${el.className}`).textContent = val
         }
     })
+}
+
+function reduceNumber(a){
+    const result = driller.reduce((n,{a})=> Number(n)+Number(a),0)
+    return result
 }
 
 async function downloadCsv(){
