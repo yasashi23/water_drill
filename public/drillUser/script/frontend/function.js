@@ -1,6 +1,7 @@
 async function onSubmit(){
     const dataForm = serializeFormData(form)
     const url = `${host}/db/postDriller`
+
     try{
 
         const {data,msg}= await postData(url,dataForm)
@@ -8,26 +9,12 @@ async function onSubmit(){
             alert(msg)
         }else{
             const meterRes = (data.reduce((n,{du_meters_drilled})=> Number(n)+Number(du_meters_drilled),0))
-            console.log(data,meterRes)
             
-            //just example
-            completion_td.forEach((el,ind) =>{
-                const {du_driller,du_assistant} = data[data.length-1]
-                console.log(el,ind,du_driller,du_assistant)
-                if(ind <= 4){
-                    el.textContent = meterRes
-                }else if(ind === 5){
-                    el.textContent = du_driller
-                }else{
-                    el.textContent = du_assistant
-                }
-            })
+            allInputs.forEach(input => {
+            input.value = "";
+            });
             alert(msg)
-
         }
-
-        
-
     }catch(err){
         console.error(err)
     }
@@ -57,11 +44,62 @@ function loopData(dt){
     
 }
 
+function loopNameDrillers(dt){
+    dt.forEach(data => {
+        const {assistant,driller} = data
+            const newOption = cE("option")
+            newOption.textContent = driller
+            newOption.setAttribute("data-assistant",assistant)
+            drillers_name.appendChild(newOption)
+    });
+    
+}
+
 function cE(str){
     return document.createElement(str)
 }
 
+
+function getMtsDrill(a){
+    let totalDepth = `${Number(totalDepthFromDb) + Number(a.value)}`
+    total_depth_value.value = totalDepth
+}
+
+
+async function getDataCompletion(user,num){
+    const url = `${host}/db/completionRead/${user}-${num}`
+    try{
+        const {admin,driller,cost} = await getData(url)
+        const meterRes = driller.reduce((n,{du_drills_day})=> Number(n)+Number(du_drills_day),0)
+        total_depth_value.value = meterRes
+        totalDepthFromDb = meterRes
+    }catch(err){
+        console.error(err)
+    }
+}
+
+
+async function getDataDrillersAssistants(){
+    const url = `${host}/db/earnInput`
+    try{
+        const data = await getData(url)
+        loopNameDrillers(data)
+        
+    }catch(err){
+        console.error(err)
+    }
+}
+
+
+
 function drillerNumber(a){
     const data = a.options[a.selectedIndex].getAttribute("data-customer")
+    const num = a.options[a.selectedIndex].textContent
     customer_name.value = data
+    getDataCompletion(data,num)
+}
+
+function selectDrillers(a){
+    const data = a.options[a.selectedIndex].getAttribute("data-assistant")
+    assistant_name.value = data
 }

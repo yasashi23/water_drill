@@ -17,15 +17,20 @@ function changeElement(admin,driller,cost){
     changeContent("started",started_day.split("T")[0])
 
     if(driller.length === 0){
+        
     if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
+
     }else{
     const {t_helpers,t_drillers} = driller[driller.length-1]
     if(completion_day !== null)changeContent("completion-day",completion_day.split("T")[0])
 
     const meterRes = driller.reduce((n,{du_drills_day})=> Number(n)+Number(du_drills_day),0)
     const staticLevelMtr = driller.reduce((n,{t_static_level})=> Number(n)+Number(t_static_level),0)
-    const flowRate = driller.reduce((n,{t_flow})=> Number(n)+Number(t_flow),0)
+
+    const flowRate = driller.reduce((n,{dc_engine_hours})=> Number(n)+Number(dc_engine_hours),0) + driller.reduce((n,{dc_gasoil_lts})=> Number(n)+Number(dc_gasoil_lts),0)
+
     const dynamicMtr = driller.reduce((n,{t_dynamic})=> Number(n)+Number(t_dynamic),0)
+
     const filter = driller.reduce((n,{t_filtres})=> Number(n)+Number(t_filtres),0)
         // console.log(filter)
    
@@ -33,15 +38,10 @@ function changeElement(admin,driller,cost){
     changeContent("total-depth",meterRes)
     changeContent("driller",t_drillers)
     changeContent("assistant",t_helpers)
-
-
-
     changeContent("static-level-meters",staticLevelMtr || 0)
     changeContent("flow-rate",flowRate || 0)
-    // changeContent("total-depth",meterRes)
     changeContent("dynamic-meters",dynamicMtr || 0)
     changeContent("filters",filter || 0)
-
 
     // COSTO
     const dieselLitersTotal = driller.reduce((n,{dc_gasoil_lts})=> Number(n)+Number(dc_gasoil_lts),0)
@@ -65,15 +65,13 @@ function changeElement(admin,driller,cost){
     total_cost_grease.textContent = totalGreaseKg
 
     // Beneficio
-    const earningsTotal = 50000
     const costTotal = (totalDieselLiters+totalGreaseKg+totalengineOils)
-    const profitTotal = (earningsTotal-costTotal)
 
 
-    profit_earnings.textContent = earningsTotal
+    // profit_earnings.textContent = earningsTotal
     profit_total_cost.textContent = costTotal
 
-    profit_profit.textContent = profitTotal
+    profit_profit.textContent = costTotal
     }
 
 }
@@ -82,7 +80,7 @@ function changeElement(admin,driller,cost){
 function chargedClick(){
     const numberCharged = Number(serializeFormData(formCharged).charged)
     profit_price.textContent = numberCharged
-    const profitTotal = Number(profit_earnings.textContent-profit_total_cost.textContent)+numberCharged
+    const profitTotal = Number(numberCharged-profit_total_cost.textContent)
     profit_profit.textContent = profitTotal
 }
 
@@ -112,7 +110,6 @@ async function downloadCsv(){
         "Diesel liters":total_liter_diesel.textContent,
         "Engine Oil":total_liter_engine.textContent,
         "Grease Kg":total_liter_grease.textContent,
-        Earnings:profit_earnings.textContent,
         "Total Cost":profit_total_cost.textContent,
         Profit:profit_profit.textContent
     }

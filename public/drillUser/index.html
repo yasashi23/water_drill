@@ -41,14 +41,11 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="2">
                                     <label for="du_drills_day">Perfora En El Dia (mts)</label><br>
-                                    <input type="number" id="du_drills_day" name="du_drills_day">
+                                    <input type="number" id="du_drills_day" name="du_drills_day" onchange="getMtsDrill(this)">
                                 </td>
-                                <td>
-                                    <label for="du_total_date">Total A La Fecha (mts)</label><br>
-                                    <input type="text" id="du_total_date" name="du_total_date">
-                                </td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td colspan="2">
@@ -114,10 +111,6 @@
                         <hr>
                         <table class="container__input-stock">
                             <tr>
-                                <td>
-                                    <label for="s_engine_hours">Motor(horas)</label><br>
-                                    <input type="number" name="s_engine_hours" id="s_engine_hours">
-                                </td>
                                 <td>
                                     <label for="s_gasoil_lts">Gasoil(lts)</label><br>
                                     <input type="number" name="s_gasoil_lts" id="s_gasoil_lts">
@@ -215,7 +208,8 @@
                             <tr>
                                 <td colspan="2">
                                     <label for="t_drillers">Perforadores</label><br>
-                                    <input type="text" name="t_drillers" id="t_drillers">
+                                    <select name="t_drillers" id="t_drillers" onchange="selectDrillers(this)"></select>
+                                    <!-- <input type="text" name="t_drillers" id="t_drillers"> -->
                                 </td>
                                 <td></td>
                             </tr>

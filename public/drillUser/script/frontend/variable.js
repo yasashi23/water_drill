@@ -1,5 +1,9 @@
 const form = document.querySelector('.container .container__form-data')
 const btn_submit = document.querySelector('.container__btn-submit')
 const driller_user = document.querySelector('#du_driller_user')
+const drillers_name = document.querySelector('#t_drillers')
 const customer_name = document.querySelector("#du_customer_name")
-const completion_td = document.querySelectorAll('.container .container__completion tr td:nth-child(2)')
+const assistant_name = document.querySelector('#t_helpers')
+var total_depth_value = document.querySelector("#t_total_depth")
+let totalDepthFromDb = 0
+const allInputs = document.querySelectorAll('td input')
