@@ -23,6 +23,7 @@
                                 <td>
                                     <label for="du_driller_user">Cliente</label><br>
                                     <select id="du_driller_user" name="du_driller_user" onchange="drillerNumber(this)">
+                                        <option value="2" disabled selected>Seleccionar usuario de perforador</option>
                                     </select>
                                 </td>
                                 <td>
@@ -174,7 +175,7 @@
                             <tr>
                                 <td>
                                     <label for="t_total_depth">Profundidad Total(mts)</label><br>
-                                    <input type="number" name="t_total_depth" id="t_total_depth">
+                                    <input type="number" name="t_total_depth" id="t_total_depth" readonly>
                                 </td>
                                 <td>
                                     <label for="t_flow">Caudal(mts)</label><br>
