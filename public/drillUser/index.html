@@ -23,7 +23,7 @@
                                 <td>
                                     <label for="du_driller_user">Cliente</label><br>
                                     <select id="du_driller_user" name="du_driller_user" onchange="drillerNumber(this)">
-                                        <option value="2" disabled selected>Seleccionar usuario de perforador</option>
+                                        <option value="" disabled selected>Seleccionar usuario de perforador</option>
                                     </select>
                                 </td>
                                 <td>
@@ -175,7 +175,7 @@
                             <tr>
                                 <td>
                                     <label for="t_total_depth">Profundidad Total(mts)</label><br>
-                                    <input type="number" name="t_total_depth" id="t_total_depth" readonly>
+                                    <input type="number" name="t_total_depth" id="t_total_depth" readonly onfocus="this.style.outline='none'">
                                 </td>
                                 <td>
                                     <label for="t_flow">Caudal(mts)</label><br>
@@ -209,7 +209,9 @@
                             <tr>
                                 <td colspan="2">
                                     <label for="t_drillers">Perforadores</label><br>
-                                    <select name="t_drillers" id="t_drillers" onchange="selectDrillers(this)"></select>
+                                    <select name="t_drillers" id="t_drillers" onchange="selectDrillers(this)">
+                                        <option value="" disabled selected>Seleccionar perforador</option>
+                                    </select>
                                     <!-- <input type="text" name="t_drillers" id="t_drillers"> -->
                                 </td>
                                 <td></td>
@@ -217,7 +219,7 @@
                             <tr>
                                 <td colspan="2">
                                     <label for="t_helpers">Ayudantes</label><br>
-                                    <input type="text" name="t_helpers" id="t_helpers">
+                                    <input type="text" name="t_helpers" id="t_helpers" onfocus="this.style.outline='none'" readonly>
                                 </td>
                                 <td></td>
                             </tr>
