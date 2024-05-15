@@ -105,7 +105,7 @@ async function downloadCsv(){
     const data = {
         Filters:returnText('.container__filters'),
         Driller:returnText('.container__user .container__name'),
-        Assistans:returnText('.container__assistans'),
+        Assistans:returnText('.container__assistant'),
         Charged:"$20",
         "Diesel liters":total_liter_diesel.textContent,
         "Engine Oil":total_liter_engine.textContent,
@@ -115,8 +115,7 @@ async function downloadCsv(){
     }
 
     try {
-        const res = await downloadCsvMethod(url, data);
-        console.log(res);         
+        const res = await downloadCsvMethod(url, data);       
         const blob = new Blob([res], { type: 'text/csv' });
         const link = document.createElement('a');
         link.href = window.URL.createObjectURL(blob);

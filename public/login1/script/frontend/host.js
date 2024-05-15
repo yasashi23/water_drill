@@ -1,1 +1,1 @@
-const host = "https://3f8f-2001-448a-2061-58f1-da66-b94f-11bc-249e.ngrok-free.app"
+const host = "https://e735-2001-448a-2061-58f1-9efe-e7f7-b846-c061.ngrok-free.app"
