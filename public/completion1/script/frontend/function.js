@@ -27,7 +27,7 @@ function changeElement(admin,driller,cost){
     const meterRes = driller.reduce((n,{du_drills_day})=> Number(n)+Number(du_drills_day),0)
     const staticLevelMtr = driller.reduce((n,{t_static_level})=> Number(n)+Number(t_static_level),0)
 
-    const flowRate = driller.reduce((n,{dc_engine_hours})=> Number(n)+Number(dc_engine_hours),0) + driller.reduce((n,{dc_gasoil_lts})=> Number(n)+Number(dc_gasoil_lts),0)
+    const flowRate = driller.reduce((n,{dc_gasoil_lts})=> Number(n)+Number(dc_gasoil_lts),0) / driller.reduce((n,{dc_engine_hours})=> Number(n)+Number(dc_engine_hours),0)  
 
     const dynamicMtr = driller.reduce((n,{t_dynamic})=> Number(n)+Number(t_dynamic),0)
 
