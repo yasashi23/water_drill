@@ -64,7 +64,7 @@ exports.refreshToken_admin2 = async (req,res) =>{
 
 
     }catch(er){
-        console.error(err)
+        console.error(er)
     }
 
 }

@@ -9,11 +9,33 @@ const [profit_price,profit_total_cost,profit_profit] = document.querySelectorAll
 
 
 const [container_user,container_number] = document.querySelectorAll('.container .container__table .container__user td span')
-const [perliter_diesel,perliter_engine,perliter_grease] = document.querySelectorAll(".container__td-perliter span:last-child")
 
-const [total_liter_diesel,total_liter_engine,total_liter_grease] = document.querySelectorAll(".container__td-total-liter")
+const [
+    perliter_diesel,
+    perliter_engine,
+    perliter_grease,
+    perliter_bentonite,
+    perliter_cmc,
+    perliter_martillos
+] = document.querySelectorAll(".container__td-perliter span:last-child")
 
-const [total_cost_diesel,total_cost_engine,total_cost_grease] = document.querySelectorAll(".container__td-total-cost span:last-child")
+const [
+    total_liter_diesel,
+    total_liter_engine,
+    total_liter_grease,
+    total_liter_bentonite,
+    total_liter_cmc,
+    total_liter_martillos
+] = document.querySelectorAll(".container__td-total-liter")
+
+const [
+    total_cost_diesel,
+    total_cost_engine,
+    total_cost_grease,
+    total_cost_bentonite,
+    total_cost_cmc,
+    total_cost_martillos
+] = document.querySelectorAll(".container__td-total-cost span:last-child")
 
 const formCharged = document.querySelector(".container__charged")
 

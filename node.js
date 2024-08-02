@@ -5,6 +5,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const app = express()
 const port = 3000
+const host = '0.0.0.0'
 
 
 // https://github.com/elderny/mysql_Login/blob/main/MySQL_Login_Page/controllers/auth.js
@@ -49,7 +50,7 @@ const newData = {...data,"Profit":"MAHALLL"}
 // console.log(newData)
 
 
-app.listen(port,()=>{
+app.listen(port,host,()=>{
     console.log('server Running',port)
 })
 

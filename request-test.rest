@@ -155,7 +155,7 @@ POST http://localhost:3000/editHost
 Content-Type: application/json
 
 {
-    "host":"https://5ccf-2001-448a-2061-58f1-828b-c989-3580-c36b.ngrok-free.app"
+    "host":"http://180.244.158.118"
 }
 
 ########### Driller user select driller number ###############

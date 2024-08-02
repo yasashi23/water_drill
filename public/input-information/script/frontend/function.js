@@ -120,7 +120,7 @@ async function informationData(){
         <span>$${earn_assistant}</span>
       </td>
       <td><u class="container__edit-data" onclick="clickToEdit(this)">editar</u></td>
-      <td><u class="container__delete-data" onclick="clickToDelete(this)">del</u></td>
+      <td><u class="container__delete-data" onclick="clickToDelete(this)">ELIMINAR</u></td>
   </tr>`
     data_list.innerHTML += element
   }

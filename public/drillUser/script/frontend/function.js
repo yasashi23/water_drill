@@ -73,6 +73,16 @@ async function getDataCompletion(user,num){
         const meterRes = driller.reduce((n,{du_drills_day})=> Number(n)+Number(du_drills_day),0)
         total_depth_value.value = meterRes
         totalDepthFromDb = meterRes
+        const {t_drillers,t_helpers} = driller[driller.length-1] || "nothing"
+        var selectElement = document.getElementById('t_drillers');
+
+        if(!t_drillers || !t_helpers){
+            assistant_name.value = ""
+            selectElement.value = ""
+        }else{
+            assistant_name.value = t_helpers
+            selectElement.value = t_drillers            
+        }
     }catch(err){
         console.error(err)
     }
@@ -84,6 +94,7 @@ async function getDataDrillersAssistants(){
     try{
         const data = await getData(url)
         loopNameDrillers(data)
+        console.log(data)
         
     }catch(err){
         console.error(err)
@@ -102,4 +113,8 @@ function drillerNumber(a){
 function selectDrillers(a){
     const data = a.options[a.selectedIndex].getAttribute("data-assistant")
     assistant_name.value = data
+    console.log(data,a)
+    // bagaimana caranya agar jika ada tampil yang sebelumnya dan jika belum ada disuruh pilih dulu ok!!!
+    
+
 }

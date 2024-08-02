@@ -19,7 +19,7 @@ function appendElem(id, well_number, customer_name, progress, well_group) {
         <td class="container__customer-name">${customer_name}</td>
         <td class="container__well-group">${well_group}</td>
         <td class="container__status">${progressText}</td>
-        <td class="container__open"><span dataname="${customer_name}" datanum="${well_number}" onclick="clickToCompletion(this)">Open</span></td>
+        <td class="container__open"><span dataname="${customer_name}" datanum="${well_number}" onclick="clickToCompletion(this)">ABRIR</span></td>
     `;
     newTr.innerHTML = html;
     tableTr.appendChild(newTr);
